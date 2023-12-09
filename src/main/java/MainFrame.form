@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainFrame">
+  <grid id="98a0e" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="6cbcf" binding="upperPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-16748859"/>
+          <preferredSize width="800" height="100"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="bcd76" class="javax.swing.JButton" binding="menuButton">
+            <constraints border-constraint="East"/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <background color="-16748859"/>
+              <contentAreaFilled value="false"/>
+              <defaultCapable value="false"/>
+              <foreground color="-16748859"/>
+              <maximumSize width="80" height="80"/>
+              <minimumSize width="50" height="50"/>
+              <preferredSize width="80" height="80"/>
+              <requestFocusEnabled value="false"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="27dc6" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="cf9f8">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-16768507"/>
+          <preferredSize width="800" height="700"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="cf9f8" binding="defaultPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <background color="-16768507"/>
+              <preferredSize width="800" height="700"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <scrollpane id="7e0c4" binding="scrollDefaultPanel">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="95af7" class="javax.swing.JList" binding="resortList">
+                    <constraints/>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoLabelFor"/>
+  </inspectionSuppressions>
+</form>
