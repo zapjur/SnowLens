@@ -37,6 +37,7 @@ public class MainFrame extends JFrame {
         try{
             BufferedImage menuImage = ImageIO.read(new File("graphics/icons8-menu-60.png"));
             ImageIcon menuIcon = new ImageIcon(menuImage);
+            menuButton.setBorderPainted(false);
             menuButton.setIcon(menuIcon);
 
         }catch (IOException e){

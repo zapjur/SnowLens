@@ -22,6 +22,7 @@
               <background color="-16748859"/>
               <contentAreaFilled value="false"/>
               <defaultCapable value="false"/>
+              <focusable value="false"/>
               <foreground color="-16748859"/>
               <maximumSize width="80" height="80"/>
               <minimumSize width="50" height="50"/>
