@@ -1,10 +1,7 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;
-import java.io.File;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
@@ -14,6 +11,8 @@ public class MainFrame extends JFrame {
     private JPanel upperPanel;
     private JPanel mainPanel;
     private JButton menuButton;
+    private JPanel menuPanel;
+    private JButton favoriteButton;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,27 +33,21 @@ public class MainFrame extends JFrame {
             throw new RuntimeException(e);
         }
 
-        try{
-            BufferedImage menuImage = ImageIO.read(new File("graphics/icons8-menu-60.png"));
-            ImageIcon menuIcon = new ImageIcon(menuImage);
-            menuButton.setBorderPainted(false);
-            menuButton.setIcon(menuIcon);
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
         JScrollPane scrollDefaultPanel = new JScrollPane(resortList);
         scrollDefaultPanel.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         defaultPanel.add(scrollDefaultPanel);
-        cardPanel.add(defaultPanel);
 
         mainPanel.add(upperPanel, BorderLayout.NORTH);
         mainPanel.add(cardPanel, BorderLayout.CENTER);
 
-
         add(mainPanel);
         setVisible(true);
+
+        menuButton.addActionListener(e -> {
+            cardLayout.next(cardPanel);
+        });
     }
 
     public static void main(String[] args) {
@@ -66,14 +59,7 @@ public class MainFrame extends JFrame {
         public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             if (value instanceof Resort) {
                 Resort resort = (Resort) value;
-                JPanel panel = new JPanel();
-                panel.setPreferredSize(new Dimension(800, 100));
-                panel.setLayout(new FlowLayout(FlowLayout.CENTER));
-                panel.add(new JLabel(resort.name()));
-                panel.add(new JLabel(resort.country().toString()));
-                panel.add(new JLabel(resort.openStatus().toString()));
-                panel.add(new JLabel(resort.currSnow()));
-                panel.add(new JLabel(resort.snowType()));
+                OpenListPanel panel = new OpenListPanel(resort);
 
                 if (isSelected) {
                     panel.setBackground(list.getSelectionBackground());

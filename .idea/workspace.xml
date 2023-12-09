@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="cc">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons8-menu-60.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons8-menu-60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons8-snow-64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons8-snow-64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons8-star-48 (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons8-star-48 (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons8-star-48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons8-star-48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
     </list>
@@ -39,9 +47,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/piotrzapior/Documents/IntelliJIDEA/SnowLens",
+    "last_opened_file_path": "/Users/piotrzapior/Documents/IntelliJIDEA/SnowLens/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,11 +59,14 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.rainbow.brackets.disable.when",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
@@ -73,7 +85,9 @@
       <workItem from="1701986075609" duration="522000" />
       <workItem from="1701986608483" duration="162000" />
       <workItem from="1701986777131" duration="10141000" />
-      <workItem from="1702117517639" duration="26156000" />
+      <workItem from="1702117517639" duration="26195000" />
+      <workItem from="1702156275748" duration="3628000" />
+      <workItem from="1702159940124" duration="4104000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -91,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702152378420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1702153203432</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702153203432</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cc" />
-    <option name="LAST_COMMIT_MESSAGE" value="cc" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
