@@ -65,13 +65,8 @@ public class MainFrame extends JFrame {
                 Resort resort = (Resort) value;
                 OpenListPanel panel = new OpenListPanel(resort);
 
-                if (isSelected) {
-                    panel.setBackground(list.getSelectionBackground());
-                    panel.setForeground(list.getSelectionForeground());
-                } else {
-                    panel.setBackground(list.getBackground());
-                    panel.setForeground(list.getForeground());
-                }
+                panel.setBackground(list.getBackground());
+                panel.setForeground(list.getForeground());
 
                 return panel;
             }

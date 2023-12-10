@@ -6,11 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
 public class InformationScraper {
     public static List<Resort> infoScraping(String url, Resort.Country country) throws IOException {
         List<Resort> resorts = new ArrayList<>();
