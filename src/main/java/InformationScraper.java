@@ -126,10 +126,28 @@ public class InformationScraper {
         return italyResorts;
     }
 
+    public static List<Resort> austriaScraping() throws IOException {
+        List<String> austriaUrls = List.of(
+                "https://www.skiinfo.pl/dolna-austria/warunki-narciarskie",
+                "https://www.skiinfo.pl/gorna-austria/warunki-narciarskie",
+                "https://www.skiinfo.pl/karyntia/warunki-narciarskie",
+                "https://www.skiinfo.pl/salzburg/warunki-narciarskie",
+                "https://www.skiinfo.pl/styria/warunki-narciarskie",
+                "https://www.skiinfo.pl/tyrol/warunki-narciarskie",
+                "https://www.skiinfo.pl/vorarlberg/warunki-narciarskie"
+        );
+
+        List<Resort> austriaResorts = new ArrayList<>();
+        for (String url : austriaUrls) {
+            austriaResorts.addAll(infoScraping(url, Resort.Country.AUSTRIA));
+        }
+        System.out.println(austriaResorts.get(5).toString());
+        return austriaResorts;
+    }
+
     public static void main(String[] args) {
         try {
-            polandScraping();
-            italyScraping();
+            austriaScraping();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

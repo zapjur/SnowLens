@@ -30,6 +30,7 @@ public class MainFrame extends JFrame {
 
         try {
             List<Resort> resorts = InformationScraper.polandScraping();
+            resorts.sort(new Resort.ResortComparator());
             DefaultListModel<Resort> listModel = new DefaultListModel<>();
             listModel.addAll(resorts);
             resortList.setModel(listModel);
