@@ -31,7 +31,9 @@
           </grid>
           <forms/>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="102dc" class="javax.swing.JLabel" binding="nameLabel">
@@ -61,7 +63,9 @@
           </grid>
           <forms/>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="d2454" class="javax.swing.JLabel" binding="snowLastLabel">
@@ -83,7 +87,9 @@
           </grid>
           <forms/>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="43af1" class="javax.swing.JLabel" binding="currSnowLabel">
@@ -113,7 +119,9 @@
           </grid>
           <forms/>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="544d6" class="javax.swing.JLabel" binding="trailsDistLabel">
@@ -166,6 +174,7 @@
           <forms/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <preferredSize width="50" height="100"/>
         </properties>
         <border type="none"/>
