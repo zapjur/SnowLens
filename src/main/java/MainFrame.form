@@ -9,7 +9,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="6cbcf" binding="upperPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="2">
+      <grid id="6cbcf" binding="upperPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="North"/>
         <properties>
           <background color="-16748859"/>
@@ -17,39 +17,78 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="8208a" class="javax.swing.JButton" binding="favoriteButton">
-            <constraints/>
+          <grid id="c2907" binding="upperButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="East"/>
             <properties>
               <background color="-16748859"/>
-              <borderPainted value="false"/>
-              <contentAreaFilled value="false"/>
-              <focusable value="false"/>
-              <foreground color="-16748859"/>
-              <icon value="icons8-star-48 (1).png"/>
-              <maximumSize width="80" height="80"/>
-              <minimumSize width="30" height="30"/>
-              <preferredSize width="80" height="80"/>
-              <text value=""/>
+              <preferredSize width="200" height="100"/>
             </properties>
-          </component>
-          <component id="bcd76" class="javax.swing.JButton" binding="menuButton">
-            <constraints/>
+            <border type="none"/>
+            <children>
+              <component id="8208a" class="javax.swing.JButton" binding="favoriteButton">
+                <constraints/>
+                <properties>
+                  <background color="-16748859"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusable value="false"/>
+                  <foreground color="-16748859"/>
+                  <icon value="icons8-star-48 (1).png"/>
+                  <maximumSize width="80" height="80"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="80" height="80"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="bcd76" class="javax.swing.JButton" binding="menuButton">
+                <constraints/>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <background color="-16748859"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <defaultCapable value="false"/>
+                  <focusable value="false"/>
+                  <foreground color="-16748859"/>
+                  <icon value="icons8-menu-60.png"/>
+                  <maximumSize width="80" height="80"/>
+                  <minimumSize width="50" height="50"/>
+                  <preferredSize width="80" height="80"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c009e" binding="logoPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="Center"/>
             <properties>
-              <alignmentX value="0.0"/>
               <background color="-16748859"/>
-              <borderPainted value="false"/>
-              <contentAreaFilled value="false"/>
-              <defaultCapable value="false"/>
-              <focusable value="false"/>
-              <foreground color="-16748859"/>
-              <icon value="icons8-menu-60.png"/>
-              <maximumSize width="80" height="80"/>
-              <minimumSize width="50" height="50"/>
-              <preferredSize width="80" height="80"/>
-              <requestFocusEnabled value="false"/>
-              <text value=""/>
             </properties>
-          </component>
+            <border type="none"/>
+            <children>
+              <component id="d7938" class="javax.swing.JLabel" binding="logoLabel">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="logoSmall.png"/>
+                  <preferredSize width="200" height="100"/>
+                  <text value=""/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="7fe70" binding="fillingPanel" layout-manager="GridBagLayout">
+            <constraints border-constraint="West"/>
+            <properties>
+              <background color="-16748859"/>
+              <preferredSize width="200" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
         </children>
       </grid>
       <grid id="27dc6" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="cf9f8">

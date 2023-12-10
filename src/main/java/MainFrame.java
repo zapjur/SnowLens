@@ -13,6 +13,10 @@ public class MainFrame extends JFrame {
     private JButton menuButton;
     private JPanel menuPanel;
     private JButton favoriteButton;
+    private JPanel upperButtonPanel;
+    private JPanel logoPanel;
+    private JLabel logoLabel;
+    private JPanel fillingPanel;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
