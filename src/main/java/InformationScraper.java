@@ -47,7 +47,13 @@ public class InformationScraper {
                 String openTrailsDist = currTd.select("span").text();
                 parts = openTrailsDist.split(" ");
                 openTrailsDist = parts[0]+"km";
-                String openTrailsPer = parts[2];
+                String openTrailsPer;
+                if(parts.length >= 3){
+                    openTrailsPer = parts[2];
+                }
+                else{
+                    openTrailsPer = "N/A";
+                }
 
                 currTd = currTd.nextElementSibling();
                 String openLifts = currTd.select("span").text();
@@ -88,7 +94,7 @@ public class InformationScraper {
     }
 
     public static List<Resort> polandScraping() throws IOException {
-        List<String> polandUrls = List.of(
+        List<String> Urls = List.of(
                 "https://www.skiinfo.pl/malopolskie/warunki-narciarskie",
                 "https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie",
                 "https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie",
@@ -97,16 +103,16 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/slaskie/warunki-narciarskie"
         );
 
-        List<Resort> polandResorts = new ArrayList<>();
-        for (String url : polandUrls) {
-            polandResorts.addAll(infoScraping(url, Resort.Country.POLAND));
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.POLAND));
         }
-
-        return polandResorts;
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
     }
 
     public static List<Resort> italyScraping() throws IOException {
-        List<String> italyUrls = List.of(
+        List<String> Urls = List.of(
                 "https://www.skiinfo.pl/abruzja/warunki-narciarskie",
                 "https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie",
                 "https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie",
@@ -118,16 +124,16 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/veneto/warunki-narciarskie"
         );
 
-        List<Resort> italyResorts = new ArrayList<>();
-        for (String url : italyUrls) {
-            italyResorts.addAll(infoScraping(url, Resort.Country.ITALY));
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.ITALY));
         }
-
-        return italyResorts;
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
     }
 
     public static List<Resort> austriaScraping() throws IOException {
-        List<String> austriaUrls = List.of(
+        List<String> Urls = List.of(
                 "https://www.skiinfo.pl/dolna-austria/warunki-narciarskie",
                 "https://www.skiinfo.pl/gorna-austria/warunki-narciarskie",
                 "https://www.skiinfo.pl/karyntia/warunki-narciarskie",
@@ -137,17 +143,111 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/vorarlberg/warunki-narciarskie"
         );
 
-        List<Resort> austriaResorts = new ArrayList<>();
-        for (String url : austriaUrls) {
-            austriaResorts.addAll(infoScraping(url, Resort.Country.AUSTRIA));
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.AUSTRIA));
         }
-        System.out.println(austriaResorts.get(5).toString());
-        return austriaResorts;
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> czechScraping() throws IOException {
+        List<String> Urls = List.of(
+                "https://www.skiinfo.pl/beskidy/warunki-narciarskie",
+                "https://www.skiinfo.pl/jizerske-hory/warunki-narciarskie",
+                "https://www.skiinfo.pl/orlicke-hory/warunki-narciarskie",
+                "https://www.skiinfo.pl/jesenik/warunki-narciarskie",
+                "https://www.skiinfo.pl/karkonosze/warunki-narciarskie",
+                "https://www.skiinfo.pl/rudawy/warunki-narciarskie",
+                "https://www.skiinfo.pl/sumava/warunki-narciarskie",
+                "https://www.skiinfo.pl/wysoczyzna/warunki-narciarskie"
+        );
+
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.CZECH));
+        }
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> andorraScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/andora/warunki-narciarskie", Resort.Country.ANDORRA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> belgiumScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/belgia/warunki-narciarskie", Resort.Country.BELGIUM);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> bulgariaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/bulgaria/warunki-narciarskie", Resort.Country.BULGARIA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> franceScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/francja/warunki-narciarskie", Resort.Country.FRANCE);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> spainScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/hiszpania/warunki-narciarskie", Resort.Country.SPAIN);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> liechtensteinScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/liechtenstein/warunki-narciarskie", Resort.Country.LIECHTENSTEIN);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> germanyScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/niemcy/warunki-narciarskie", Resort.Country.GERMANY);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> norwayScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/norwegia/warunki-narciarskie", Resort.Country.NORWAY);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> romaniaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/rumunia/warunki-narciarskie", Resort.Country.ROMANIA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> slovakiaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowacja/warunki-narciarskie", Resort.Country.SLOVAKIA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> sloveniaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowenia/warunki-narciarskie", Resort.Country.SLOVENIA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> scotlandScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szkocja/warunki-narciarskie", Resort.Country.SCOTLAND);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> swedenScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szwecja/warunki-narciarskie", Resort.Country.SWEDEN);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> usaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/usa/warunki-narciarskie", Resort.Country.USA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
+    public static List<Resort> canadaScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/kanada/warunki-narciarskie", Resort.Country.CANADA);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
     }
 
     public static void main(String[] args) {
         try {
-            austriaScraping();
+            canadaScraping();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

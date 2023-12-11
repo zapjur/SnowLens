@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="sorting added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
@@ -82,7 +82,8 @@
       <workItem from="1702117517639" duration="26195000" />
       <workItem from="1702156275748" duration="3628000" />
       <workItem from="1702159940124" duration="7628000" />
-      <workItem from="1702202002551" duration="8567000" />
+      <workItem from="1702202002551" duration="11283000" />
+      <workItem from="1702313133052" duration="4873000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -140,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702209142637</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sorting added">
+      <option name="closed" value="true" />
+      <created>1702244323685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702244323685</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +158,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cc" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="sorting added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting added" />
   </component>
 </project>

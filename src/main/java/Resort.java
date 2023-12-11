@@ -16,7 +16,8 @@ public record Resort(
         POLAND, AUSTRIA, ITALY, FINLAND, FRANCE,
         CZECH, ANDORRA, BELGIUM, SPAIN, LIECHTENSTEIN,
         GERMANY, NORWAY, ROMANIA, SLOVAKIA, SLOVENIA,
-        SCOTLAND, SWITZERLAND, SWEDEN, USA, CANADA
+        SCOTLAND, SWITZERLAND, SWEDEN, USA, CANADA,
+        BULGARIA
     }
 
     public static class ResortComparator implements Comparator<Resort>{
