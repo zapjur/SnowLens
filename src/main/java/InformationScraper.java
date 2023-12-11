@@ -189,6 +189,11 @@ public class InformationScraper {
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
+    public static List<Resort> finlandScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/finlandia/warunki-narciarskie", Resort.Country.FINLAND);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
     public static List<Resort> spainScraping() throws IOException {
         List<Resort> resorts = infoScraping("https://www.skiinfo.pl/hiszpania/warunki-narciarskie", Resort.Country.SPAIN);
         resorts.sort(new Resort.ResortComparator());
@@ -234,6 +239,11 @@ public class InformationScraper {
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
+    public static List<Resort> switzerlandScraping() throws IOException {
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szwajcaria/warunki-narciarskie", Resort.Country.SWITZERLAND);
+        resorts.sort(new Resort.ResortComparator());
+        return resorts;
+    }
     public static List<Resort> usaScraping() throws IOException {
         List<Resort> resorts = infoScraping("https://www.skiinfo.pl/usa/warunki-narciarskie", Resort.Country.USA);
         resorts.sort(new Resort.ResortComparator());
@@ -247,7 +257,7 @@ public class InformationScraper {
 
     public static void main(String[] args) {
         try {
-            canadaScraping();
+            switzerlandScraping();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
