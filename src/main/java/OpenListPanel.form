@@ -51,6 +51,8 @@
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="2 godziny temu"/>
+              <verticalAlignment value="1"/>
+              <verticalTextPosition value="1"/>
             </properties>
           </component>
         </children>
