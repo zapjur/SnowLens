@@ -5,90 +5,97 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class InformationScraper {
-    public static List<Resort> infoScraping(String url, Resort.Country country) throws IOException {
+    private static final Logger logger = LogManager.getLogger(InformationScraper.class);
+    public static List<Resort> infoScraping(String url, Resort.Country country) {
+        logger.info("Start of scraping data from url: " + url);
         List<Resort> resorts = new ArrayList<>();
 
-        Document document = Jsoup.connect(url).get();
 
-        Elements docTBody = document.select("tbody");
-        int counter = 0;
-        for(Element currTBody : docTBody){
-            Element currTr = currTBody.select("tr").first();
-            boolean closedLeft = false;
+        try {
+            Document document = Jsoup.connect(url).get();
 
-            while(currTr != null && counter < 2){ // petla dla otwartych i weekend
-                Element currTd = currTr.select("td").first();
-                String name = currTd.select("a").select("span").text();
-                String updateTime = currTd.select("a").select("time").text();
+            Elements docTBody = document.select("tbody");
+            int counter = 0;
+            for (Element currTBody : docTBody) {
+                Element currTr = currTBody.select("tr").first();
+                boolean closedLeft = false;
 
-                currTd = currTd.nextElementSibling();
-                String snowLast24 = currTd.select("span").text();
-
-                currTd = currTd.nextElementSibling();
-
-                if(currTd == null){
-                    closedLeft = true;
-                    break;
-                }
-                String currSnow = currTd.select("span").text();
-                String[] parts = currSnow.split(" ");
-                currSnow = parts[0];
-                String snowType;
-                if(parts.length >= 2) {
-                    snowType = parts[1];
-                }
-                else{
-                    snowType = "N/A";
-                }
-
-                currTd = currTd.nextElementSibling();
-                String openTrailsDist = currTd.select("span").text();
-                parts = openTrailsDist.split(" ");
-                openTrailsDist = parts[0]+"km";
-                String openTrailsPer;
-                if(parts.length >= 3){
-                    openTrailsPer = parts[2];
-                }
-                else{
-                    openTrailsPer = "N/A";
-                }
-
-                currTd = currTd.nextElementSibling();
-                String openLifts = currTd.select("span").text();
-                parts = openLifts.split(" ");
-                openLifts = parts[0];
-
-                if(counter == 0) {
-                    resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                                           openTrailsPer, openLifts, Resort.OpenStatus.OPEN, country));
-                }
-                else{
-                    resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                                           openTrailsPer, openLifts, Resort.OpenStatus.WEEKEND, country));
-                }
-
-                currTr = currTr.nextElementSibling();
-            }
-
-            if(counter == 2 || closedLeft){ // dla zamknietych (inne dane)
-                while(currTr != null){
+                while (currTr != null && counter < 2) { // petla dla otwartych i weekend
                     Element currTd = currTr.select("td").first();
                     String name = currTd.select("a").select("span").text();
                     String updateTime = currTd.select("a").select("time").text();
 
                     currTd = currTd.nextElementSibling();
-                    String openDate = currTd.select("span").text();
+                    String snowLast24 = currTd.select("span").text();
 
-                    resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country));
+                    currTd = currTd.nextElementSibling();
+
+                    if (currTd == null) {
+                        closedLeft = true;
+                        break;
+                    }
+                    String currSnow = currTd.select("span").text();
+                    String[] parts = currSnow.split(" ");
+                    currSnow = parts[0];
+                    String snowType;
+                    if (parts.length >= 2) {
+                        snowType = parts[1];
+                    } else {
+                        snowType = "N/A";
+                    }
+
+                    currTd = currTd.nextElementSibling();
+                    String openTrailsDist = currTd.select("span").text();
+                    parts = openTrailsDist.split(" ");
+                    openTrailsDist = parts[0] + "km";
+                    String openTrailsPer;
+                    if (parts.length >= 3) {
+                        openTrailsPer = parts[2];
+                    } else {
+                        openTrailsPer = "N/A";
+                    }
+
+                    currTd = currTd.nextElementSibling();
+                    String openLifts = currTd.select("span").text();
+                    parts = openLifts.split(" ");
+                    openLifts = parts[0];
+
+                    if (counter == 0) {
+                        resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
+                                openTrailsPer, openLifts, Resort.OpenStatus.OPEN, country));
+                    } else {
+                        resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
+                                openTrailsPer, openLifts, Resort.OpenStatus.WEEKEND, country));
+                    }
 
                     currTr = currTr.nextElementSibling();
                 }
-            }
-            counter++;
-        }
 
+                if (counter == 2 || closedLeft) { // dla zamknietych (inne dane)
+                    while (currTr != null) {
+                        Element currTd = currTr.select("td").first();
+                        String name = currTd.select("a").select("span").text();
+                        String updateTime = currTd.select("a").select("time").text();
+
+                        currTd = currTd.nextElementSibling();
+                        String openDate = currTd.select("span").text();
+
+                        resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country));
+
+                        currTr = currTr.nextElementSibling();
+                    }
+                }
+                counter++;
+            }
+            logger.info("Success scraping url: " + url);
+        }
+        catch (IOException e){
+            logger.error("Error while scraping url: " + url);
+        }
 
         return resorts;
     }
@@ -261,5 +268,6 @@ public class InformationScraper {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

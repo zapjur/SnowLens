@@ -1,6 +1,3 @@
-import com.jgoodies.forms.layout.CellConstraints;
-import com.jgoodies.forms.layout.FormLayout;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.*;
 import java.awt.*;
 
