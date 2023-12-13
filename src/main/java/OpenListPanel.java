@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class OpenListPanel extends JPanel {
     private JPanel namePanel;
@@ -20,7 +21,7 @@ public class OpenListPanel extends JPanel {
 
     public OpenListPanel(Resort resort){
         setSize(800,100);
-        setPreferredSize(new Dimension(800, 100));
+        setPreferredSize(new Dimension(1000, 100));
 
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
@@ -29,7 +30,7 @@ public class OpenListPanel extends JPanel {
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         updateTimeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         namePanel.setLayout(new BoxLayout(namePanel, BoxLayout.PAGE_AXIS));
-        namePanel.setPreferredSize(new Dimension(200, 100));
+        namePanel.setPreferredSize(new Dimension(300, 100));
         namePanel.add(nameLabel);
         namePanel.add(updateTimeLabel);
         add(namePanel);

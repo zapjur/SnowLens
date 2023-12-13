@@ -17,10 +17,12 @@ public class MainFrame extends JFrame {
     private JPanel logoPanel;
     private JLabel logoLabel;
     private JPanel fillingPanel;
+    private JScrollPane menuScrollPanel;
+    private JList menuList;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 800);
+        setSize(1000, 800);
         setTitle("Snow Lens");
         setBackground(Color.WHITE);
         setResizable(false);
@@ -42,6 +44,13 @@ public class MainFrame extends JFrame {
         JScrollPane scrollDefaultPanel = new JScrollPane(resortList);
         scrollDefaultPanel.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         defaultPanel.add(scrollDefaultPanel);
+
+        JList<Resort.Country> menuList = new JList<>(Resort.Country.values());
+        menuList.setCellRenderer(new MenuListRenderer());
+
+        JScrollPane menuScrollPanel = new JScrollPane(menuList);
+        menuPanel.add(menuScrollPanel);
+        cardPanel.add(menuPanel);
 
         mainPanel.add(upperPanel, BorderLayout.NORTH);
         mainPanel.add(cardPanel, BorderLayout.CENTER);
@@ -71,6 +80,17 @@ public class MainFrame extends JFrame {
                 return panel;
             }
             return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+        }
+    }
+
+    public static class MenuListRenderer implements ListCellRenderer<Resort.Country>{
+
+        @Override
+        public Component getListCellRendererComponent(JList<? extends Resort.Country> list, Resort.Country value, int index, boolean isSelected, boolean cellHasFocus) {
+            MenuListPanel panel = new MenuListPanel(value);
+            panel.setBackground(list.getBackground());
+            panel.setForeground(list.getForeground());
+            return panel;
         }
     }
 }

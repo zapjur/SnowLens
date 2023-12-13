@@ -35,7 +35,7 @@
                   <contentAreaFilled value="false"/>
                   <focusable value="false"/>
                   <foreground color="-16748859"/>
-                  <icon value="icons8-star-48 (1).png"/>
+                  <icon value="starFull.png"/>
                   <maximumSize width="80" height="80"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="80" height="80"/>
@@ -52,7 +52,7 @@
                   <defaultCapable value="false"/>
                   <focusable value="false"/>
                   <foreground color="-16748859"/>
-                  <icon value="icons8-menu-60.png"/>
+                  <icon value="menu.png"/>
                   <maximumSize width="80" height="80"/>
                   <minimumSize width="50" height="50"/>
                   <preferredSize width="80" height="80"/>
@@ -139,7 +139,23 @@
               <preferredSize width="800" height="700"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <scrollpane id="b5535" binding="menuScrollPanel">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-16748859"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="83a98" class="javax.swing.JList" binding="menuList">
+                    <constraints/>
+                    <properties>
+                      <background color="-16748859"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
           </grid>
         </children>
       </grid>
