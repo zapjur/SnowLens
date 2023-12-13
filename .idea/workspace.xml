@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="log4j added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MenuListPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MenuListPanel.java" afterDir="false" />
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuListPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons8-menu-60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons8-snow-64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons8-star-48 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons8-star-48.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +88,7 @@
       <workItem from="1702313133052" duration="11460000" />
       <workItem from="1702396635403" duration="6355000" />
       <workItem from="1702468515609" duration="1340000" />
-      <workItem from="1702489882589" duration="9164000" />
+      <workItem from="1702489882589" duration="12597000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -195,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702403137388</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1702500011826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702500011826</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,8 +215,8 @@
     <MESSAGE value="cc" />
     <MESSAGE value="sorting added" />
     <MESSAGE value="linki" />
-    <MESSAGE value="update" />
     <MESSAGE value="log4j added" />
-    <option name="LAST_COMMIT_MESSAGE" value="log4j added" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

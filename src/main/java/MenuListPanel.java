@@ -7,10 +7,11 @@ public class MenuListPanel extends JPanel {
 
     public MenuListPanel(Resort.Country country){
         setSize(1000, 50);
-        countryButton.setPreferredSize(new Dimension(1000, 50));
-        countryButton.setIcon(new ImageIcon(country.getFlagUrl()));
+        countryButton.setPreferredSize(new Dimension(800, 50));
+        countryButton.setIcon(new ImageIcon(getClass().getResource(country.getFlagUrl())));
         countryButton.setText(country.getCountryName());
         countryButton.setFont(new Font("Arial", Font.PLAIN, 14));
-        add(countryButton);
+        countryButton.setIconTextGap(10);
+        add(countryButton, BorderLayout.CENTER);
     }
 }
