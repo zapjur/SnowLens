@@ -28,10 +28,10 @@ public class InformationScraper {
                     Element currTd = currTr.select("td").first();
                     String name = currTd.select("a").select("span").text();
                     String updateTime = currTd.select("a").select("time").text();
-                    if(lang == Dictionary.Language.ENGLISH) {
-                        updateTime = Dictionary.translateTime(updateTime);
+                    String[] parts = updateTime.split(" ");
+                    if(lang == Dictionary.Language.POLISH && parts.length >= 3) {
+                        updateTime = parts[0] +" "+ Dictionary.getPol2Eng(parts[1] + " " + parts[2]);
                     }
-
                     currTd = currTd.nextElementSibling();
                     String snowLast24 = currTd.select("span").text();
 
@@ -42,7 +42,7 @@ public class InformationScraper {
                         break;
                     }
                     String currSnow = currTd.select("span").text();
-                    String[] parts = currSnow.split(" ");
+                    parts = currSnow.split(" ");
                     currSnow = parts[0];
                     String snowType;
                     if (parts.length > 2) {
@@ -52,8 +52,8 @@ public class InformationScraper {
                     } else {
                         snowType = "N/A";
                     }
-                    if(lang == Dictionary.Language.ENGLISH){
-                        snowType = Dictionary.getEng2Pol(snowType);
+                    if(lang == Dictionary.Language.POLISH){
+                        snowType = Dictionary.getPol2Eng(snowType);
                     }
 
                     currTd = currTd.nextElementSibling();
@@ -268,17 +268,79 @@ public class InformationScraper {
         return resorts;
     }
     public static List<Resort> switzerlandScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szwajcaria/warunki-narciarskie", Resort.Country.SWITZERLAND, Dictionary.Language.POLISH);
+        List<String> Urls = List.of(
+                "https://www.onthesnow.co.uk/bernese-oberland/skireport",
+                "https://www.onthesnow.co.uk/central-switzerland/skireport",
+                "https://www.onthesnow.co.uk/fribourg/skireport",
+                "https://www.onthesnow.co.uk/graubunden/skireport",
+                "https://www.onthesnow.co.uk/valais/skireport",
+                "https://www.onthesnow.co.uk/vosges/skireport"
+        );
+
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.SWITZERLAND, Dictionary.Language.ENGLISH));
+        }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> usaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/usa/warunki-narciarskie", Resort.Country.USA, Dictionary.Language.POLISH);
+        List<String> Urls = List.of(
+                "https://www.onthesnow.com/alaska/skireport",
+                "https://www.onthesnow.com/idaho/skireport",
+                "https://www.onthesnow.com/maryland/skireport",
+                "https://www.onthesnow.com/montana/skireport",
+                "https://www.onthesnow.com/new-york/skireport",
+                "https://www.onthesnow.com/south-dakota/skireport",
+                "https://www.onthesnow.com/washington/skireport",
+                "https://www.onthesnow.com/arizona/skireport",
+                "https://www.onthesnow.com/illinois/skireport",
+                "https://www.onthesnow.com/massachusetts/skireport",
+                "https://www.onthesnow.com/nevada/skireport",
+                "https://www.onthesnow.com/north-carolina/skireport",
+                "https://www.onthesnow.com/tennessee/skireport",
+                "https://www.onthesnow.com/west-virginia/skireport",
+                "https://www.onthesnow.com/california/skireport",
+                "https://www.onthesnow.com/indiana/skireport",
+                "https://www.onthesnow.com/michigan/skireport",
+                "https://www.onthesnow.com/new-hampshire/skireport",
+                "https://www.onthesnow.com/ohio/skireport",
+                "https://www.onthesnow.com/utah/skireport",
+                "https://www.onthesnow.com/wisconsin/skireport",
+                "https://www.onthesnow.com/colorado/skireport",
+                "https://www.onthesnow.com/iowa/skireport",
+                "https://www.onthesnow.com/minnesota/skireport",
+                "https://www.onthesnow.com/new-jersey/skireport",
+                "https://www.onthesnow.com/oregon/skireport",
+                "https://www.onthesnow.com/vermont/skireport",
+                "https://www.onthesnow.com/wyoming/skireport",
+                "https://www.onthesnow.com/connecticut/skireport",
+                "https://www.onthesnow.com/maine/skireport",
+                "https://www.onthesnow.com/missouri/skireport",
+                "https://www.onthesnow.com/new-mexico/skireport",
+                "https://www.onthesnow.com/pennsylvania/skireport",
+                "https://www.onthesnow.com/virginia/skireports"
+        );
+
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.USA, Dictionary.Language.ENGLISH));
+        }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> canadaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/kanada/warunki-narciarskie", Resort.Country.CANADA, Dictionary.Language.POLISH);
+        List<String> Urls = List.of(
+                "https://www.onthesnow.com/alberta/skireport",
+                "https://www.onthesnow.com/british-columbia/skireport",
+                "https://www.onthesnow.com/ontario/skireport",
+                "https://www.onthesnow.com/quebec/skireport"
+        );
+
+        List<Resort> resorts = new ArrayList<>();
+        for (String url : Urls) {
+            resorts.addAll(infoScraping(url, Resort.Country.CANADA, Dictionary.Language.ENGLISH));
+        }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }

@@ -23,27 +23,27 @@ public record Resort(
 
 
         private static final Map<Country, String> COUNTRY_NAMES = Map.ofEntries(
-                entry(Country.POLAND, "Polska"),
+                entry(Country.POLAND, "Poland"),
                 entry(Country.AUSTRIA, "Austria"),
-                entry(Country.ITALY, "Włochy"),
-                entry(Country.FINLAND, "Finlandia"),
-                entry(Country.FRANCE, "Francja"),
-                entry(Country.CZECH, "Czechy"),
-                entry(Country.ANDORRA, "Andora"),
-                entry(Country.BELGIUM, "Belgia"),
-                entry(Country.SPAIN, "Hiszpania"),
+                entry(Country.ITALY, "Italy"),
+                entry(Country.FINLAND, "Finland"),
+                entry(Country.FRANCE, "France"),
+                entry(Country.CZECH, "Czech"),
+                entry(Country.ANDORRA, "Andorra"),
+                entry(Country.BELGIUM, "Belgium"),
+                entry(Country.SPAIN, "Spain"),
                 entry(Country.LIECHTENSTEIN, "Liechtenstein"),
-                entry(Country.GERMANY, "Niemcy"),
-                entry(Country.NORWAY, "Norwegia"),
-                entry(Country.ROMANIA, "Rumunia"),
-                entry(Country.SLOVAKIA, "Słowacja"),
-                entry(Country.SLOVENIA, "Słowenia"),
-                entry(Country.SCOTLAND, "Szkocja"),
-                entry(Country.SWITZERLAND, "Szwajcaria"),
-                entry(Country.SWEDEN, "Szwecja"),
+                entry(Country.GERMANY, "Germany"),
+                entry(Country.NORWAY, "Norway"),
+                entry(Country.ROMANIA, "Romania"),
+                entry(Country.SLOVAKIA, "Slovakia"),
+                entry(Country.SLOVENIA, "Slovenia"),
+                entry(Country.SCOTLAND, "Scotland"),
+                entry(Country.SWITZERLAND, "Switzerland"),
+                entry(Country.SWEDEN, "Sweden"),
                 entry(Country.USA, "USA"),
-                entry(Country.CANADA, "Kanada"),
-                entry(Country.BULGARIA, "Bułgaria")
+                entry(Country.CANADA, "Canada"),
+                entry(Country.BULGARIA, "Bulgaria")
         );
 
         public String getFlagUrl(){

@@ -31,7 +31,7 @@ public class MainFrame extends JFrame {
         resortList.setCellRenderer(new ResortRenderer());
 
         try {
-            List<Resort> resorts = InformationScraper.polandScraping();
+            List<Resort> resorts = InformationScraper.usaScraping();
             DefaultListModel<Resort> listModel = new DefaultListModel<>();
             listModel.addAll(resorts);
             resortList.setModel(listModel);
