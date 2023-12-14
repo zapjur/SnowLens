@@ -87,10 +87,10 @@ public class MainFrame extends JFrame {
 
         @Override
         public Component getListCellRendererComponent(JList<? extends Resort.Country> list, Resort.Country value, int index, boolean isSelected, boolean cellHasFocus) {
-            MenuListPanel panel = new MenuListPanel(value);
-            panel.setBackground(list.getBackground());
-            panel.setForeground(list.getForeground());
-            return panel;
+            MenuButton button = new MenuButton(value);
+            button.setBackground(list.getBackground());
+            button.setForeground(list.getForeground());
+            return button;
         }
     }
 }
