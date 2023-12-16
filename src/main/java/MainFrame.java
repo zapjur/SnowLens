@@ -18,6 +18,7 @@ public class MainFrame extends JFrame {
     private JLabel logoLabel;
     private JPanel fillingPanel;
     private JScrollPane menuScrollPanel;
+    private JPanel menuButtonPanel;
     private JList menuList;
 
     public MainFrame() {
@@ -29,9 +30,10 @@ public class MainFrame extends JFrame {
         setLocationRelativeTo(null);
 
         resortList.setCellRenderer(new ResortRenderer());
+        CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
         try {
-            List<Resort> resorts = InformationScraper.usaScraping();
+            List<Resort> resorts = InformationScraper.italyScraping();
             DefaultListModel<Resort> listModel = new DefaultListModel<>();
             listModel.addAll(resorts);
             resortList.setModel(listModel);
@@ -39,16 +41,24 @@ public class MainFrame extends JFrame {
             throw new RuntimeException(e);
         }
 
-        CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
+        menuButtonPanel.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.anchor = GridBagConstraints.CENTER;
 
-        JScrollPane scrollDefaultPanel = new JScrollPane(resortList);
+        for(Resort.Country country : Resort.Country.values()){
+            MenuButton button = new MenuButton(country);
+            button.addActionListener(e->{
+                cardLayout.next(cardPanel);
+            });
+            menuButtonPanel.add(button, gbc);
+        }
+        menuScrollPanel.setViewportView(menuButtonPanel);
+
         scrollDefaultPanel.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         defaultPanel.add(scrollDefaultPanel);
 
-        JList<Resort.Country> menuList = new JList<>(Resort.Country.values());
-        menuList.setCellRenderer(new MenuListRenderer());
-
-        JScrollPane menuScrollPanel = new JScrollPane(menuList);
         menuPanel.add(menuScrollPanel);
         cardPanel.add(menuPanel);
 
@@ -83,14 +93,4 @@ public class MainFrame extends JFrame {
         }
     }
 
-    public static class MenuListRenderer implements ListCellRenderer<Resort.Country>{
-
-        @Override
-        public Component getListCellRendererComponent(JList<? extends Resort.Country> list, Resort.Country value, int index, boolean isSelected, boolean cellHasFocus) {
-            MenuButton button = new MenuButton(value);
-            button.setBackground(list.getBackground());
-            button.setForeground(list.getForeground());
-            return button;
-        }
-    }
 }

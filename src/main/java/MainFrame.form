@@ -147,12 +147,12 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="83a98" class="javax.swing.JList" binding="menuList">
+                  <grid id="1acbc" binding="menuButtonPanel" layout-manager="GridBagLayout">
                     <constraints/>
-                    <properties>
-                      <background color="-16748859"/>
-                    </properties>
-                  </component>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
                 </children>
               </scrollpane>
             </children>
