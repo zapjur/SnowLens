@@ -1,8 +1,5 @@
 import java.util.Map;
 import static java.util.Map.entry;
-import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Dictionary {
     private static final Map<String, String> pol2EngDic = Map.ofEntries(

@@ -34,6 +34,7 @@ public class MainFrame extends JFrame {
 
         try {
             List<Resort> resorts = InformationScraper.italyScraping();
+            Country.COUNTRY_RESORTS.put(Country.ITALY, resorts);
             DefaultListModel<Resort> listModel = new DefaultListModel<>();
             listModel.addAll(resorts);
             resortList.setModel(listModel);
@@ -47,11 +48,8 @@ public class MainFrame extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.CENTER;
 
-        for(Resort.Country country : Resort.Country.values()){
-            MenuButton button = new MenuButton(country);
-            button.addActionListener(e->{
-                cardLayout.next(cardPanel);
-            });
+        for(Country country : Country.values()){
+            MenuButton button = getMenuButton(country, cardLayout);
             menuButtonPanel.add(button, gbc);
         }
         menuScrollPanel.setViewportView(menuButtonPanel);
@@ -71,6 +69,24 @@ public class MainFrame extends JFrame {
         menuButton.addActionListener(e -> {
             cardLayout.next(cardPanel);
         });
+    }
+
+    private MenuButton getMenuButton(Country country, CardLayout cardLayout) {
+        MenuButton button = new MenuButton(country);
+        button.addActionListener(e->{
+            try {
+                if(!Country.COUNTRY_RESORTS.containsKey(country)){
+                    Country.COUNTRY_RESORTS.put(country, country.getResortList());
+                }
+                DefaultListModel<Resort> listModel = new DefaultListModel<>();
+                listModel.addAll(Country.COUNTRY_RESORTS.get(country));
+                resortList.setModel(listModel);
+            } catch(IOException es){
+                es.printStackTrace();
+            }
+            cardLayout.next(cardPanel);
+        });
+        return button;
     }
 
     public static void main(String[] args) {

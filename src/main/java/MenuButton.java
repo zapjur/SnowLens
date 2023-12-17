@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MenuButton extends JButton {
-    public MenuButton(Resort.Country country){
+    public MenuButton(Country country){
         setPreferredSize(new Dimension(800, 50));
         setIcon(new ImageIcon(getClass().getResource(country.getFlagUrl())));
         setText(country.getCountryName());

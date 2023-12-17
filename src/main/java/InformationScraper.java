@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class InformationScraper {
     private static final Logger logger = LogManager.getLogger(InformationScraper.class);
-    public static List<Resort> infoScraping(String url, Resort.Country country, Dictionary.Language lang) {
+    public static List<Resort> infoScraping(String url, Country country, Dictionary.Language lang) {
         logger.info("Start of scraping data from url: " + url);
         List<Resort> resorts = new ArrayList<>();
 
@@ -120,7 +120,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.POLAND, Dictionary.Language.POLISH));
+            resorts.addAll(infoScraping(url, Country.POLAND, Dictionary.Language.POLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
@@ -141,7 +141,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.ITALY, Dictionary.Language.POLISH));
+            resorts.addAll(infoScraping(url, Country.ITALY, Dictionary.Language.POLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
@@ -160,7 +160,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.AUSTRIA, Dictionary.Language.POLISH));
+            resorts.addAll(infoScraping(url, Country.AUSTRIA, Dictionary.Language.POLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
@@ -179,23 +179,23 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.CZECH, Dictionary.Language.POLISH));
+            resorts.addAll(infoScraping(url, Country.CZECH, Dictionary.Language.POLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> andorraScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/andora/warunki-narciarskie", Resort.Country.ANDORRA,Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/andora/warunki-narciarskie", Country.ANDORRA,Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> belgiumScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/belgia/warunki-narciarskie", Resort.Country.BELGIUM, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/belgia/warunki-narciarskie", Country.BELGIUM, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> bulgariaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/bulgaria/warunki-narciarskie", Resort.Country.BULGARIA, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/bulgaria/warunki-narciarskie", Country.BULGARIA, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
@@ -212,58 +212,58 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.FRANCE, Dictionary.Language.ENGLISH));
+            resorts.addAll(infoScraping(url, Country.FRANCE, Dictionary.Language.ENGLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> finlandScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/finlandia/warunki-narciarskie", Resort.Country.FINLAND, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/finlandia/warunki-narciarskie", Country.FINLAND, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> spainScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/hiszpania/warunki-narciarskie", Resort.Country.SPAIN, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/hiszpania/warunki-narciarskie", Country.SPAIN, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> liechtensteinScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/liechtenstein/warunki-narciarskie", Resort.Country.LIECHTENSTEIN, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/liechtenstein/warunki-narciarskie", Country.LIECHTENSTEIN, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> germanyScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/niemcy/warunki-narciarskie", Resort.Country.GERMANY, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/niemcy/warunki-narciarskie", Country.GERMANY, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> norwayScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/norwegia/warunki-narciarskie", Resort.Country.NORWAY, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/norwegia/warunki-narciarskie", Country.NORWAY, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> romaniaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/rumunia/warunki-narciarskie", Resort.Country.ROMANIA, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/rumunia/warunki-narciarskie", Country.ROMANIA, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> slovakiaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowacja/warunki-narciarskie", Resort.Country.SLOVAKIA, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowacja/warunki-narciarskie", Country.SLOVAKIA, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> sloveniaScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowenia/warunki-narciarskie", Resort.Country.SLOVENIA, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/slowenia/warunki-narciarskie", Country.SLOVENIA, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> scotlandScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szkocja/warunki-narciarskie", Resort.Country.SCOTLAND, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szkocja/warunki-narciarskie", Country.SCOTLAND, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
     public static List<Resort> swedenScraping() throws IOException {
-        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szwecja/warunki-narciarskie", Resort.Country.SWEDEN, Dictionary.Language.POLISH);
+        List<Resort> resorts = infoScraping("https://www.skiinfo.pl/szwecja/warunki-narciarskie", Country.SWEDEN, Dictionary.Language.POLISH);
         resorts.sort(new Resort.ResortComparator());
         return resorts;
     }
@@ -279,7 +279,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.SWITZERLAND, Dictionary.Language.ENGLISH));
+            resorts.addAll(infoScraping(url, Country.SWITZERLAND, Dictionary.Language.ENGLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
@@ -324,7 +324,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.USA, Dictionary.Language.ENGLISH));
+            resorts.addAll(infoScraping(url, Country.USA, Dictionary.Language.ENGLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
@@ -339,7 +339,7 @@ public class InformationScraper {
 
         List<Resort> resorts = new ArrayList<>();
         for (String url : Urls) {
-            resorts.addAll(infoScraping(url, Resort.Country.CANADA, Dictionary.Language.ENGLISH));
+            resorts.addAll(infoScraping(url, Country.CANADA, Dictionary.Language.ENGLISH));
         }
         resorts.sort(new Resort.ResortComparator());
         return resorts;
