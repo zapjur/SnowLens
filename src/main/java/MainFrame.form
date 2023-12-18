@@ -121,10 +121,12 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="5d9e2" class="javax.swing.JList" binding="resortList">
+                  <grid id="5472c" binding="scrollContainer" layout-manager="GridBagLayout">
                     <constraints/>
                     <properties/>
-                  </component>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
                 </children>
               </scrollpane>
             </children>

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Country.java" afterDir="false" />
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="wybor kraju">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sortButtonsPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,10 @@
       <workItem from="1702546544190" duration="43000" />
       <workItem from="1702556051355" duration="17399000" />
       <workItem from="1702753465139" duration="8514000" />
-      <workItem from="1702820735077" duration="6573000" />
+      <workItem from="1702820735077" duration="7210000" />
+      <workItem from="1702849428965" duration="231000" />
+      <workItem from="1702850762390" duration="1042000" />
+      <workItem from="1702921801788" duration="6441000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -234,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702770857150</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="wybor kraju">
+      <option name="closed" value="true" />
+      <created>1702828652026</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702828652026</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +269,7 @@
     <MESSAGE value="log4j added" />
     <MESSAGE value="added flags" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="wybor kraju" />
+    <option name="LAST_COMMIT_MESSAGE" value="wybor kraju" />
   </component>
 </project>

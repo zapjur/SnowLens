@@ -21,9 +21,8 @@ public class OpenListPanel extends JPanel {
     private JLabel liftsLabel;
 
     public OpenListPanel(Resort resort){
-        setSize(800,100);
         setPreferredSize(new Dimension(1000, 100));
-
+        setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         nameLabel.setFont(new Font("Arial", Font.BOLD, 14));

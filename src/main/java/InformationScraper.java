@@ -66,6 +66,8 @@ public class InformationScraper {
                     } else {
                         openTrailsPer = "N/A";
                     }
+                    parts = openTrailsDist.split("/");
+                    String openDist = parts[0];
 
                     currTd = currTd.nextElementSibling();
                     String openLifts = currTd.select("span").text();
@@ -74,10 +76,10 @@ public class InformationScraper {
 
                     if (counter == 0) {
                         resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                                openTrailsPer, openLifts, Resort.OpenStatus.OPEN, country));
+                                openTrailsPer, openDist, openLifts, Resort.OpenStatus.OPEN, country));
                     } else {
                         resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                                openTrailsPer, openLifts, Resort.OpenStatus.WEEKEND, country));
+                                openTrailsPer, openDist, openLifts, Resort.OpenStatus.WEEKEND, country));
                     }
 
                     currTr = currTr.nextElementSibling();

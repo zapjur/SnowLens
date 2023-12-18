@@ -19,7 +19,9 @@ public class MainFrame extends JFrame {
     private JPanel fillingPanel;
     private JScrollPane menuScrollPanel;
     private JPanel menuButtonPanel;
+    private JPanel scrollContainer;
     private JList menuList;
+    private Country currCountry;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,18 +31,21 @@ public class MainFrame extends JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
 
-        resortList.setCellRenderer(new ResortRenderer());
         CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
+        scrollContainer.setLayout(new BoxLayout(scrollContainer, BoxLayout.Y_AXIS));
         try {
             List<Resort> resorts = InformationScraper.italyScraping();
+            currCountry = Country.ITALY;
             Country.COUNTRY_RESORTS.put(Country.ITALY, resorts);
-            DefaultListModel<Resort> listModel = new DefaultListModel<>();
-            listModel.addAll(resorts);
-            resortList.setModel(listModel);
+            for(Resort resort : resorts){
+                scrollContainer.add(new OpenListPanel(resort));
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        scrollDefaultPanel.setViewportView(scrollContainer);
 
         menuButtonPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -55,7 +60,8 @@ public class MainFrame extends JFrame {
         menuScrollPanel.setViewportView(menuButtonPanel);
 
         scrollDefaultPanel.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        defaultPanel.add(scrollDefaultPanel);
+        defaultPanel.add(scrollDefaultPanel, BorderLayout.CENTER);
+        defaultPanel.add(new sortButtonsPanel(this), BorderLayout.NORTH);
 
         menuPanel.add(menuScrollPanel);
         cardPanel.add(menuPanel);
@@ -78,35 +84,34 @@ public class MainFrame extends JFrame {
                 if(!Country.COUNTRY_RESORTS.containsKey(country)){
                     Country.COUNTRY_RESORTS.put(country, country.getResortList());
                 }
-                DefaultListModel<Resort> listModel = new DefaultListModel<>();
-                listModel.addAll(Country.COUNTRY_RESORTS.get(country));
-                resortList.setModel(listModel);
+                scrollContainer.removeAll();
+                for(Resort resort : Country.COUNTRY_RESORTS.get(country)){
+                    scrollContainer.add(new OpenListPanel(resort));
+                }
+                scrollDefaultPanel.setViewportView(scrollContainer);
             } catch(IOException es){
                 es.printStackTrace();
             }
+            currCountry = country;
             cardLayout.next(cardPanel);
         });
         return button;
     }
 
+    public void addToScrollContainer(JPanel panel){
+        scrollContainer.add(panel);
+    }
+    public void removeFromScrollContainer(){
+        scrollContainer.removeAll();
+    }
+    public void setScrollView(){
+        scrollDefaultPanel.setViewportView(scrollContainer);
+    }
+    public Country getCurrCountry(){
+        return currCountry;
+    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(MainFrame::new);
-    }
-
-    public static class ResortRenderer extends DefaultListCellRenderer {
-        @Override
-        public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-            if (value instanceof Resort) {
-                Resort resort = (Resort) value;
-                OpenListPanel panel = new OpenListPanel(resort);
-
-                panel.setBackground(list.getBackground());
-                panel.setForeground(list.getForeground());
-
-                return panel;
-            }
-            return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-        }
     }
 
 }
