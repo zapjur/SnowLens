@@ -9,7 +9,7 @@ public record Resort(
     }
 
     public enum OpenStatus {
-        CLOSE, OPEN, WEEKEND
+        CLOSE, OPEN, WEEKEND, TEMPCLOSED
     }
     public static class ResortComparator implements Comparator<Resort> {
 
@@ -24,8 +24,10 @@ public record Resort(
                     return 0;
                 case WEEKEND:
                     return 1;
-                case CLOSE:
+                case TEMPCLOSED:
                     return 2;
+                case CLOSE:
+                    return 3;
                 default:
                     return Integer.MAX_VALUE;
             }

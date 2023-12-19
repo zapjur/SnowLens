@@ -910,3 +910,321 @@
 2023-12-18 20:36:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
 2023-12-18 20:36:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
 2023-12-18 20:36:11 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:39:32 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:39:33 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:39:33 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:39:34 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:39:34 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:39:35 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:39:35 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:39:36 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:39:36 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:39:36 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:39:36 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:39:37 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:39:37 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:39:38 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:39:38 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:39:39 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:39:39 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:39:39 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:41:17 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:41:18 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:41:18 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:41:20 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:41:20 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:41:21 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:41:21 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:41:22 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:41:22 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:41:24 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:41:24 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:41:25 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:41:25 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:41:27 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:41:27 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:41:28 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:41:28 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:41:29 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:42:32 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:42:33 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:42:33 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:42:34 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:42:34 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:42:35 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:42:35 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:42:36 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:42:36 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:42:37 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:42:37 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:42:38 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:42:38 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:42:39 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:42:39 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:42:40 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:42:40 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:42:41 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:43:05 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:43:06 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 20:43:06 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:43:07 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 20:43:07 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:43:08 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 20:43:08 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:43:09 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 20:43:09 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:43:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 20:43:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:43:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 20:43:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:43:12 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 20:43:12 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:43:12 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 20:43:12 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 20:43:13 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 21:11:21 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 21:11:22 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 21:11:22 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 21:11:24 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 21:11:24 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 21:11:25 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 21:11:25 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 21:11:27 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 21:11:27 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 21:11:28 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 21:11:28 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 21:11:29 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 21:11:29 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 21:11:30 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 21:11:30 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 21:11:31 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 21:11:31 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 21:11:32 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 21:11:58 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/beskidy/warunki-narciarskie
+2023-12-18 21:11:59 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/beskidy/warunki-narciarskie
+2023-12-18 21:11:59 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/jizerske-hory/warunki-narciarskie
+2023-12-18 21:12:01 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/jizerske-hory/warunki-narciarskie
+2023-12-18 21:12:01 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/orlicke-hory/warunki-narciarskie
+2023-12-18 21:12:02 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/orlicke-hory/warunki-narciarskie
+2023-12-18 21:12:02 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/jesenik/warunki-narciarskie
+2023-12-18 21:12:04 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/jesenik/warunki-narciarskie
+2023-12-18 21:12:04 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/karkonosze/warunki-narciarskie
+2023-12-18 21:12:05 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/karkonosze/warunki-narciarskie
+2023-12-18 21:12:05 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/rudawy/warunki-narciarskie
+2023-12-18 21:12:06 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/rudawy/warunki-narciarskie
+2023-12-18 21:12:06 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/sumava/warunki-narciarskie
+2023-12-18 21:12:09 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/sumava/warunki-narciarskie
+2023-12-18 21:12:09 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/wysoczyzna/warunki-narciarskie
+2023-12-18 21:12:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/wysoczyzna/warunki-narciarskie
+2023-12-18 21:12:27 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolna-austria/warunki-narciarskie
+2023-12-18 21:12:29 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolna-austria/warunki-narciarskie
+2023-12-18 21:12:29 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/gorna-austria/warunki-narciarskie
+2023-12-18 21:12:30 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/gorna-austria/warunki-narciarskie
+2023-12-18 21:12:30 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/karyntia/warunki-narciarskie
+2023-12-18 21:12:31 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/karyntia/warunki-narciarskie
+2023-12-18 21:12:31 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/salzburg/warunki-narciarskie
+2023-12-18 21:12:33 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/salzburg/warunki-narciarskie
+2023-12-18 21:12:33 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/styria/warunki-narciarskie
+2023-12-18 21:12:34 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/styria/warunki-narciarskie
+2023-12-18 21:12:34 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol/warunki-narciarskie
+2023-12-18 21:12:35 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol/warunki-narciarskie
+2023-12-18 21:12:35 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/vorarlberg/warunki-narciarskie
+2023-12-18 21:12:36 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/vorarlberg/warunki-narciarskie
+2023-12-18 21:17:07 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 21:17:09 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-18 21:17:09 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 21:17:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-18 21:17:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 21:17:11 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-18 21:17:11 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 21:17:13 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-18 21:17:13 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 21:17:14 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-18 21:17:14 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 21:17:15 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-18 21:17:15 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 21:17:17 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-18 21:17:17 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 21:17:18 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-18 21:17:18 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 21:17:19 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-18 21:17:47 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-18 21:17:48 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-18 21:17:48 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-18 21:17:49 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-18 21:17:49 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-18 21:17:50 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-18 21:17:50 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-18 21:17:51 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-18 21:17:51 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-18 21:17:52 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-18 21:17:52 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-18 21:17:53 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-19 18:27:08 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 18:27:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 18:27:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 18:27:12 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 18:27:12 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 18:27:14 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 18:27:14 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 18:27:16 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 18:27:16 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 18:27:18 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 18:27:18 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 18:27:20 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 18:27:20 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 18:27:21 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 18:27:21 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 18:27:22 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 18:27:22 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 18:27:24 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 18:27:28 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-19 18:27:29 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-19 18:27:29 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-19 18:27:31 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-19 18:27:31 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-19 18:27:32 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-19 18:27:32 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-19 18:27:34 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-19 18:27:34 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-19 18:27:35 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-19 18:27:35 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-19 18:27:37 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-19 19:12:48 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:12:51 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:12:51 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:12:52 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:12:52 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:12:54 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:12:54 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:12:54 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:12:54 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:12:56 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:12:56 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:12:57 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:12:57 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:12:59 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:12:59 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:13:00 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:13:00 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 19:13:02 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 19:19:56 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:19:58 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:19:58 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:19:59 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:19:59 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:20:01 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:20:01 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:20:02 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:20:02 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:20:03 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:20:03 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:20:05 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:20:05 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:20:07 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:20:07 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:20:08 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:20:08 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 19:20:09 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 19:21:09 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:21:10 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 19:21:10 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:21:11 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 19:21:11 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:21:12 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 19:21:12 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:21:12 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 19:21:12 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:21:13 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 19:21:13 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:21:14 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 19:21:14 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:21:15 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 19:21:15 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:21:16 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 19:21:16 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 19:21:16 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:51:37 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:51:40 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:51:40 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:51:43 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:51:43 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:51:45 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:51:45 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:51:48 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:51:48 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:51:51 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:51:51 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:51:53 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:51:53 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:51:56 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:51:56 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:51:58 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:51:58 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:52:01 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:54:46 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:54:47 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:54:47 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:54:48 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:54:48 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:54:49 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:54:49 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:54:50 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:54:50 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:54:50 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:54:50 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:54:51 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:54:51 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:54:52 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:54:52 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:54:53 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:54:53 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:54:53 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:58:44 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:58:45 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 22:58:45 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:58:47 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 22:58:47 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:58:48 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 22:58:48 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:58:49 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 22:58:49 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:58:50 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 22:58:50 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:58:51 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 22:58:51 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:58:52 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 22:58:52 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:58:54 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 22:58:54 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:58:55 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 22:59:13 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-19 22:59:14 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2023-12-19 22:59:14 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-19 22:59:17 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2023-12-19 22:59:17 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-19 22:59:19 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2023-12-19 22:59:19 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-19 22:59:22 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2023-12-19 22:59:22 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-19 22:59:24 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2023-12-19 22:59:24 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-19 22:59:27 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2023-12-19 23:03:37 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 23:03:38 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/abruzja/warunki-narciarskie
+2023-12-19 23:03:38 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 23:03:39 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/dolina-aosty/warunki-narciarskie
+2023-12-19 23:03:39 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 23:03:40 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/emilia-romagna/warunki-narciarskie
+2023-12-19 23:03:40 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 23:03:40 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/lombardia/warunki-narciarskie
+2023-12-19 23:03:40 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 23:03:41 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/piemonte/warunki-narciarskie
+2023-12-19 23:03:41 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 23:03:42 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/toskania/warunki-narciarskie
+2023-12-19 23:03:42 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 23:03:43 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/trentino/warunki-narciarskie
+2023-12-19 23:03:43 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 23:03:44 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/tyrol-poludniowy/warunki-narciarskie
+2023-12-19 23:03:44 INFO  InformationScraper:14 - Start of scraping data from url: https://www.skiinfo.pl/veneto/warunki-narciarskie
+2023-12-19 23:03:45 INFO  InformationScraper:104 - Success scraping url: https://www.skiinfo.pl/veneto/warunki-narciarskie
