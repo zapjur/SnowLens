@@ -37,7 +37,7 @@ public enum Country {
             entry(Country.BULGARIA, "Bulgaria")
     );
 
-    private static final Map<Country, ScrapSupplier<List<Resort>>> COUNTRY_SCRAPING = Map.ofEntries(
+    private static final Map<Country, ScrapSupplier<Map<Resort.OpenStatus, List<Resort>>>> COUNTRY_SCRAPING = Map.ofEntries(
             entry(Country.POLAND, InformationScraper::polandScraping),
             entry(Country.AUSTRIA, InformationScraper::austriaScraping),
             entry(Country.ITALY, InformationScraper::italyScraping),
@@ -61,7 +61,7 @@ public enum Country {
             entry(Country.BULGARIA, InformationScraper::bulgariaScraping)
     );
 
-    public static final Map<Country, List<Resort>> COUNTRY_RESORTS = new HashMap<>();
+    public static final Map<Country, Map<Resort.OpenStatus, List<Resort>>> COUNTRY_RESORTS = new HashMap<>();
 
     public String getFlagUrl() {
         return "/flags/" + this.name().toLowerCase() + ".png";
@@ -71,7 +71,7 @@ public enum Country {
         return COUNTRY_NAMES.getOrDefault(this, "N/A");
     }
 
-    public List<Resort> getResortList() throws IOException {
+    public Map<Resort.OpenStatus, List<Resort>> getResortList() throws IOException {
         return Country.COUNTRY_SCRAPING.get(this).get();
     }
 

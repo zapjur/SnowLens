@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
@@ -35,12 +36,16 @@ public class MainFrame extends JFrame {
 
         scrollContainer.setLayout(new BoxLayout(scrollContainer, BoxLayout.Y_AXIS));
         try {
-            List<Resort> resorts = InformationScraper.italyScraping();
+            Map<Resort.OpenStatus, List<Resort>> map = InformationScraper.franceScraping();
             currCountry = Country.ITALY;
-            Country.COUNTRY_RESORTS.put(Country.ITALY, resorts);
-            for(Resort resort : resorts){
-                scrollContainer.add(new OpenListPanel(resort));
+            Country.COUNTRY_RESORTS.put(Country.ITALY, map);
+            List<Resort> openResorts = map.get(Resort.OpenStatus.OPEN);
+            if(openResorts != null){
+                for(Resort resort : openResorts){
+                    scrollContainer.add(new OpenListPanel(resort));
+                }
             }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -85,8 +90,12 @@ public class MainFrame extends JFrame {
                     Country.COUNTRY_RESORTS.put(country, country.getResortList());
                 }
                 scrollContainer.removeAll();
-                for(Resort resort : Country.COUNTRY_RESORTS.get(country)){
-                    scrollContainer.add(new OpenListPanel(resort));
+
+                List<Resort> openResorts = Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN);
+                if(openResorts != null){
+                    for(Resort resort : openResorts){
+                        scrollContainer.add(new OpenListPanel(resort));
+                    }
                 }
                 scrollDefaultPanel.setViewportView(scrollContainer);
             } catch(IOException es){
