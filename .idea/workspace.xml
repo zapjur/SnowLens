@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="change from lists to maps">
+      <change afterPath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Country.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sortButtonsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sortButtonsPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,9 @@
       <workItem from="1702850762390" duration="1042000" />
       <workItem from="1702921801788" duration="8415000" />
       <workItem from="1703006808113" duration="2078000" />
-      <workItem from="1703022691235" duration="9179000" />
+      <workItem from="1703022691235" duration="10458000" />
+      <workItem from="1703103643653" duration="140000" />
+      <workItem from="1703104496940" duration="3350000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -265,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703024755556</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="change from lists to maps">
+      <option name="closed" value="true" />
+      <created>1703031920309</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703031920309</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +299,7 @@
     <MESSAGE value="wybor kraju" />
     <MESSAGE value="added first sorting buttons" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="change from lists to maps" />
+    <option name="LAST_COMMIT_MESSAGE" value="change from lists to maps" />
   </component>
 </project>

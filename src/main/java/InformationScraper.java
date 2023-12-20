@@ -15,6 +15,19 @@ public class InformationScraper {
     private static Map<Resort.OpenStatus, List<Resort>> infoScraping(String url, Country country, Dictionary.Language lang) {
         logger.info("Start of scraping data from url: " + url);
 
+        String open = "Open";
+        String closed = "Closed";
+        String weekends = "Weekends Only";
+        String tempclosed = "Temporarily Closed";
+
+        switch(lang){
+            case POLISH:
+                open  = "Otwarty";
+                closed = "Zamknięty";
+                weekends = "Tylko W Weekendy";
+                tempclosed = "Tymczasowo Nieczynny";
+        }
+
         Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
 
         try {
@@ -24,21 +37,23 @@ public class InformationScraper {
 
             for(Element table : tables){
                 if(!table.select("span.styles_open__3MfH6").isEmpty()){
-                    if(table.select("span.styles_open__3MfH6").text().equals("Open")){
+                    if(table.select("span.styles_open__3MfH6").text().equals(open)){
                         map.put(Resort.OpenStatus.OPEN, scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN));
                     }
-                    else if (table.select("span.styles_open__3MfH6").text().equals("Weekends Only")){
+                    else if (table.select("span.styles_open__3MfH6").text().equals(weekends)){
                         map.put(Resort.OpenStatus.WEEKEND, scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND));
                     }
                     
                 }
                 else if (!table.select("span.styles_partial__2pEPh").isEmpty()) {
-                    if(table.select("span.styles_partial__2pEPh").text().equals("Temporarily Closed")) {
+                    if(table.select("span.styles_partial__2pEPh").text().equals(tempclosed)) {
                         map.put(Resort.OpenStatus.TEMPCLOSED, scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED));
                     }
                 }
-                else if (!table.select("styles_closed__2QlIG").isEmpty()) {
-                    map.put(Resort.OpenStatus.CLOSE, scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE));
+                else if (!table.select("span.styles_closed__2QlIG").isEmpty()) {
+                    if(table.select("span.styles_closed__2QlIG").text().equals(closed)) {
+                        map.put(Resort.OpenStatus.CLOSE, scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE));
+                    }
                 }
             }
 
@@ -110,7 +125,7 @@ public class InformationScraper {
 
     private static List<Resort> scrapForClosed(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status){
         List<Resort> resorts = new ArrayList<>();
-        Elements trs = table.select("tr");
+        Elements trs = table.select("tbody").select("tr");
 
         for(Element currTr : trs){
 

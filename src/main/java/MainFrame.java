@@ -41,9 +41,46 @@ public class MainFrame extends JFrame {
             Country.COUNTRY_RESORTS.put(Country.ITALY, map);
             List<Resort> openResorts = map.get(Resort.OpenStatus.OPEN);
             if(openResorts != null){
+                JPanel panel = new JPanel();
+                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+                panel.add(new OpenStatusPanel("Open"));
                 for(Resort resort : openResorts){
-                    scrollContainer.add(new OpenListPanel(resort));
+                    panel.add(new OpenListPanel(resort));
                 }
+                scrollContainer.add(panel);
+            }
+
+            List<Resort> weekendResorts = map.get(Resort.OpenStatus.WEEKEND);
+            if(weekendResorts != null){
+                JPanel panel = new JPanel();
+                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+                panel.add(new OpenStatusPanel("Weekends Only"));
+                for(Resort resort : weekendResorts){
+                    panel.add(new OpenListPanel(resort));
+                }
+                scrollContainer.add(panel);
+            }
+
+            List<Resort> tempclosedResorts = map.get(Resort.OpenStatus.TEMPCLOSED);
+            if(tempclosedResorts != null){
+                JPanel panel = new JPanel();
+                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+                panel.add(new OpenStatusPanel("Temporarily Closed"));
+                for(Resort resort : tempclosedResorts){
+                    panel.add(new OpenListPanel(resort));
+                }
+                scrollContainer.add(panel);
+            }
+
+            List<Resort> closedResorts = map.get(Resort.OpenStatus.CLOSE);
+            if(closedResorts != null){
+                JPanel panel = new JPanel();
+                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+                panel.add(new OpenStatusPanel("Closed"));
+                for(Resort resort : closedResorts){
+                    panel.add(new OpenListPanel(resort));
+                }
+                scrollContainer.add(panel);
             }
 
         } catch (IOException e) {
