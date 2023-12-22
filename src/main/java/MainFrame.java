@@ -6,8 +6,6 @@ import java.util.Map;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
-    private JPanel defaultPanel;
-    private JScrollPane scrollDefaultPanel;
     private JList<Resort> resortList;
     private JPanel upperPanel;
     private JPanel mainPanel;
@@ -20,9 +18,6 @@ public class MainFrame extends JFrame {
     private JPanel fillingPanel;
     private JScrollPane menuScrollPanel;
     private JPanel menuButtonPanel;
-    private JPanel scrollContainer;
-    private JList menuList;
-    private Country currCountry;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,12 +29,15 @@ public class MainFrame extends JFrame {
 
         CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
-        scrollContainer.setLayout(new BoxLayout(scrollContainer, BoxLayout.Y_AXIS));
         try {
+            CountryResortsPanel countryResortsPanel = new CountryResortsPanel(Country.FRANCE);
+            countryResortsPanel.addSortButtonsPanel();
+
             Map<Resort.OpenStatus, List<Resort>> map = InformationScraper.franceScraping();
-            currCountry = Country.ITALY;
-            Country.COUNTRY_RESORTS.put(Country.ITALY, map);
+            Country.COUNTRY_RESORTS.put(Country.FRANCE, map);
+
             List<Resort> openResorts = map.get(Resort.OpenStatus.OPEN);
+
             if(openResorts != null){
                 JPanel panel = new JPanel();
                 panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -47,7 +45,7 @@ public class MainFrame extends JFrame {
                 for(Resort resort : openResorts){
                     panel.add(new OpenListPanel(resort));
                 }
-                scrollContainer.add(panel);
+                countryResortsPanel.addToScrollContainer(panel);
             }
 
             List<Resort> weekendResorts = map.get(Resort.OpenStatus.WEEKEND);
@@ -58,7 +56,7 @@ public class MainFrame extends JFrame {
                 for(Resort resort : weekendResorts){
                     panel.add(new OpenListPanel(resort));
                 }
-                scrollContainer.add(panel);
+                countryResortsPanel.addToScrollContainer(panel);
             }
 
             List<Resort> tempclosedResorts = map.get(Resort.OpenStatus.TEMPCLOSED);
@@ -69,7 +67,7 @@ public class MainFrame extends JFrame {
                 for(Resort resort : tempclosedResorts){
                     panel.add(new OpenListPanel(resort));
                 }
-                scrollContainer.add(panel);
+                countryResortsPanel.addToScrollContainer(panel);
             }
 
             List<Resort> closedResorts = map.get(Resort.OpenStatus.CLOSE);
@@ -80,14 +78,16 @@ public class MainFrame extends JFrame {
                 for(Resort resort : closedResorts){
                     panel.add(new OpenListPanel(resort));
                 }
-                scrollContainer.add(panel);
+                countryResortsPanel.addToScrollContainer(panel);
             }
+
+            countryResortsPanel.setScrollView();
+            cardPanel.add(countryResortsPanel, Country.FRANCE.getCountryName());
+            cardLayout.show(cardPanel, Country.FRANCE.getCountryName());
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        scrollDefaultPanel.setViewportView(scrollContainer);
 
         menuButtonPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -101,12 +101,8 @@ public class MainFrame extends JFrame {
         }
         menuScrollPanel.setViewportView(menuButtonPanel);
 
-        scrollDefaultPanel.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        defaultPanel.add(scrollDefaultPanel, BorderLayout.CENTER);
-        defaultPanel.add(new sortButtonsPanel(this), BorderLayout.NORTH);
-
         menuPanel.add(menuScrollPanel);
-        cardPanel.add(menuPanel);
+        cardPanel.add(menuPanel, "MenuCard");
 
         mainPanel.add(upperPanel, BorderLayout.NORTH);
         mainPanel.add(cardPanel, BorderLayout.CENTER);
@@ -115,7 +111,7 @@ public class MainFrame extends JFrame {
         setVisible(true);
 
         menuButton.addActionListener(e -> {
-            cardLayout.next(cardPanel);
+            cardLayout.show(cardPanel, "MenuCard");
         });
     }
 
@@ -126,36 +122,31 @@ public class MainFrame extends JFrame {
                 if(!Country.COUNTRY_RESORTS.containsKey(country)){
                     Country.COUNTRY_RESORTS.put(country, country.getResortList());
                 }
-                scrollContainer.removeAll();
 
+                CountryResortsPanel countryResortsPanel = new CountryResortsPanel(country);
+                countryResortsPanel.addSortButtonsPanel();
                 List<Resort> openResorts = Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN);
                 if(openResorts != null){
+                    JPanel panel = new JPanel();
+                    panel.add(new OpenStatusPanel("Open"));
+                    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     for(Resort resort : openResorts){
-                        scrollContainer.add(new OpenListPanel(resort));
+                        panel.add(new OpenListPanel(resort));
                     }
+                    countryResortsPanel.addToScrollContainer(panel);
                 }
-                scrollDefaultPanel.setViewportView(scrollContainer);
+
+                countryResortsPanel.setScrollView();
+                cardPanel.add(countryResortsPanel, country.getCountryName());
+                cardLayout.show(cardPanel, country.getCountryName());
+
             } catch(IOException es){
                 es.printStackTrace();
             }
-            currCountry = country;
-            cardLayout.next(cardPanel);
         });
         return button;
     }
 
-    public void addToScrollContainer(JPanel panel){
-        scrollContainer.add(panel);
-    }
-    public void removeFromScrollContainer(){
-        scrollContainer.removeAll();
-    }
-    public void setScrollView(){
-        scrollDefaultPanel.setViewportView(scrollContainer);
-    }
-    public Country getCurrCountry(){
-        return currCountry;
-    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(MainFrame::new);
     }

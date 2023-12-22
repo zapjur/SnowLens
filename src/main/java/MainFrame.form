@@ -93,7 +93,7 @@
           </grid>
         </children>
       </grid>
-      <grid id="27dc6" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="cf9f8">
+      <grid id="27dc6" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0">
         <constraints border-constraint="Center"/>
         <properties>
           <background color="-1"/>
@@ -102,35 +102,6 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="cf9f8" binding="defaultPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-            <constraints>
-              <card name="DefaultCard"/>
-            </constraints>
-            <properties>
-              <background color="-1"/>
-              <foreground color="-1"/>
-              <preferredSize width="800" height="700"/>
-            </properties>
-            <border type="none"/>
-            <children>
-              <scrollpane id="7e0c4" binding="scrollDefaultPanel">
-                <constraints border-constraint="Center"/>
-                <properties>
-                  <background color="-1"/>
-                  <foreground color="-1"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <grid id="5472c" binding="scrollContainer" layout-manager="GridBagLayout">
-                    <constraints/>
-                    <properties/>
-                    <border type="none"/>
-                    <children/>
-                  </grid>
-                </children>
-              </scrollpane>
-            </children>
-          </grid>
           <grid id="5b2d" binding="menuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
               <card name="MenuCard"/>

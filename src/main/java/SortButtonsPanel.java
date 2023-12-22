@@ -4,14 +4,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class sortButtonsPanel extends JPanel {
+public class SortButtonsPanel extends JPanel {
 
     private JButton sortByNames = new JButton();
     private JButton sortBySnowLast = new JButton();
     private JButton sortByCurrSnow = new JButton();
     private JButton sortByOpenDist = new JButton();
     private JButton sortByOpenLifts = new JButton();
-    public sortButtonsPanel(MainFrame frame){
+
+    public SortButtonsPanel(Country country, CountryResortsPanel countryPanel){
         setSize(new Dimension(1000, 50));
         setLayout(new GridLayout(1,5));
 
@@ -28,23 +29,23 @@ public class sortButtonsPanel extends JPanel {
         sortByNames.setText("Name");
 
         sortByOpenDist.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
+            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
                 try {
                     return Float.parseFloat(resort.openDist());
                 } catch (NumberFormatException ex) {
                     return Float.MIN_VALUE;
                 }
             }).reversed());
-
-            frame.removeFromScrollContainer();
-            for(Resort resort : Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN)){
-                frame.addToScrollContainer(new OpenListPanel(resort));
+            countryPanel.clearScrollContainer();
+            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
+            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
+                countryPanel.addToScrollContainer(new OpenListPanel(resort));
             }
-            frame.setScrollView();
+            countryPanel.setScrollView();
         });
 
         sortByCurrSnow.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
+            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
                 try {
                     String[] parts = resort.currSnow().split("-");
                     if(parts.length >= 2) {
@@ -58,16 +59,16 @@ public class sortButtonsPanel extends JPanel {
                     return Integer.MIN_VALUE;
                 }
             }).reversed());
-
-            frame.removeFromScrollContainer();
-            for(Resort resort : Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN)){
-                frame.addToScrollContainer(new OpenListPanel(resort));
+            countryPanel.clearScrollContainer();
+            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
+            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
+                countryPanel.addToScrollContainer(new OpenListPanel(resort));
             }
-            frame.setScrollView();
+            countryPanel.setScrollView();
         });
 
         sortByOpenLifts.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
+            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
                 try {
                     String[] parts = resort.openLifts().split("/");
                     return Integer.parseInt(parts[0]);
@@ -75,22 +76,22 @@ public class sortButtonsPanel extends JPanel {
                     return Integer.MIN_VALUE;
                 }
             }).reversed());
-
-            frame.removeFromScrollContainer();
-            for(Resort resort : Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN)){
-                frame.addToScrollContainer(new OpenListPanel(resort));
+            countryPanel.clearScrollContainer();
+            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
+            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
+                countryPanel.addToScrollContainer(new OpenListPanel(resort));
             }
-            frame.setScrollView();
+            countryPanel.setScrollView();
         });
 
         sortByNames.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN), Comparator.comparing(Resort::name));
-
-            frame.removeFromScrollContainer();
-            for(Resort resort : Country.COUNTRY_RESORTS.get(frame.getCurrCountry()).get(Resort.OpenStatus.OPEN)){
-                frame.addToScrollContainer(new OpenListPanel(resort));
+            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing(Resort::name));
+            countryPanel.clearScrollContainer();
+            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
+            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
+                countryPanel.addToScrollContainer(new OpenListPanel(resort));
             }
-            frame.setScrollView();
+            countryPanel.setScrollView();
         });
 
     }
