@@ -24,8 +24,8 @@ public class InformationScraper {
             case POLISH:
                 open  = "Otwarty";
                 closed = "Zamknięty";
-                weekends = "Tylko W Weekendy";
-                tempclosed = "Tymczasowo Nieczynny";
+                weekends = "Tylko w weekendy";
+                tempclosed = "Tymczasowo nieczynny";
         }
 
         Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();

@@ -12,9 +12,11 @@ public class SortButtonsPanel extends JPanel {
     private JButton sortByOpenDist = new JButton();
     private JButton sortByOpenLifts = new JButton();
 
+
     public SortButtonsPanel(Country country, CountryResortsPanel countryPanel){
         setSize(new Dimension(1000, 50));
         setLayout(new GridLayout(1,5));
+
 
         List<JButton> buttons = List.of(sortByNames, sortBySnowLast, sortByCurrSnow, sortByOpenDist, sortByOpenLifts);
 
@@ -36,12 +38,7 @@ public class SortButtonsPanel extends JPanel {
                     return Float.MIN_VALUE;
                 }
             }).reversed());
-            countryPanel.clearScrollContainer();
-            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
-            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
-                countryPanel.addToScrollContainer(new OpenListPanel(resort));
-            }
-            countryPanel.setScrollView();
+            displayResorts(country, countryPanel);
         });
 
         sortByCurrSnow.addActionListener(e ->{
@@ -59,12 +56,7 @@ public class SortButtonsPanel extends JPanel {
                     return Integer.MIN_VALUE;
                 }
             }).reversed());
-            countryPanel.clearScrollContainer();
-            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
-            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
-                countryPanel.addToScrollContainer(new OpenListPanel(resort));
-            }
-            countryPanel.setScrollView();
+            displayResorts(country, countryPanel);
         });
 
         sortByOpenLifts.addActionListener(e ->{
@@ -76,24 +68,40 @@ public class SortButtonsPanel extends JPanel {
                     return Integer.MIN_VALUE;
                 }
             }).reversed());
-            countryPanel.clearScrollContainer();
-            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
-            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
-                countryPanel.addToScrollContainer(new OpenListPanel(resort));
-            }
-            countryPanel.setScrollView();
+            displayResorts(country, countryPanel);
         });
 
         sortByNames.addActionListener(e ->{
             Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing(Resort::name));
-            countryPanel.clearScrollContainer();
-            countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
-            for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
-                countryPanel.addToScrollContainer(new OpenListPanel(resort));
-            }
-            countryPanel.setScrollView();
+
+            displayResorts(country, countryPanel);
         });
 
+    }
+
+    private void displayResorts(Country country, CountryResortsPanel countryPanel){
+        countryPanel.clearScrollContainer();
+        countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
+        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
+            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        }
+
+        countryPanel.addToScrollContainer(new OpenStatusPanel("Weekends Only"));
+        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.WEEKEND)){
+            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        }
+
+        countryPanel.addToScrollContainer(new OpenStatusPanel("Temporarily Closed"));
+        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.TEMPCLOSED)){
+            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        }
+
+        countryPanel.addToScrollContainer(new OpenStatusPanel("Closed"));
+        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.CLOSE)){
+            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        }
+
+        countryPanel.setScrollView();
     }
 
 }

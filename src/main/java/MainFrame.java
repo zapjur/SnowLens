@@ -96,7 +96,7 @@ public class MainFrame extends JFrame {
         gbc.anchor = GridBagConstraints.CENTER;
 
         for(Country country : Country.values()){
-            MenuButton button = getMenuButton(country, cardLayout);
+            MenuButton button = getMenuButton(country, cardLayout, cardPanel);
             menuButtonPanel.add(button, gbc);
         }
         menuScrollPanel.setViewportView(menuButtonPanel);
@@ -115,35 +115,9 @@ public class MainFrame extends JFrame {
         });
     }
 
-    private MenuButton getMenuButton(Country country, CardLayout cardLayout) {
+    private MenuButton getMenuButton(Country country, CardLayout cardLayout, JPanel cardPanel) {
         MenuButton button = new MenuButton(country);
-        button.addActionListener(e->{
-            try {
-                if(!Country.COUNTRY_RESORTS.containsKey(country)){
-                    Country.COUNTRY_RESORTS.put(country, country.getResortList());
-                }
-
-                CountryResortsPanel countryResortsPanel = new CountryResortsPanel(country);
-                countryResortsPanel.addSortButtonsPanel();
-                List<Resort> openResorts = Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN);
-                if(openResorts != null){
-                    JPanel panel = new JPanel();
-                    panel.add(new OpenStatusPanel("Open"));
-                    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                    for(Resort resort : openResorts){
-                        panel.add(new OpenListPanel(resort));
-                    }
-                    countryResortsPanel.addToScrollContainer(panel);
-                }
-
-                countryResortsPanel.setScrollView();
-                cardPanel.add(countryResortsPanel, country.getCountryName());
-                cardLayout.show(cardPanel, country.getCountryName());
-
-            } catch(IOException es){
-                es.printStackTrace();
-            }
-        });
+        button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel));
         return button;
     }
 
