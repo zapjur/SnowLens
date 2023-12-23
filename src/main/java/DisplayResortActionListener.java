@@ -10,7 +10,8 @@ public class DisplayResortActionListener implements ActionListener {
     private Country country;
     private CardLayout cardLayout;
     private JPanel cardPanel;
-    public DisplayResortActionListener(Country country, CardLayout cardLayout, JPanel cardPanel){
+
+    public DisplayResortActionListener(Country country, CardLayout cardLayout, JPanel cardPanel, String lastCountryPanel, boolean menuIsActive){
         this.country = country;
         this.cardLayout = cardLayout;
         this.cardPanel = cardPanel;

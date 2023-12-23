@@ -18,6 +18,9 @@ public class MainFrame extends JFrame {
     private JPanel fillingPanel;
     private JScrollPane menuScrollPanel;
     private JPanel menuButtonPanel;
+    private final String MENU_PANEL = "MenuPanel";
+    private String lastCountryPanel = null;
+    private boolean menuIsActive = false;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -84,6 +87,8 @@ public class MainFrame extends JFrame {
             countryResortsPanel.setScrollView();
             cardPanel.add(countryResortsPanel, Country.FRANCE.getCountryName());
             cardLayout.show(cardPanel, Country.FRANCE.getCountryName());
+            menuIsActive = false;
+            lastCountryPanel = Country.FRANCE.getCountryName();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -102,7 +107,7 @@ public class MainFrame extends JFrame {
         menuScrollPanel.setViewportView(menuButtonPanel);
 
         menuPanel.add(menuScrollPanel);
-        cardPanel.add(menuPanel, "MenuCard");
+        cardPanel.add(menuPanel, MENU_PANEL);
 
         mainPanel.add(upperPanel, BorderLayout.NORTH);
         mainPanel.add(cardPanel, BorderLayout.CENTER);
@@ -111,13 +116,25 @@ public class MainFrame extends JFrame {
         setVisible(true);
 
         menuButton.addActionListener(e -> {
-            cardLayout.show(cardPanel, "MenuCard");
+            if(!menuIsActive){
+                cardLayout.show(cardPanel, MENU_PANEL);
+                menuIsActive = true;
+            }
+            else{
+                cardLayout.show(cardPanel, lastCountryPanel);
+                menuIsActive = false;
+            }
+
         });
     }
 
     private MenuButton getMenuButton(Country country, CardLayout cardLayout, JPanel cardPanel) {
         MenuButton button = new MenuButton(country);
-        button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel));
+        button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel, lastCountryPanel, menuIsActive));
+        button.addActionListener(e -> {
+            lastCountryPanel = country.getCountryName();
+            menuIsActive = false;
+        });
         return button;
     }
 
