@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class ClosedListPanel extends JPanel {
 
@@ -10,10 +13,16 @@ public class ClosedListPanel extends JPanel {
     private JLabel openDateLabel = new JLabel();
     private JPanel favoritePanel = new JPanel();
     private JButton favoriteButton = new JButton();
+    private boolean isFavorite = false;
+    private ImageIcon starEmpty;
+    private ImageIcon starFull;
     public ClosedListPanel(Resort resort){
         setPreferredSize(new Dimension(1000, 100));
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+
+        starEmpty = new ImageIcon(getClass().getResource("starEmpty.png"));
+        starFull = new ImageIcon(getClass().getResource("starFull.png"));
 
         nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
         nameLabel.setBackground(Color.WHITE);
@@ -65,6 +74,34 @@ public class ClosedListPanel extends JPanel {
         favoritePanel.setBackground(Color.WHITE);
         favoritePanel.add(favoriteButton);
         add(favoritePanel);
+
+        favoriteButton.addActionListener(e -> {
+            if(isFavorite){
+                favoriteButton.setIcon(starEmpty);
+                isFavorite = false;
+
+                if(Country.COUNTRY_RESORTS.containsKey(Country.FAVORITE) && Country.COUNTRY_RESORTS.get(Country.FAVORITE).containsKey(resort.openStatus())){
+                    Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).remove(resort);
+                }
+
+
+            }
+            else{
+                favoriteButton.setIcon(starFull);
+                isFavorite = true;
+
+                if(!Country.COUNTRY_RESORTS.containsKey(Country.FAVORITE)){
+                    Country.COUNTRY_RESORTS.put(Country.FAVORITE, new HashMap<Resort.OpenStatus, List<Resort>>());
+                }
+
+                if(!Country.COUNTRY_RESORTS.get(Country.FAVORITE).containsKey(resort.openStatus())){
+                    Country.COUNTRY_RESORTS.get(Country.FAVORITE).put(resort.openStatus(), new ArrayList<Resort>());
+                }
+
+                Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).add(resort);
+
+            }
+        });
 
         nameLabel.setText(resort.name());
         updateTimeLabel.setText(resort.updateTime());

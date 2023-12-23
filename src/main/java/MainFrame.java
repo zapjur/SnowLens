@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +22,7 @@ public class MainFrame extends JFrame {
     private final String MENU_PANEL = "MenuPanel";
     private String lastCountryPanel = null;
     private boolean menuIsActive = false;
+    private boolean favoriteIsActive = false;
 
     public MainFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,6 +91,7 @@ public class MainFrame extends JFrame {
             cardLayout.show(cardPanel, Country.FRANCE.getCountryName());
             menuIsActive = false;
             lastCountryPanel = Country.FRANCE.getCountryName();
+            Country.addedCards.add(Country.FRANCE);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -101,6 +104,7 @@ public class MainFrame extends JFrame {
         gbc.anchor = GridBagConstraints.CENTER;
 
         for(Country country : Country.values()){
+            if(country.equals(Country.FAVORITE)) continue;
             MenuButton button = getMenuButton(country, cardLayout, cardPanel);
             menuButtonPanel.add(button, gbc);
         }
@@ -116,27 +120,44 @@ public class MainFrame extends JFrame {
         setVisible(true);
 
         menuButton.addActionListener(e -> {
-            if(!menuIsActive){
-                cardLayout.show(cardPanel, MENU_PANEL);
-                menuIsActive = true;
-            }
-            else{
+            if(menuIsActive){
                 cardLayout.show(cardPanel, lastCountryPanel);
                 menuIsActive = false;
             }
+            else{
+                cardLayout.show(cardPanel, MENU_PANEL);
+                menuIsActive = true;
+                favoriteIsActive = false;
+            }
 
+        });
+
+        CountryResortsPanel favoritePanel = new CountryResortsPanel(Country.FAVORITE);
+        cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
+
+        favoriteButton.addActionListener(new DisplayResortActionListener(Country.FAVORITE, cardLayout, cardPanel));
+        favoriteButton.addActionListener(e -> {
+            if(favoriteIsActive){
+                cardLayout.show(cardPanel, lastCountryPanel);
+                favoriteIsActive = false;
+            }
+            else{
+                favoriteIsActive = true;
+                menuIsActive = false;
+            }
         });
     }
 
     private MenuButton getMenuButton(Country country, CardLayout cardLayout, JPanel cardPanel) {
         MenuButton button = new MenuButton(country);
-        button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel, lastCountryPanel, menuIsActive));
+        button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel));
         button.addActionListener(e -> {
             lastCountryPanel = country.getCountryName();
             menuIsActive = false;
         });
         return button;
     }
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(MainFrame::new);

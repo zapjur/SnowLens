@@ -1,8 +1,6 @@
 import java.io.IOException;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 import static java.util.Map.entry;
 
 public enum Country {
@@ -10,7 +8,7 @@ public enum Country {
     CZECH, ANDORRA, BELGIUM, SPAIN, LIECHTENSTEIN,
     GERMANY, NORWAY, ROMANIA, SLOVAKIA, SLOVENIA,
     SCOTLAND, SWITZERLAND, SWEDEN, USA, CANADA,
-    BULGARIA;
+    BULGARIA, FAVORITE;
 
 
     private static final Map<Country, String> COUNTRY_NAMES = Map.ofEntries(
@@ -34,7 +32,8 @@ public enum Country {
             entry(Country.SWEDEN, "Sweden"),
             entry(Country.USA, "USA"),
             entry(Country.CANADA, "Canada"),
-            entry(Country.BULGARIA, "Bulgaria")
+            entry(Country.BULGARIA, "Bulgaria"),
+            entry(Country.FAVORITE, "Favorite")
     );
 
     private static final Map<Country, ScrapSupplier<Map<Resort.OpenStatus, List<Resort>>>> COUNTRY_SCRAPING = Map.ofEntries(
@@ -62,6 +61,7 @@ public enum Country {
     );
 
     public static final Map<Country, Map<Resort.OpenStatus, List<Resort>>> COUNTRY_RESORTS = new HashMap<>();
+    public static List<Country> addedCards = new ArrayList<>();
 
     public String getFlagUrl() {
         return "/flags/" + this.name().toLowerCase() + ".png";
