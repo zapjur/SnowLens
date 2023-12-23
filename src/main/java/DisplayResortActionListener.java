@@ -65,7 +65,7 @@ public class DisplayResortActionListener implements ActionListener {
                 panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                 panel.add(new OpenStatusPanel("Closed"));
                 for(Resort resort : closedResorts){
-                    panel.add(new OpenListPanel(resort));
+                    panel.add(new ClosedListPanel(resort));
                 }
                 countryResortsPanel.addToScrollContainer(panel);
             }

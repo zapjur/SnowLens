@@ -98,7 +98,7 @@ public class SortButtonsPanel extends JPanel {
 
         countryPanel.addToScrollContainer(new OpenStatusPanel("Closed"));
         for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.CLOSE)){
-            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+            countryPanel.addToScrollContainer(new ClosedListPanel(resort));
         }
 
         countryPanel.setScrollView();
