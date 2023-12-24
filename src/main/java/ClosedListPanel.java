@@ -17,6 +17,9 @@ public class ClosedListPanel extends JPanel {
     private ImageIcon starEmpty;
     private ImageIcon starFull;
     public ClosedListPanel(Resort resort){
+        if(Country.COUNTRY_RESORTS.get(Country.FAVORITE) != null && Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).contains(resort)){
+            isFavorite = true;
+        }
         setPreferredSize(new Dimension(1000, 100));
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
@@ -66,7 +69,13 @@ public class ClosedListPanel extends JPanel {
         openDatePanel.add(openDateLabel);
         add(openDatePanel);
 
-        favoriteButton.setIcon(new ImageIcon(getClass().getResource("starEmpty.png")));
+        if(isFavorite){
+            favoriteButton.setIcon(starFull);
+        }
+        else{
+            favoriteButton.setIcon(starEmpty);
+        }
+
         favoriteButton.setBackground(Color.WHITE);
         favoriteButton.setBorderPainted(false);
         favoriteButton.setFocusPainted(false);

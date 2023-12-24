@@ -25,6 +25,10 @@ public class OpenListPanel extends JPanel {
     private ImageIcon starFull;
 
     public OpenListPanel(Resort resort){
+        if(Country.COUNTRY_RESORTS.get(Country.FAVORITE) != null && Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).contains(resort)){
+            isFavorite = true;
+        }
+
         setPreferredSize(new Dimension(1000, 100));
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
@@ -67,6 +71,13 @@ public class OpenListPanel extends JPanel {
 
         liftsPanel.setPreferredSize(new Dimension(100, 100));
         add(liftsPanel);
+
+        if(isFavorite){
+            favoriteButton.setIcon(starFull);
+        }
+        else{
+            favoriteButton.setIcon(starEmpty);
+        }
 
         favoritePanel.setPreferredSize(new Dimension(100, 100));
         add(favoritePanel);
