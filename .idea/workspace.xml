@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="added favorite button logic">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update favorite button logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,8 @@
       <workItem from="1703281612150" duration="14873000" />
       <workItem from="1703357329915" duration="1992000" />
       <workItem from="1703359380968" duration="6107000" />
-      <workItem from="1703417722587" duration="2190000" />
+      <workItem from="1703417722587" duration="3058000" />
+      <workItem from="1703426575894" duration="2034000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -326,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703364946128</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update favorite button logic">
+      <option name="closed" value="true" />
+      <created>1703420899892</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703420899892</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +368,7 @@
     <MESSAGE value="added loop to menu button" />
     <MESSAGE value="added closed resorts panel" />
     <MESSAGE value="added favorite button logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added favorite button logic" />
+    <MESSAGE value="update favorite button logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="update favorite button logic" />
   </component>
 </project>

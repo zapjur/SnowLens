@@ -19,17 +19,9 @@ public class DisplayResortActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(country.equals(Country.FAVORITE) && Country.addedCards.contains(Country.FAVORITE)){
-            Country.addedCards.remove(Country.FAVORITE);
-            return;
-        }
-        if(Country.addedCards.contains(country) && !country.equals(Country.FAVORITE)) {
-            cardLayout.show(cardPanel, country.getCountryName());
-            return;
-        }
         try {
 
-                if (!Country.COUNTRY_RESORTS.containsKey(country) && !country.equals(Country.FAVORITE)) {
+                if (!Country.COUNTRY_RESORTS.containsKey(country)) {
                     Country.COUNTRY_RESORTS.put(country, country.getResortList());
                 }
 
@@ -78,6 +70,7 @@ public class DisplayResortActionListener implements ActionListener {
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
+                
                 countryResortsPanel.setScrollView();
                 cardPanel.add(countryResortsPanel, country.getCountryName());
                 Country.addedCards.add(country);

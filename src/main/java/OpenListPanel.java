@@ -23,6 +23,7 @@ public class OpenListPanel extends JPanel {
     private boolean isFavorite = false;
     private ImageIcon starEmpty;
     private ImageIcon starFull;
+    private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
 
     public OpenListPanel(Resort resort){
         if(Country.COUNTRY_RESORTS.get(Country.FAVORITE) != null && Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).contains(resort)){
@@ -85,27 +86,12 @@ public class OpenListPanel extends JPanel {
             if(isFavorite){
                 favoriteButton.setIcon(starEmpty);
                 isFavorite = false;
-
-                if(Country.COUNTRY_RESORTS.containsKey(Country.FAVORITE) && Country.COUNTRY_RESORTS.get(Country.FAVORITE).containsKey(resort.openStatus())){
-                    Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).remove(resort);
-                }
-
-
+                favoriteResorts.removeFavorite(resort);
             }
             else{
                 favoriteButton.setIcon(starFull);
                 isFavorite = true;
-
-                if(!Country.COUNTRY_RESORTS.containsKey(Country.FAVORITE)){
-                    Country.COUNTRY_RESORTS.put(Country.FAVORITE, new HashMap<Resort.OpenStatus, List<Resort>>());
-                }
-
-                if(!Country.COUNTRY_RESORTS.get(Country.FAVORITE).containsKey(resort.openStatus())){
-                    Country.COUNTRY_RESORTS.get(Country.FAVORITE).put(resort.openStatus(), new ArrayList<Resort>());
-                }
-
-                Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).add(resort);
-
+                favoriteResorts.addFavorite(resort, this);
             }
         });
 

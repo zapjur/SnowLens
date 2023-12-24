@@ -135,13 +135,14 @@ public class MainFrame extends JFrame {
         CountryResortsPanel favoritePanel = new CountryResortsPanel(Country.FAVORITE);
         cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
 
-        favoriteButton.addActionListener(new DisplayResortActionListener(Country.FAVORITE, cardLayout, cardPanel));
+        favoriteButton.addActionListener(new DisplayFavoriteButtonActionListener(favoritePanel));
         favoriteButton.addActionListener(e -> {
             if(favoriteIsActive){
                 cardLayout.show(cardPanel, lastCountryPanel);
                 favoriteIsActive = false;
             }
             else{
+                cardLayout.show(cardPanel, Country.FAVORITE.getCountryName());
                 favoriteIsActive = true;
                 menuIsActive = false;
             }
