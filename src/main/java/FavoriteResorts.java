@@ -36,5 +36,8 @@ public class FavoriteResorts {
     public Map<Resort, JPanel> getPanels(Resort.OpenStatus status){
         return favoriteMap.get(status);
     }
+    public boolean containsResort(Resort resort){
+        return favoriteMap.get(resort.openStatus()).containsKey(resort);
+    }
 
 }

@@ -1,8 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
 
 public class OpenListPanel extends JPanel {
     private JPanel namePanel;
@@ -26,7 +23,16 @@ public class OpenListPanel extends JPanel {
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
 
     public OpenListPanel(Resort resort){
-        if(Country.COUNTRY_RESORTS.get(Country.FAVORITE) != null && Country.COUNTRY_RESORTS.get(Country.FAVORITE).get(resort.openStatus()).contains(resort)){
+        constructObject(resort);
+    }
+
+    public OpenListPanel(Resort resort, boolean isFavorite){
+        this.isFavorite = isFavorite;
+        constructObject(resort);
+    }
+
+    private void constructObject(Resort resort){
+        if(favoriteResorts.containsResort(resort)){
             isFavorite = true;
         }
 
@@ -91,7 +97,7 @@ public class OpenListPanel extends JPanel {
             else{
                 favoriteButton.setIcon(starFull);
                 isFavorite = true;
-                favoriteResorts.addFavorite(resort, this);
+                favoriteResorts.addFavorite(resort, new OpenListPanel(resort, true));
             }
         });
 
@@ -103,6 +109,6 @@ public class OpenListPanel extends JPanel {
         trailsDistLabel.setText(resort.openTrailsDist());
         trailsPerLabel.setText(resort.openTrailsPer());
         liftsLabel.setText(resort.openLifts());
-
     }
+
 }

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="better favorite logic">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,9 @@
       <workItem from="1703426575894" duration="2057000" />
       <workItem from="1703618209665" duration="32000" />
       <workItem from="1703618360715" duration="78000" />
-      <workItem from="1703619820753" duration="1486000" />
+      <workItem from="1703619820753" duration="1526000" />
+      <workItem from="1703626042215" duration="1643000" />
+      <workItem from="1703789679250" duration="2070000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -344,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703428633484</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <option name="closed" value="true" />
+      <created>1703621337590</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703621337590</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,12 +382,12 @@
     <MESSAGE value="wybor kraju" />
     <MESSAGE value="added first sorting buttons" />
     <MESSAGE value="change from lists to maps" />
-    <MESSAGE value="update" />
     <MESSAGE value="added loop to menu button" />
     <MESSAGE value="added closed resorts panel" />
     <MESSAGE value="added favorite button logic" />
     <MESSAGE value="update favorite button logic" />
     <MESSAGE value="better favorite logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="better favorite logic" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
