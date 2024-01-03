@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,11 +8,10 @@ public class FavoriteResorts {
     private Map<Resort.OpenStatus, Map<Resort, JPanel>> favoriteMap;
 
     private FavoriteResorts() {
-        favoriteMap = new HashMap<>();
-        favoriteMap.put(Resort.OpenStatus.OPEN, new HashMap<Resort, JPanel>());
-        favoriteMap.put(Resort.OpenStatus.WEEKEND, new HashMap<Resort, JPanel>());
-        favoriteMap.put(Resort.OpenStatus.TEMPCLOSED, new HashMap<Resort, JPanel>());
-        favoriteMap.put(Resort.OpenStatus.CLOSE, new HashMap<Resort, JPanel>());
+        favoriteMap = new EnumMap<>(Resort.OpenStatus.class);
+        for (Resort.OpenStatus status : Resort.OpenStatus.values()) {
+            favoriteMap.put(status, new HashMap<Resort, JPanel>());
+        }
     }
 
     public static FavoriteResorts getInstance() {
@@ -39,5 +39,4 @@ public class FavoriteResorts {
     public boolean containsResort(Resort resort){
         return favoriteMap.get(resort.openStatus()).containsKey(resort);
     }
-
 }

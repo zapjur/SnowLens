@@ -1558,3 +1558,269 @@
 2023-12-28 20:28:51 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
 2023-12-28 20:28:51 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
 2023-12-28 20:28:52 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:17:47 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:17:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:17:49 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:17:50 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:17:50 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:17:51 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:17:51 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:17:52 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:17:52 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:17:54 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:17:54 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:17:55 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:21:22 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:21:23 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:21:23 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:21:24 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:21:24 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:21:24 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:21:24 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:21:26 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:21:26 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:21:27 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:21:27 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:21:27 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:40:42 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:40:43 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 20:40:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:40:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 20:40:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:40:46 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 20:40:46 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:40:47 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 20:40:47 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:40:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 20:40:49 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 20:40:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 22:15:50 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 22:15:52 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-02 22:15:52 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 22:15:53 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-02 22:15:53 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 22:15:55 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-02 22:15:55 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 22:15:56 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-02 22:15:56 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 22:15:57 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-02 22:15:57 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 22:15:58 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-02 22:16:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/slowacja/warunki-narciarskie
+2024-01-02 22:16:08 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/slowacja/warunki-narciarskie
+2024-01-03 21:32:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 21:32:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 21:32:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 21:32:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 21:32:09 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 21:32:10 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 21:32:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 21:32:11 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 21:32:11 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 21:32:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 21:32:12 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 21:32:14 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:00:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:00:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:00:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:00:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:00:09 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:00:10 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:00:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:00:10 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:00:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:00:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:00:12 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:00:13 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:00:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:00:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:00:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:00:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:00:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:00:46 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:00:46 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:00:47 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:00:47 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:00:48 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:00:48 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:00:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:01:14 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-03 22:01:15 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-03 22:01:15 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-03 22:01:16 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-03 22:01:16 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-03 22:01:17 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-03 22:01:17 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-03 22:01:18 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-03 22:01:18 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-03 22:01:19 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-03 22:01:19 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-03 22:01:20 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-03 22:02:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:02:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:02:12 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:02:13 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:02:13 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:02:14 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:02:14 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:02:14 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:02:14 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:02:15 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:02:15 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:02:16 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:07:05 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:07:06 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:07:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:07:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:07:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:07:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:07:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:07:10 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:07:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:07:11 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:07:11 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:07:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:07:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:07:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:07:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:07:46 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:07:46 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:07:47 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:07:47 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:07:48 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:07:48 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:07:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:07:49 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:07:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:09:25 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:09:26 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:09:26 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:09:27 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:09:27 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:09:28 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:09:28 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:09:29 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:09:29 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:09:29 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:09:29 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:09:30 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:13:01 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:13:03 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:13:03 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:13:04 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:13:04 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:13:05 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:13:05 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:13:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:13:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:13:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:13:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:13:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:22:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:22:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:22:09 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:22:10 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:22:10 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:22:11 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:22:11 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:22:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:22:12 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:22:14 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:22:14 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:22:15 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:23:54 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:23:56 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:23:56 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:23:57 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:23:57 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:23:58 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:23:58 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:23:59 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:23:59 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:24:00 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:24:00 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:24:01 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:25:39 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:25:40 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:25:40 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:25:41 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:25:41 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:25:42 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:25:42 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:25:43 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:25:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:25:43 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:25:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:25:44 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:26:19 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:26:20 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:26:20 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:26:21 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:26:21 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:26:22 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:26:22 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:26:23 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:26:23 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:26:24 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:26:24 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:26:25 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:43:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:43:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:43:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:43:46 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:43:46 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:43:47 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:43:47 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:43:49 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:43:49 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:43:50 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:43:50 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:43:51 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:45:04 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:45:05 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:45:05 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:45:06 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:45:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:45:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:45:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:45:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:45:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:45:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:45:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:45:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:45:29 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:45:30 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:45:30 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:45:31 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:45:31 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:45:32 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:45:32 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:45:33 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:45:33 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:45:33 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:45:33 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:45:34 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:46:20 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-03 22:46:21 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-03 22:46:21 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-03 22:46:22 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-03 22:46:22 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-03 22:46:23 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-03 22:46:23 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-03 22:46:24 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-03 22:46:24 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-03 22:46:25 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-03 22:46:25 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-03 22:46:26 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-03 22:48:41 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:48:43 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-03 22:48:43 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:48:44 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-03 22:48:44 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:48:44 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-03 22:48:44 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:48:45 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-03 22:48:45 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:48:46 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-03 22:48:46 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-03 22:48:47 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport

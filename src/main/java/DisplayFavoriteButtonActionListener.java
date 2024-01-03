@@ -16,8 +16,10 @@ public class DisplayFavoriteButtonActionListener implements ActionListener {
         favoritePanel.clearScrollContainer();
         favoritePanel.addSortButtonsPanel();
 
-        for(JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()){
-            favoritePanel.addToScrollContainer(panel);
+        for(Resort.OpenStatus status : Resort.OpenStatus.values()) {
+            for (JPanel panel : favoriteResorts.getPanels(status).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
         }
 
         favoritePanel.setScrollView();

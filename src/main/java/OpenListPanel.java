@@ -21,9 +21,11 @@ public class OpenListPanel extends JPanel {
     private ImageIcon starEmpty;
     private ImageIcon starFull;
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
+    private CountryResorts countryResorts = CountryResorts.getInstance();
 
     public OpenListPanel(Resort resort){
         constructObject(resort);
+        countryResorts.addResort(resort.country(), resort, this);
     }
 
     public OpenListPanel(Resort resort, boolean isFavorite){
@@ -93,6 +95,7 @@ public class OpenListPanel extends JPanel {
                 favoriteButton.setIcon(starEmpty);
                 isFavorite = false;
                 favoriteResorts.removeFavorite(resort);
+                countryResorts.getPanel(resort.country(), resort.openStatus(), resort).unfavorite();
             }
             else{
                 favoriteButton.setIcon(starFull);
@@ -109,6 +112,11 @@ public class OpenListPanel extends JPanel {
         trailsDistLabel.setText(resort.openTrailsDist());
         trailsPerLabel.setText(resort.openTrailsPer());
         liftsLabel.setText(resort.openLifts());
+    }
+
+    public void unfavorite(){
+        isFavorite = false;
+        favoriteButton.setIcon(starEmpty);
     }
 
 }

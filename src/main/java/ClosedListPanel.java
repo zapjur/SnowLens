@@ -14,7 +14,18 @@ public class ClosedListPanel extends JPanel {
     private ImageIcon starEmpty;
     private ImageIcon starFull;
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
+    private CountryResorts countryResorts = CountryResorts.getInstance();
     public ClosedListPanel(Resort resort){
+        constructObject(resort);
+        countryResorts.addResort(resort.country(), resort, this);
+    }
+
+    public ClosedListPanel(Resort resort, boolean isFavorite){
+        this.isFavorite = isFavorite;
+        constructObject(resort);
+    }
+
+    private void constructObject(Resort resort){
         if(favoriteResorts.containsResort(resort)){
             isFavorite = true;
         }
@@ -87,19 +98,21 @@ public class ClosedListPanel extends JPanel {
                 favoriteButton.setIcon(starEmpty);
                 isFavorite = false;
                 favoriteResorts.removeFavorite(resort);
-
-
+                countryResorts.getPanelClosed(resort.country(), resort.openStatus(), resort).unfavorite();
             }
             else{
                 favoriteButton.setIcon(starFull);
                 isFavorite = true;
-                favoriteResorts.addFavorite(resort, new ClosedListPanel(resort));
+                favoriteResorts.addFavorite(resort, new ClosedListPanel(resort, true));
             }
         });
 
         nameLabel.setText(resort.name());
         updateTimeLabel.setText(resort.updateTime());
         openDateLabel.setText(resort.openDate());
-
+    }
+    public void unfavorite(){
+        isFavorite = false;
+        favoriteButton.setIcon(starEmpty);
     }
 }
