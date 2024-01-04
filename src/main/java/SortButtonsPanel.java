@@ -66,6 +66,15 @@ public class SortButtonsPanel extends JPanel {
 
         });
 
+        sortBySnowLast.addActionListener(e -> {
+
+            Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByLastSnow(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+
+            display(countryPanel, openMap, closedMap);
+
+        });
+
     }
 
     private void display(CountryResortsPanel countryPanel, Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap, Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap){

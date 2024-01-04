@@ -170,7 +170,16 @@ public class CountryResorts {
         if (countryMapSortedByLastSnow == null) {
             countryMapSortedByLastSnow = new EnumMap<>(Country.class);
         }
-        countryMapSortedByLastSnow.putIfAbsent(country, sortMap(country, Comparator.comparing(Resort::snowLast24), countryMap));
+
+        Comparator comparator = Comparator.comparing((Resort resort) -> {
+            try{
+                String temp = resort.snowLast24().replace("cm", "");
+                return Float.parseFloat(temp);
+            } catch (NumberFormatException e){
+                return Float.MIN_VALUE;
+            }
+        }).reversed();
+        countryMapSortedByLastSnow.putIfAbsent(country, sortMap(country, comparator, countryMap));
         return countryMapSortedByLastSnow.get(country);
 
     }

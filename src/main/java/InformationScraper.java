@@ -132,7 +132,7 @@ public class InformationScraper {
             }
 
             currTd = currTd.nextElementSibling();
-
+            currTd.select("span").select("div").remove();
             String openDate = currTd.select("span").text();
 
             resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country));

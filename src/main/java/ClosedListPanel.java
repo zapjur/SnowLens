@@ -88,6 +88,8 @@ public class ClosedListPanel extends JPanel {
         favoriteButton.setBackground(Color.WHITE);
         favoriteButton.setBorderPainted(false);
         favoriteButton.setFocusPainted(false);
+        favoriteButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        favoritePanel.setLayout(new BoxLayout(favoritePanel, BoxLayout.PAGE_AXIS));
         favoritePanel.setPreferredSize(new Dimension(100, 100));
         favoritePanel.setBackground(Color.WHITE);
         favoritePanel.add(favoriteButton);
