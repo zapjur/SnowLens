@@ -111,7 +111,15 @@ public class CountryResorts {
         if (countryMapSortedByOpenDist == null) {
             countryMapSortedByOpenDist = new EnumMap<>(Country.class);
         }
-        countryMapSortedByOpenDist.putIfAbsent(country, sortMap(country, Comparator.comparing(Resort::openDist), countryMap));
+
+        Comparator comparator = Comparator.comparing((Resort resort) -> {
+            try {
+                return Float.parseFloat(resort.openDist());
+            } catch (NumberFormatException e){
+                return Float.MIN_VALUE;
+            }
+        }).reversed();
+        countryMapSortedByOpenDist.putIfAbsent(country, sortMap(country, comparator, countryMap));
         return countryMapSortedByOpenDist.get(country);
 
     }
@@ -120,7 +128,16 @@ public class CountryResorts {
         if (countryMapSortedByOpenLifts == null) {
             countryMapSortedByOpenLifts = new EnumMap<>(Country.class);
         }
-        countryMapSortedByOpenLifts.putIfAbsent(country, sortMap(country, Comparator.comparing(Resort::openLifts), countryMap));
+
+        Comparator comparator = Comparator.comparing((Resort resort) -> {
+            try{
+                String[] parts = resort.openLifts().split("/");
+                return Integer.parseInt(parts[0]);
+            } catch (NumberFormatException e){
+                return Integer.MIN_VALUE;
+            }
+        }).reversed();
+        countryMapSortedByOpenLifts.putIfAbsent(country, sortMap(country, comparator, countryMap));
         return countryMapSortedByOpenLifts.get(country);
 
     }
@@ -129,7 +146,22 @@ public class CountryResorts {
         if (countryMapSortedByCurrSnow == null) {
             countryMapSortedByCurrSnow = new EnumMap<>(Country.class);
         }
-        countryMapSortedByCurrSnow.putIfAbsent(country, sortMap(country, Comparator.comparing(Resort::currSnow), countryMap));
+
+        Comparator comparator = Comparator.comparing((Resort resort) -> {
+            try{
+                String[] parts = resort.currSnow().split("-");
+                if(parts.length >= 2) {
+                    return Integer.parseInt(parts[0]) + Integer.parseInt(parts[1].replace("cm", ""));
+                }
+                else{
+                    if(parts.length == 0) return Integer.MIN_VALUE;
+                    return Integer.parseInt((parts[0]));
+                }
+            } catch (NumberFormatException ex) {
+                return Integer.MIN_VALUE;
+            }
+        }).reversed();
+        countryMapSortedByCurrSnow.putIfAbsent(country, sortMap(country, comparator, countryMap));
         return countryMapSortedByCurrSnow.get(country);
 
     }

@@ -79,21 +79,15 @@ public class InformationScraper {
                 updateTime = parts[0] +" "+ Dictionary.getPol2Eng(parts[1] + " " + parts[2]);
             }
             currTd = currTd.nextElementSibling();
+            currTd.select("span").select("div").remove();
             String snowLast24 = currTd.select("span").text();
 
             currTd = currTd.nextElementSibling();
 
+            String snowType = currTd.select("span").select("div").first().text();
+            currTd.select("span").select("div").remove();
             String currSnow = currTd.select("span").text();
-            parts = currSnow.split(" ");
-            currSnow = parts[0];
-            String snowType;
-            if (parts.length > 2) {
-                snowType = parts[1] +" "+ parts[2];
-            } else if (parts.length == 2) {
-                snowType = parts[1];
-            } else {
-                snowType = "N/A";
-            }
+
             if(lang == Dictionary.Language.POLISH){
                 snowType = Dictionary.getPol2Eng(snowType);
             }

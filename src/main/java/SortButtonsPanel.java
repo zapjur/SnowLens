@@ -24,7 +24,7 @@ public class SortButtonsPanel extends JPanel {
             button.setPreferredSize(new Dimension(150, 50));
             add(button);
         }
-        sortByOpenLifts.setText("Lifts");
+        sortByOpenLifts.setText("Open Lifts");
         sortByOpenDist.setText("Distance");
         sortByCurrSnow.setText("Snow");
         sortBySnowLast.setText("Last Snowfall");
