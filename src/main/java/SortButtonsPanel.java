@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Map;
 import java.util.List;
 
 public class SortButtonsPanel extends JPanel {
@@ -11,6 +10,7 @@ public class SortButtonsPanel extends JPanel {
     private JButton sortByCurrSnow = new JButton();
     private JButton sortByOpenDist = new JButton();
     private JButton sortByOpenLifts = new JButton();
+    private CountryResorts countryResorts = CountryResorts.getInstance();
 
 
     public SortButtonsPanel(Country country, CountryResortsPanel countryPanel){
@@ -31,74 +31,64 @@ public class SortButtonsPanel extends JPanel {
         sortByNames.setText("Name");
 
         sortByOpenDist.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
-                try {
-                    return Float.parseFloat(resort.openDist());
-                } catch (NumberFormatException ex) {
-                    return Float.MIN_VALUE;
-                }
-            }).reversed());
-            displayResorts(country, countryPanel);
+
+            Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByOpenDist(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+
+            display(countryPanel, openMap, closedMap);
+
         });
 
         sortByCurrSnow.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
-                try {
-                    String[] parts = resort.currSnow().split("-");
-                    if(parts.length >= 2) {
-                        return Integer.parseInt(parts[0]) + Integer.parseInt(parts[1].replace("cm", ""));
-                    }
-                    else{
-                        if(parts.length == 0) return Integer.MIN_VALUE;
-                        return Integer.parseInt((parts[0]));
-                    }
-                } catch (NumberFormatException ex) {
-                    return Integer.MIN_VALUE;
-                }
-            }).reversed());
-            displayResorts(country, countryPanel);
+
+            Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByCurrSnow(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+
+            display(countryPanel, openMap, closedMap);
+
         });
 
         sortByOpenLifts.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing((Resort resort) -> {
-                try {
-                    String[] parts = resort.openLifts().split("/");
-                    return Integer.parseInt(parts[0]);
-                } catch (NumberFormatException ex) {
-                    return Integer.MIN_VALUE;
-                }
-            }).reversed());
-            displayResorts(country, countryPanel);
+
+            Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByOpenLifts(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+
+            display(countryPanel, openMap, closedMap);
+
         });
 
         sortByNames.addActionListener(e ->{
-            Collections.sort(Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN), Comparator.comparing(Resort::name));
 
-            displayResorts(country, countryPanel);
+            Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByNames(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getClosedSortedByNames(country);
+
+            display(countryPanel, openMap, closedMap);
+
         });
 
     }
 
-    private void displayResorts(Country country, CountryResortsPanel countryPanel){
+    private void display(CountryResortsPanel countryPanel, Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap, Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap){
         countryPanel.clearScrollContainer();
-        countryPanel.addToScrollContainer(new OpenStatusPanel("Open"));
-        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN)){
-            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+
+        countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
+        for(JPanel panel : openMap.get(Resort.OpenStatus.OPEN).values()){
+            countryPanel.addToScrollContainer(panel);
         }
 
-        countryPanel.addToScrollContainer(new OpenStatusPanel("Weekends Only"));
-        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.WEEKEND)){
-            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
+        for(JPanel panel : openMap.get(Resort.OpenStatus.WEEKEND).values()){
+            countryPanel.addToScrollContainer(panel);
         }
 
-        countryPanel.addToScrollContainer(new OpenStatusPanel("Temporarily Closed"));
-        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.TEMPCLOSED)){
-            countryPanel.addToScrollContainer(new OpenListPanel(resort));
+        countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
+        for(JPanel panel : openMap.get(Resort.OpenStatus.TEMPCLOSED).values()){
+            countryPanel.addToScrollContainer(panel);
         }
 
-        countryPanel.addToScrollContainer(new OpenStatusPanel("Closed"));
-        for(Resort resort : Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.CLOSE)){
-            countryPanel.addToScrollContainer(new ClosedListPanel(resort));
+        countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
+        for(JPanel panel : closedMap.get(Resort.OpenStatus.CLOSE).values()){
+            countryPanel.addToScrollContainer(panel);
         }
 
         countryPanel.setScrollView();

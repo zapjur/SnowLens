@@ -3,26 +3,30 @@ import java.awt.*;
 
 public class OpenStatusPanel extends JPanel {
 
-    public OpenStatusPanel(String status){
+    public OpenStatusPanel(Resort.OpenStatus status){
         setSize(new Dimension(1000, 50));
         setLayout(new BorderLayout());
         setBackground(Color.WHITE);
 
-        JLabel label = new JLabel(status);
+        JLabel label = new JLabel();
         switch (status){
-            case "Open":
+            case OPEN:
+                label.setText("Open");
                 label.setForeground(Color.GREEN);
                 break;
 
-            case "Closed":
+            case CLOSE:
+                label.setText("Closed");
                 label.setForeground(Color.RED);
                 break;
 
-            case "Weekends Only":
+            case WEEKEND:
+                label.setText("Weekends Only");
                 label.setForeground(Color.GREEN);
                 break;
 
-            case "Temporarily Closed":
+            case TEMPCLOSED:
+                label.setText("Temporarily Closed");
                 label.setForeground(Color.ORANGE);
                 break;
         }

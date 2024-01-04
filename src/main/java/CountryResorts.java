@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.stream.Collectors;
 import java.util.Comparator;
-import javax.swing.JPanel;
 
 public class CountryResorts {
     private static volatile CountryResorts instance;
@@ -76,6 +75,10 @@ public class CountryResorts {
         return countryMap.get(country).get(resort.openStatus()).containsKey(resort);
     }
 
+    public Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> getCountryMapClosed(Country country){
+        return countryMapClosed.get(country);
+    }
+
     private Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> sortMap(Country country, Comparator<Resort> comparator, Map<Country, Map<Resort.OpenStatus, Map<Resort, OpenListPanel>>> mapToSort) {
         Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> sortedMap = new EnumMap<>(Resort.OpenStatus.class);
         Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> unsortedMap = mapToSort.get(country);
@@ -142,7 +145,11 @@ public class CountryResorts {
 
 
     public Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> getClosedSortedByNames(Country country){
-        if(countryMapClosedSortedByNames != null){
+        if(countryMapClosedSortedByNames == null){
+            countryMapClosedSortedByNames = new EnumMap<>(Country.class);
+        }
+
+        if(countryMapClosedSortedByNames.containsKey(country)){
             return countryMapClosedSortedByNames.get(country);
         }
 

@@ -30,7 +30,7 @@ public class DisplayResortActionListener implements ActionListener {
                 List<Resort> openResorts = Country.COUNTRY_RESORTS.get(country).get(Resort.OpenStatus.OPEN);
                 if (openResorts != null) {
                     JPanel panel = new JPanel();
-                    panel.add(new OpenStatusPanel("Open"));
+                    panel.add(new OpenStatusPanel(Resort.OpenStatus.OPEN));
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     for (Resort resort : openResorts) {
                         panel.add(new OpenListPanel(resort));
@@ -42,7 +42,7 @@ public class DisplayResortActionListener implements ActionListener {
                 if (weekendResorts != null) {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                    panel.add(new OpenStatusPanel("Weekends Only"));
+                    panel.add(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
                     for (Resort resort : weekendResorts) {
                         panel.add(new OpenListPanel(resort));
                     }
@@ -53,7 +53,7 @@ public class DisplayResortActionListener implements ActionListener {
                 if (tempclosedResorts != null) {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                    panel.add(new OpenStatusPanel("Temporarily Closed"));
+                    panel.add(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
                     for (Resort resort : tempclosedResorts) {
                         panel.add(new OpenListPanel(resort));
                     }
@@ -64,7 +64,7 @@ public class DisplayResortActionListener implements ActionListener {
                 if (closedResorts != null) {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                    panel.add(new OpenStatusPanel("Closed"));
+                    panel.add(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
                     for (Resort resort : closedResorts) {
                         panel.add(new ClosedListPanel(resort));
                     }

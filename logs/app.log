@@ -1872,3 +1872,39 @@
 2024-01-04 15:34:54 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
 2024-01-04 15:34:54 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
 2024-01-04 15:34:55 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-04 17:29:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-04 17:29:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-04 17:29:08 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-04 17:29:09 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-04 17:29:09 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-04 17:29:11 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-04 17:29:11 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-04 17:29:12 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-04 17:29:12 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-04 17:29:13 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-04 17:29:13 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-04 17:29:14 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-04 17:32:01 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-04 17:32:03 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/northern-alps/skireport
+2024-01-04 17:32:03 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-04 17:32:04 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/southern-alps/skireport
+2024-01-04 17:32:04 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-04 17:32:05 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/massif-central/skireport
+2024-01-04 17:32:05 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-04 17:32:06 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/pyrenees/skireport
+2024-01-04 17:32:06 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-04 17:32:07 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/vosges/skireport
+2024-01-04 17:32:07 INFO  InformationScraper:16 - Start of scraping data from url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-04 17:32:08 INFO  InformationScraper:60 - Success scraping url: https://www.onthesnow.co.uk/jura/skireport
+2024-01-04 17:32:32 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-04 17:32:33 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-04 17:32:33 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-04 17:32:34 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-04 17:32:34 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-04 17:32:35 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-04 17:32:35 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-04 17:32:36 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-04 17:32:36 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-04 17:32:37 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-04 17:32:37 INFO  InformationScraper:16 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-04 17:32:38 INFO  InformationScraper:60 - Success scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
