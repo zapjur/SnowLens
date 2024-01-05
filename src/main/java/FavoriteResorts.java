@@ -6,7 +6,7 @@ import java.util.EnumMap;
 public class FavoriteResorts {
     private static volatile FavoriteResorts instance;
     private Map<Resort.OpenStatus, Map<Resort, JPanel>> favoriteMap;
-    private Map<String, String> favoriteSavedMap;
+    private Map<String, Resort> favoriteSavedMap;
 
     private FavoriteResorts() {
         favoriteMap = new EnumMap<>(Resort.OpenStatus.class);
@@ -29,7 +29,7 @@ public class FavoriteResorts {
 
     public void addFavorite(Resort resort, JPanel panel) {
         favoriteMap.get(resort.openStatus()).put(resort, panel);
-        favoriteSavedMap.put(resort.name(), resort.url());
+        favoriteSavedMap.put(resort.name(), resort);
     }
 
     public void removeFavorite(Resort resort) {
@@ -47,10 +47,22 @@ public class FavoriteResorts {
     public boolean containsStatus(Resort.OpenStatus status) {
         return favoriteMap.get(status).size() > 0;
     }
-    public Map<String, String> getFavoriteSavedMap(){
+    public Map<String, Resort> getFavoriteSavedMap(){
         return favoriteSavedMap;
     }
-    public void setFavoriteSavedMap(Map<String, String> favoriteSavedMap){
+    public void setFavoriteSavedMap(Map<String, Resort> favoriteSavedMap){
         this.favoriteSavedMap = favoriteSavedMap;
+    }
+
+    public void scrapStartFavorite(){
+        for(Resort resort : favoriteSavedMap.values()){
+            Resort res = InformationScraper.scrapFavoriteResort(resort.url(), resort.country(), resort.lang(), resort);
+            if(resort.openStatus() != Resort.OpenStatus.CLOSE) {
+                favoriteMap.get(resort.openStatus()).put(resort, new OpenListPanel(resort, true));
+            }
+            else{
+                favoriteMap.get(Resort.OpenStatus.CLOSE).put(resort, new ClosedListPanel(resort, true));
+            }
+        }
     }
 }

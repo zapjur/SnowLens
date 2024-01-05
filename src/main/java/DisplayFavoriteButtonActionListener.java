@@ -14,7 +14,6 @@ public class DisplayFavoriteButtonActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         favoritePanel.clearScrollContainer();
-        favoritePanel.addSortButtonsPanel();
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));

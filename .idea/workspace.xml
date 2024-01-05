@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="fix closed panel favorite button">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DisplayStartFavoritePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StorageHandler.java" afterDir="false" />
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="added counting to log4j">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StorageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StorageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +119,8 @@
       <workItem from="1703626042215" duration="1643000" />
       <workItem from="1703789679250" duration="2121000" />
       <workItem from="1704222853001" duration="11127000" />
-      <workItem from="1704364027862" duration="29404000" />
+      <workItem from="1704364027862" duration="29460000" />
+      <workItem from="1704466118727" duration="7395000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -411,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704401028762</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added counting to log4j">
+      <option name="closed" value="true" />
+      <created>1704413833640</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704413833640</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +451,7 @@
     <MESSAGE value="better favorite logic" />
     <MESSAGE value="update" />
     <MESSAGE value="fix closed panel favorite button" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix closed panel favorite button" />
+    <MESSAGE value="added counting to log4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="added counting to log4j" />
   </component>
 </project>

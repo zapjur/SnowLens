@@ -13,6 +13,142 @@ import org.apache.logging.log4j.Logger;
 public class InformationScraper {
     private static final Logger logger = LogManager.getLogger(InformationScraper.class);
     private static int count = 0;
+
+    public static Resort scrapFavoriteResort(String url, Country country, Dictionary.Language lang, Resort resort) {
+        logger.info("Start of looking for favorite resort: " + resort.name());
+
+        String open = "Open";
+        String closed = "Closed";
+        String weekends = "Weekends Only";
+        String tempclosed = "Temporarily Closed";
+
+        switch (lang) {
+            case POLISH:
+                open = "Otwarty";
+                closed = "Zamknięty";
+                weekends = "Tylko w weekendy";
+                tempclosed = "Tymczasowo nieczynny";
+        }
+
+        Resort res = null;
+
+        try {
+            Document document = Jsoup.connect(url).get();
+
+            Elements tables = document.select("table.styles_table__jGKQz.styles_collabsibleTable__23cyC");
+            count = 0;
+            for (Element table : tables) {
+                if (!table.select("span.styles_open__3MfH6").isEmpty()) {
+                    if (table.select("span.styles_open__3MfH6").text().equals(open)) {
+                        res = scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN, url, resort);
+                        if(res != null) return res;
+
+                    } else if (table.select("span.styles_open__3MfH6").text().equals(weekends)) {
+                        res = scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND, url, resort);
+                        if(res != null) return res;
+                    }
+
+                } else if (!table.select("span.styles_partial__2pEPh").isEmpty()) {
+                    if (table.select("span.styles_partial__2pEPh").text().equals(tempclosed)) {
+                        res = scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED, url, resort);
+                        if(res != null) return res;
+                    }
+                } else if (!table.select("span.styles_closed__2QlIG").isEmpty()) {
+                    if (table.select("span.styles_closed__2QlIG").text().equals(closed)) {
+                        res = scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE, url, resort);
+                        if(res != null) return res;
+                    }
+                }
+            }
+
+            logger.info("Success scraping favorite resort: " + resort.name());
+
+        } catch (IOException e){
+            logger.error("Error while scraping favorite resort: " + resort.name());
+        }
+        return null;
+    }
+
+    private static Resort scrapForOpen(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status, String url, Resort resort){
+        Elements trs = table.select("tbody").select("tr");
+        for(Element currTr : trs){
+
+            Element currTd = currTr.select("td").first();
+            String name = currTd.select("a").select("span").text();
+            String updateTime = currTd.select("a").select("time").text();
+            String[] parts = updateTime.split(" ");
+            if(lang == Dictionary.Language.POLISH && parts.length >= 3) {
+                updateTime = parts[0] +" "+ Dictionary.getPol2Eng(parts[1] + " " + parts[2]);
+            }
+            currTd = currTd.nextElementSibling();
+            currTd.select("span").select("div").remove();
+            String snowLast24 = currTd.select("span").text();
+
+            currTd = currTd.nextElementSibling();
+
+            String snowType = currTd.select("span").select("div").first().text();
+            currTd.select("span").select("div").remove();
+            String currSnow = currTd.select("span").text();
+
+            if(lang == Dictionary.Language.POLISH){
+                snowType = Dictionary.getPol2Eng(snowType);
+            }
+
+            currTd = currTd.nextElementSibling();
+            String openTrailsDist = currTd.select("span").text();
+            parts = openTrailsDist.split(" ");
+            openTrailsDist = parts[0] + "km";
+            String openTrailsPer;
+            if (parts.length >= 3) {
+                openTrailsPer = parts[2];
+            } else {
+                openTrailsPer = "N/A";
+            }
+            parts = openTrailsDist.split("/");
+            String openDist = parts[0];
+
+            currTd = currTd.nextElementSibling();
+            String openLifts = currTd.select("span").text();
+            parts = openLifts.split(" ");
+            openLifts = parts[0];
+
+            count++;
+
+            if(name == resort.name()) {
+                return new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
+                        openTrailsPer, openDist, openLifts, status, country, url, lang);
+            }
+
+        }
+        return null;
+    }
+
+    private static Resort scrapForClosed(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status, String url, Resort resort){
+        Elements trs = table.select("tbody").select("tr");
+
+        for(Element currTr : trs){
+
+            Element currTd = currTr.select("td").first();
+            String name = currTd.select("a").select("span").text();
+            String updateTime = currTd.select("a").select("time").text();
+            String[] parts = updateTime.split(" ");
+            if(lang == Dictionary.Language.POLISH && parts.length >= 3) {
+                updateTime = parts[0] +" "+ Dictionary.getPol2Eng(parts[1] + " " + parts[2]);
+            }
+
+            currTd = currTd.nextElementSibling();
+            currTd.select("span").select("div").remove();
+            String openDate = currTd.select("span").text();
+
+            if(name == resort.name()){
+                return new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang);
+            }
+            count++;
+
+        }
+        return null;
+    }
+
     private static Map<Resort.OpenStatus, List<Resort>> infoScraping(String url, Country country, Dictionary.Language lang) {
         logger.info("Start of scraping data from url: " + url);
 
@@ -112,7 +248,7 @@ public class InformationScraper {
             openLifts = parts[0];
 
             resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                    openTrailsPer, openDist, openLifts, status, country, url));
+                    openTrailsPer, openDist, openLifts, status, country, url, lang));
 
             count++;
 
@@ -138,7 +274,7 @@ public class InformationScraper {
             currTd.select("span").select("div").remove();
             String openDate = currTd.select("span").text();
 
-            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url));
+            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang));
             count++;
 
         }
