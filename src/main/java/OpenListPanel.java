@@ -22,21 +22,19 @@ public class OpenListPanel extends JPanel {
     private ImageIcon starFull;
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
     private CountryResorts countryResorts = CountryResorts.getInstance();
+    private Font font = new Font("Arial", Font.BOLD, 14);
 
     public OpenListPanel(Resort resort){
+        this.isFavorite = true;
+        constructObject(resort);
+    }
+    public OpenListPanel(Resort resort, boolean isFavorite){
+        this.isFavorite = isFavorite;
         constructObject(resort);
         countryResorts.addResort(resort.country(), resort, this);
     }
 
-    public OpenListPanel(Resort resort, boolean isFavorite){
-        this.isFavorite = isFavorite;
-        constructObject(resort);
-    }
-
     private void constructObject(Resort resort){
-        if(favoriteResorts.containsResort(resort)){
-            isFavorite = true;
-        }
 
         setPreferredSize(new Dimension(1000, 100));
         setBackground(Color.WHITE);
@@ -45,7 +43,7 @@ public class OpenListPanel extends JPanel {
         starEmpty = new ImageIcon(getClass().getResource("starEmpty.png"));
         starFull = new ImageIcon(getClass().getResource("starFull.png"));
 
-        nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        nameLabel.setFont(font);
         updateTimeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         updateTimeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -58,7 +56,7 @@ public class OpenListPanel extends JPanel {
         snowLastPanel.setPreferredSize(new Dimension(100, 100));
         add(snowLastPanel);
 
-        currSnowLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        currSnowLabel.setFont(font);
         snowTypeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         currSnowLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         snowTypeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -68,7 +66,7 @@ public class OpenListPanel extends JPanel {
         currSnowPanel.add(snowTypeLabel);
         add(currSnowPanel);
 
-        trailsDistLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        trailsDistLabel.setFont(font);
         trailsPerLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         trailsDistLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         trailsPerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -100,23 +98,26 @@ public class OpenListPanel extends JPanel {
             else{
                 favoriteButton.setIcon(starFull);
                 isFavorite = true;
-                favoriteResorts.addFavorite(resort, new OpenListPanel(resort, true));
+                favoriteResorts.addFavorite(resort, new OpenListPanel(resort));
             }
         });
 
         nameLabel.setText(resort.name());
         updateTimeLabel.setText(resort.updateTime());
         snowLastLabel.setText(resort.snowLast24());
+        snowLastLabel.setFont(font);
         currSnowLabel.setText(resort.currSnow());
         snowTypeLabel.setText(resort.snowType());
         trailsDistLabel.setText(resort.openTrailsDist());
         trailsPerLabel.setText(resort.openTrailsPer());
         liftsLabel.setText(resort.openLifts());
+        liftsLabel.setFont(font);
     }
 
     public void unfavorite(){
         isFavorite = false;
         favoriteButton.setIcon(starEmpty);
+        System.out.println(isFavorite);
     }
 
 }

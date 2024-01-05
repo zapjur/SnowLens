@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 public class InformationScraper {
     private static final Logger logger = LogManager.getLogger(InformationScraper.class);
     private static int count = 0;
+    private static FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
 
     public static Resort scrapFavoriteResort(String url, Country country, Dictionary.Language lang, Resort resort) {
         logger.info("Start of looking for favorite resort: " + resort.name());
@@ -114,9 +115,9 @@ public class InformationScraper {
 
             count++;
 
-            if(name == resort.name()) {
+            if(name.equals(resort.name())) {
                 return new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                        openTrailsPer, openDist, openLifts, status, country, url, lang);
+                        openTrailsPer, openDist, openLifts, status, country, url, lang, favoriteResorts.containsResort(name, status));
             }
 
         }
@@ -141,7 +142,7 @@ public class InformationScraper {
             String openDate = currTd.select("span").text();
 
             if(name == resort.name()){
-                return new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang);
+                return new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang, favoriteResorts.containsResort(name, status));
             }
             count++;
 
@@ -248,7 +249,7 @@ public class InformationScraper {
             openLifts = parts[0];
 
             resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                    openTrailsPer, openDist, openLifts, status, country, url, lang));
+                    openTrailsPer, openDist, openLifts, status, country, url, lang, favoriteResorts.containsResort(name, status)));
 
             count++;
 
@@ -274,7 +275,7 @@ public class InformationScraper {
             currTd.select("span").select("div").remove();
             String openDate = currTd.select("span").text();
 
-            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang));
+            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url, lang, favoriteResorts.containsResort(name, status)));
             count++;
 
         }

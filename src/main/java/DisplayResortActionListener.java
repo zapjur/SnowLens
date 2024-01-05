@@ -33,7 +33,7 @@ public class DisplayResortActionListener implements ActionListener {
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.OPEN));
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     for (Resort resort : openResorts) {
-                        panel.add(new OpenListPanel(resort));
+                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -44,7 +44,7 @@ public class DisplayResortActionListener implements ActionListener {
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
                     for (Resort resort : weekendResorts) {
-                        panel.add(new OpenListPanel(resort));
+                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -55,7 +55,7 @@ public class DisplayResortActionListener implements ActionListener {
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
                     for (Resort resort : tempclosedResorts) {
-                        panel.add(new OpenListPanel(resort));
+                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -66,7 +66,7 @@ public class DisplayResortActionListener implements ActionListener {
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
                     for (Resort resort : closedResorts) {
-                        panel.add(new ClosedListPanel(resort));
+                        panel.add(new ClosedListPanel(resort, resort.isFavorite()));
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }

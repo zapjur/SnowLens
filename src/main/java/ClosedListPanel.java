@@ -15,20 +15,20 @@ public class ClosedListPanel extends JPanel {
     private ImageIcon starFull;
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
     private CountryResorts countryResorts = CountryResorts.getInstance();
-    public ClosedListPanel(Resort resort){
-        constructObject(resort);
-        countryResorts.addResort(resort.country(), resort, this);
-    }
+    private Font font = new Font("Arial", Font.BOLD, 14);
 
+    public ClosedListPanel(Resort resort){
+        this.isFavorite = true;
+        constructObject(resort);
+    }
     public ClosedListPanel(Resort resort, boolean isFavorite){
         this.isFavorite = isFavorite;
+        countryResorts.addResort(resort.country(), resort, this);
         constructObject(resort);
     }
 
     private void constructObject(Resort resort){
-        if(favoriteResorts.containsResort(resort)){
-            isFavorite = true;
-        }
+
         setPreferredSize(new Dimension(1000, 100));
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
@@ -36,7 +36,7 @@ public class ClosedListPanel extends JPanel {
         starEmpty = new ImageIcon(getClass().getResource("starEmpty.png"));
         starFull = new ImageIcon(getClass().getResource("starFull.png"));
 
-        nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        nameLabel.setFont(font);
         nameLabel.setBackground(Color.WHITE);
         updateTimeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         updateTimeLabel.setBackground(Color.WHITE);
@@ -69,7 +69,7 @@ public class ClosedListPanel extends JPanel {
         fill3.setBackground(Color.WHITE);
         add(fill3);
 
-        openDateLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        openDateLabel.setFont(font);
         openDateLabel.setBackground(Color.WHITE);
         openDateLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         openDatePanel.setLayout(new BoxLayout(openDatePanel, BoxLayout.PAGE_AXIS));
@@ -105,7 +105,7 @@ public class ClosedListPanel extends JPanel {
             else{
                 favoriteButton.setIcon(starFull);
                 isFavorite = true;
-                favoriteResorts.addFavorite(resort, new ClosedListPanel(resort, true));
+                favoriteResorts.addFavorite(resort, new ClosedListPanel(resort));
             }
         });
 

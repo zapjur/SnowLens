@@ -43,7 +43,9 @@ public class FavoriteResorts {
     public boolean containsResort(Resort resort){
         return favoriteMap.get(resort.openStatus()).containsKey(resort);
     }
-
+    public boolean containsResort(String name, Resort.OpenStatus status) {
+        return favoriteMap.get(status).keySet().stream().anyMatch(resort -> resort.name().equals(name));
+    }
     public boolean containsStatus(Resort.OpenStatus status) {
         return favoriteMap.get(status).size() > 0;
     }
@@ -58,10 +60,10 @@ public class FavoriteResorts {
         for(Resort resort : favoriteSavedMap.values()){
             Resort res = InformationScraper.scrapFavoriteResort(resort.url(), resort.country(), resort.lang(), resort);
             if(resort.openStatus() != Resort.OpenStatus.CLOSE) {
-                favoriteMap.get(resort.openStatus()).put(resort, new OpenListPanel(resort, true));
+                favoriteMap.get(res.openStatus()).put(res, new OpenListPanel(res));
             }
             else{
-                favoriteMap.get(Resort.OpenStatus.CLOSE).put(resort, new ClosedListPanel(resort, true));
+                favoriteMap.get(Resort.OpenStatus.CLOSE).put(res, new ClosedListPanel(res));
             }
         }
     }
