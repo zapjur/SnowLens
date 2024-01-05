@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 public class InformationScraper {
     private static final Logger logger = LogManager.getLogger(InformationScraper.class);
+    private static int count = 0;
     private static Map<Resort.OpenStatus, List<Resort>> infoScraping(String url, Country country, Dictionary.Language lang) {
         logger.info("Start of scraping data from url: " + url);
 
@@ -34,30 +35,30 @@ public class InformationScraper {
             Document document = Jsoup.connect(url).get();
 
             Elements tables = document.select("table.styles_table__jGKQz.styles_collabsibleTable__23cyC");
-
+            count = 0;
             for(Element table : tables){
                 if(!table.select("span.styles_open__3MfH6").isEmpty()){
                     if(table.select("span.styles_open__3MfH6").text().equals(open)){
-                        map.put(Resort.OpenStatus.OPEN, scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN));
+                        map.put(Resort.OpenStatus.OPEN, scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN, url));
                     }
                     else if (table.select("span.styles_open__3MfH6").text().equals(weekends)){
-                        map.put(Resort.OpenStatus.WEEKEND, scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND));
+                        map.put(Resort.OpenStatus.WEEKEND, scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND, url));
                     }
                     
                 }
                 else if (!table.select("span.styles_partial__2pEPh").isEmpty()) {
                     if(table.select("span.styles_partial__2pEPh").text().equals(tempclosed)) {
-                        map.put(Resort.OpenStatus.TEMPCLOSED, scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED));
+                        map.put(Resort.OpenStatus.TEMPCLOSED, scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED, url));
                     }
                 }
                 else if (!table.select("span.styles_closed__2QlIG").isEmpty()) {
                     if(table.select("span.styles_closed__2QlIG").text().equals(closed)) {
-                        map.put(Resort.OpenStatus.CLOSE, scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE));
+                        map.put(Resort.OpenStatus.CLOSE, scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE, url));
                     }
                 }
             }
 
-            logger.info("Success scraping url: " + url);
+            logger.info("Success scraping " +  count + " resorts from url: " + url);
         }
         catch (IOException e){
             logger.error("Error while scraping url: " + url);
@@ -66,7 +67,7 @@ public class InformationScraper {
         return map;
     }
 
-    private static List<Resort> scrapForOpen(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status){
+    private static List<Resort> scrapForOpen(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status, String url){
         List<Resort> resorts = new ArrayList<>();
         Elements trs = table.select("tbody").select("tr");
         for(Element currTr : trs){
@@ -111,13 +112,15 @@ public class InformationScraper {
             openLifts = parts[0];
 
             resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
-                    openTrailsPer, openDist, openLifts, status, country));
+                    openTrailsPer, openDist, openLifts, status, country, url));
+
+            count++;
 
         }
         return resorts;
     }
 
-    private static List<Resort> scrapForClosed(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status){
+    private static List<Resort> scrapForClosed(Element table, Country country, Dictionary.Language lang, Resort.OpenStatus status, String url){
         List<Resort> resorts = new ArrayList<>();
         Elements trs = table.select("tbody").select("tr");
 
@@ -135,7 +138,8 @@ public class InformationScraper {
             currTd.select("span").select("div").remove();
             String openDate = currTd.select("span").text();
 
-            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country));
+            resorts.add(new Resort(name, updateTime, openDate, Resort.OpenStatus.CLOSE, country, url));
+            count++;
 
         }
         return resorts;

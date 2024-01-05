@@ -16,8 +16,30 @@ public class DisplayFavoriteButtonActionListener implements ActionListener {
         favoritePanel.clearScrollContainer();
         favoritePanel.addSortButtonsPanel();
 
-        for(Resort.OpenStatus status : Resort.OpenStatus.values()) {
-            for (JPanel panel : favoriteResorts.getPanels(status).values()) {
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.WEEKEND)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.TEMPCLOSED)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.CLOSE)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.CLOSE).values()) {
                 favoritePanel.addToScrollContainer(panel);
             }
         }

@@ -1,8 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import javax.swing.WindowConstants;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
@@ -22,79 +26,23 @@ public class MainFrame extends JFrame {
     private String lastCountryPanel = null;
     private boolean menuIsActive = false;
     private boolean favoriteIsActive = false;
+    private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
 
     public MainFrame() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         setSize(1000, 800);
         setTitle("Snow Lens");
         setBackground(Color.WHITE);
         setResizable(false);
         setLocationRelativeTo(null);
 
+        favoriteResorts.setFavoriteSavedMap(StorageHandler.loadSetFromFile("data/favorites.json"));
+
         CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
-        try {
-            CountryResortsPanel countryResortsPanel = new CountryResortsPanel(Country.FRANCE);
-            countryResortsPanel.addSortButtonsPanel();
-
-            Map<Resort.OpenStatus, List<Resort>> map = InformationScraper.franceScraping();
-            Country.COUNTRY_RESORTS.put(Country.FRANCE, map);
-
-            List<Resort> openResorts = map.get(Resort.OpenStatus.OPEN);
-
-            if(openResorts != null){
-                JPanel panel = new JPanel();
-                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                panel.add(new OpenStatusPanel(Resort.OpenStatus.OPEN));
-                for(Resort resort : openResorts){
-                    panel.add(new OpenListPanel(resort));
-                }
-                countryResortsPanel.addToScrollContainer(panel);
-            }
-
-            List<Resort> weekendResorts = map.get(Resort.OpenStatus.WEEKEND);
-            if(weekendResorts != null){
-                JPanel panel = new JPanel();
-                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                panel.add(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
-                for(Resort resort : weekendResorts){
-                    panel.add(new OpenListPanel(resort));
-                }
-                countryResortsPanel.addToScrollContainer(panel);
-            }
-
-            List<Resort> tempclosedResorts = map.get(Resort.OpenStatus.TEMPCLOSED);
-            if(tempclosedResorts != null){
-                JPanel panel = new JPanel();
-                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                panel.add(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
-                for(Resort resort : tempclosedResorts){
-                    panel.add(new OpenListPanel(resort));
-                }
-                countryResortsPanel.addToScrollContainer(panel);
-            }
-
-            List<Resort> closedResorts = map.get(Resort.OpenStatus.CLOSE);
-            if(closedResorts != null){
-                JPanel panel = new JPanel();
-                panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-                panel.add(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
-                for(Resort resort : closedResorts){
-                    panel.add(new ClosedListPanel(resort));
-                }
-                countryResortsPanel.addToScrollContainer(panel);
-            }
-
-            countryResortsPanel.setScrollView();
-            cardPanel.add(countryResortsPanel, Country.FRANCE.getCountryName());
-            cardLayout.show(cardPanel, Country.FRANCE.getCountryName());
-            menuIsActive = false;
-            lastCountryPanel = Country.FRANCE.getCountryName();
-            Country.addedCards.add(Country.FRANCE);
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        CountryResortsPanel favoritePanel = new CountryResortsPanel(Country.FAVORITE);
+        cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
+        cardLayout.show(cardPanel, Country.FAVORITE.getCountryName());
 
         menuButtonPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -131,9 +79,6 @@ public class MainFrame extends JFrame {
 
         });
 
-        CountryResortsPanel favoritePanel = new CountryResortsPanel(Country.FAVORITE);
-        cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
-
         favoriteButton.addActionListener(new DisplayFavoriteButtonActionListener(favoritePanel));
         favoriteButton.addActionListener(e -> {
             if(favoriteIsActive){
@@ -144,6 +89,14 @@ public class MainFrame extends JFrame {
                 cardLayout.show(cardPanel, Country.FAVORITE.getCountryName());
                 favoriteIsActive = true;
                 menuIsActive = false;
+            }
+        });
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                StorageHandler.saveSetToFile(favoriteResorts.getFavoriteSavedMap(), "data/favorites.json");
+                System.exit(0);
             }
         });
     }
