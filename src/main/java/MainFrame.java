@@ -1,16 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 import javax.swing.WindowConstants;
-import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
-    private JList<Resort> resortList;
     private JPanel upperPanel;
     private JPanel mainPanel;
     private JButton menuButton;

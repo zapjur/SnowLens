@@ -106,3 +106,241 @@
 2024-01-05 18:38:54 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
 2024-01-05 18:39:03 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
 2024-01-05 18:39:03 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 18:45:42 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 18:45:42 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 18:45:42 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 18:45:44 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 18:45:44 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 18:45:45 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 18:45:45 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 18:45:45 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 18:45:52 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 18:45:52 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:42:06 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:42:06 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:42:06 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:42:07 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:42:07 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:42:08 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:42:08 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:42:09 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:42:13 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:42:14 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:42:14 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:42:15 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:42:15 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:42:16 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:42:16 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:42:17 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:42:17 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:42:18 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:42:18 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:42:19 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:43:11 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:43:11 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:44:09 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:44:09 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:44:09 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:44:10 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:44:10 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:44:11 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:44:11 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:44:11 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:44:43 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:44:44 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:44:44 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:44:44 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:44:44 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:44:45 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:44:45 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:44:46 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:44:46 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:44:47 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:44:47 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:44:47 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:45:51 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:45:51 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:47:17 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:47:17 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:47:17 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:47:19 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:47:19 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:47:20 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:47:20 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:47:21 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:47:32 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:47:32 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:48:11 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:48:11 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:48:11 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:48:12 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:48:12 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:48:13 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:48:13 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:48:13 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:48:16 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:48:17 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:48:17 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:48:18 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:48:18 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:48:19 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:48:19 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:48:20 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:48:20 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:48:21 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:48:21 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:48:22 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:48:49 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:48:49 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:50:53 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:50:53 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:50:53 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:50:56 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:50:56 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:50:57 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:50:57 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:50:58 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:51:01 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:51:02 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:51:02 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:51:02 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:51:02 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:51:03 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:51:03 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:51:04 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:51:04 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:51:05 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:51:05 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:51:06 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:51:16 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:51:16 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:52:00 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:52:00 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:52:00 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:52:01 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:52:01 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:52:02 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:52:02 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:52:03 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:52:05 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:52:06 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:52:06 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:52:07 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:52:07 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:52:08 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:52:08 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:52:09 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:52:09 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:52:09 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:52:09 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:52:10 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:53:02 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:53:02 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:53:32 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:53:32 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:53:32 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:53:34 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:53:34 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:53:35 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:53:35 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:53:36 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:53:39 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:53:40 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:53:40 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:53:41 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:53:41 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:53:42 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:53:42 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:53:43 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:53:43 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:53:44 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:53:44 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:53:45 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:54:09 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:54:09 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:55:00 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:55:00 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 19:55:00 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 19:55:01 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 19:55:01 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 19:55:02 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 19:55:02 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:55:03 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 19:55:05 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:55:06 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 19:55:06 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:55:07 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 19:55:07 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:55:08 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 19:55:08 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:55:08 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 19:55:08 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:55:09 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 19:55:09 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:55:10 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 19:55:39 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 19:55:39 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:07:27 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:07:27 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:07:27 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 20:07:28 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 20:07:28 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 20:07:29 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 20:07:29 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:07:30 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:07:41 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:07:41 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:09:02 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:09:02 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:09:02 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 20:09:03 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 20:09:03 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 20:09:04 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 20:09:04 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:09:05 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:09:36 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:09:36 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:11:01 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:11:01 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:11:01 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 20:11:02 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 20:11:02 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 20:11:03 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 20:11:03 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:11:04 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:11:09 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 20:11:10 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 20:11:10 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 20:11:11 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 20:11:11 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 20:11:12 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 20:11:12 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 20:11:13 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 20:11:13 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 20:11:14 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 20:11:14 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 20:11:15 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 20:11:33 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:11:33 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:11:52 INFO  StorageHandler:25 - Start of loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:11:52 INFO  StorageHandler:29 - Success loading favorite resorts map from file: data/favorites.json
+2024-01-05 20:11:52 INFO  InformationScraper:18 - Start of looking for favorite resort: Kasina Ski
+2024-01-05 20:11:53 INFO  InformationScraper:64 - Success scraping favorite resort: Kasina Ski
+2024-01-05 20:11:53 INFO  InformationScraper:18 - Start of looking for favorite resort: Jasna (Chopok)
+2024-01-05 20:11:54 INFO  InformationScraper:64 - Success scraping favorite resort: Jasna (Chopok)
+2024-01-05 20:11:54 INFO  InformationScraper:18 - Start of looking for favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:11:55 INFO  InformationScraper:64 - Success scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-05 20:12:11 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 20:12:12 INFO  InformationScraper:197 - Success scraping 35 resorts from url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-05 20:12:12 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 20:12:13 INFO  InformationScraper:197 - Success scraping 9 resorts from url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-05 20:12:13 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 20:12:14 INFO  InformationScraper:197 - Success scraping 3 resorts from url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-05 20:12:14 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 20:12:15 INFO  InformationScraper:197 - Success scraping 1 resorts from url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-05 20:12:15 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 20:12:16 INFO  InformationScraper:197 - Success scraping 5 resorts from url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-05 20:12:16 INFO  InformationScraper:153 - Start of scraping data from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 20:12:16 INFO  InformationScraper:197 - Success scraping 16 resorts from url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-05 20:13:14 INFO  StorageHandler:14 - Start of saving favorite resorts map to file: data/favorites.json
+2024-01-05 20:13:14 INFO  StorageHandler:17 - Success saving favorite resorts map to file: data/favorites.json

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="added counting to log4j">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="json works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StorageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StorageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,7 @@
       <workItem from="1703789679250" duration="2121000" />
       <workItem from="1704222853001" duration="11127000" />
       <workItem from="1704364027862" duration="29460000" />
-      <workItem from="1704466118727" duration="7395000" />
+      <workItem from="1704466118727" duration="10953000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -418,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704413833640</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="json works">
+      <option name="closed" value="true" />
+      <created>1704476709107</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704476709107</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,6 +456,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="fix closed panel favorite button" />
     <MESSAGE value="added counting to log4j" />
-    <option name="LAST_COMMIT_MESSAGE" value="added counting to log4j" />
+    <MESSAGE value="json works" />
+    <option name="LAST_COMMIT_MESSAGE" value="json works" />
   </component>
 </project>
