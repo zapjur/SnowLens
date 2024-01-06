@@ -194,7 +194,6 @@
               <borderPainted value="false"/>
               <contentAreaFilled value="false"/>
               <focusable value="false"/>
-              <icon value="starEmpty.png"/>
               <text value=""/>
             </properties>
           </component>

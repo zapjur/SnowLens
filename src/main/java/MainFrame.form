@@ -35,7 +35,6 @@
                   <contentAreaFilled value="false"/>
                   <focusable value="false"/>
                   <foreground color="-16748859"/>
-                  <icon value="starFull.png"/>
                   <maximumSize width="80" height="80"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="80" height="80"/>
@@ -52,7 +51,6 @@
                   <defaultCapable value="false"/>
                   <focusable value="false"/>
                   <foreground color="-16748859"/>
-                  <icon value="menu.png"/>
                   <maximumSize width="80" height="80"/>
                   <minimumSize width="50" height="50"/>
                   <preferredSize width="80" height="80"/>
@@ -74,7 +72,6 @@
                 <properties>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="0"/>
-                  <icon value="logoSmall.png"/>
                   <preferredSize width="200" height="100"/>
                   <text value=""/>
                   <verticalAlignment value="0"/>
@@ -82,14 +79,24 @@
               </component>
             </children>
           </grid>
-          <grid id="7fe70" binding="fillingPanel" layout-manager="GridBagLayout">
+          <grid id="7fe70" binding="fillingPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints border-constraint="West"/>
             <properties>
               <background color="-16748859"/>
               <preferredSize width="200" height="100"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <component id="8b078" class="javax.swing.JLabel" binding="flagIconLabel">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-16748859"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
           </grid>
         </children>
       </grid>

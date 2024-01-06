@@ -32,8 +32,13 @@ public class DisplayResortActionListener implements ActionListener {
                     JPanel panel = new JPanel();
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.OPEN));
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+                    int i = 0;
                     for (Resort resort : openResorts) {
-                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
+                        OpenListPanel pan = new OpenListPanel(resort, resort.isFavorite());
+                        if(i % 2 == 0) pan.whiteBackground();
+                        else pan.grayBackground();
+                        panel.add(pan);
+                        i++;
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -43,8 +48,13 @@ public class DisplayResortActionListener implements ActionListener {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
+                    int i = 0;
                     for (Resort resort : weekendResorts) {
-                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
+                        OpenListPanel pan = new OpenListPanel(resort, resort.isFavorite());
+                        if(i % 2 == 0) pan.whiteBackground();
+                        else pan.grayBackground();
+                        panel.add(pan);
+                        i++;
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -54,8 +64,13 @@ public class DisplayResortActionListener implements ActionListener {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
+                    int i = 0;
                     for (Resort resort : tempclosedResorts) {
-                        panel.add(new OpenListPanel(resort, resort.isFavorite()));
+                        OpenListPanel pan = new OpenListPanel(resort, resort.isFavorite());
+                        if(i % 2 == 0) pan.whiteBackground();
+                        else pan.grayBackground();
+                        panel.add(pan);
+                        i++;
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }
@@ -65,8 +80,13 @@ public class DisplayResortActionListener implements ActionListener {
                     JPanel panel = new JPanel();
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
+                    int i = 0;
                     for (Resort resort : closedResorts) {
-                        panel.add(new ClosedListPanel(resort, resort.isFavorite()));
+                        ClosedListPanel pan = new ClosedListPanel(resort, resort.isFavorite());
+                        if(i % 2 == 0) pan.whiteBackground();
+                        else pan.grayBackground();
+                        panel.add(pan);
+                        i++;
                     }
                     countryResortsPanel.addToScrollContainer(panel);
                 }

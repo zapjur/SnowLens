@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="fixed favorite">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="works :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/favorites.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/favorites.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CountryResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CountryResorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortButtonsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortButtonsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +58,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/piotrzapior/Documents/IntelliJIDEA/SnowLens/.idea&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -118,7 +130,8 @@
       <workItem from="1703789679250" duration="2121000" />
       <workItem from="1704222853001" duration="11127000" />
       <workItem from="1704364027862" duration="29460000" />
-      <workItem from="1704466118727" duration="23845000" />
+      <workItem from="1704466118727" duration="32920000" />
+      <workItem from="1704555063348" duration="1590000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -440,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704494993355</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="works :)">
+      <option name="closed" value="true" />
+      <created>1704499247130</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1704499247130</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,6 +498,7 @@
     <MESSAGE value="json works" />
     <MESSAGE value="better ui" />
     <MESSAGE value="fixed favorite" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed favorite" />
+    <MESSAGE value="works :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="works :)" />
   </component>
 </project>

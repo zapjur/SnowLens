@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ClosedListPanel extends JPanel {
 
@@ -9,13 +11,15 @@ public class ClosedListPanel extends JPanel {
     private JPanel openDatePanel = new JPanel();
     private JLabel openDateLabel = new JLabel();
     private JPanel favoritePanel = new JPanel();
+    private JPanel fill, fill1, fill2, fill3;
     private JButton favoriteButton = new JButton();
     private boolean isFavorite = false;
-    private ImageIcon starEmpty;
-    private ImageIcon starFull;
+    private static final Logger logger = LogManager.getLogger(ClosedListPanel.class);
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
     private CountryResorts countryResorts = CountryResorts.getInstance();
     private Font font = new Font("Arial", Font.BOLD, 14);
+    private Color white = Color.WHITE;
+    private Color gray = new Color(233, 236, 239);
 
     public ClosedListPanel(Resort resort){
         this.isFavorite = true;
@@ -33,8 +37,11 @@ public class ClosedListPanel extends JPanel {
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
-        starEmpty = new ImageIcon(getClass().getResource("starEmpty.png"));
-        starFull = new ImageIcon(getClass().getResource("starFull.png"));
+        String starEmptyPath = "starEmpty.png";
+        java.net.URL starEmpty = getClass().getResource(starEmptyPath);
+
+        String starFullPath = "starFull.png";
+        java.net.URL starFull = getClass().getResource(starFullPath);
 
         nameLabel.setFont(font);
         nameLabel.setBackground(Color.WHITE);
@@ -49,22 +56,22 @@ public class ClosedListPanel extends JPanel {
         namePanel.add(updateTimeLabel);
         add(namePanel);
 
-        JPanel fill = new JPanel();
+        fill = new JPanel();
         fill.setPreferredSize(new Dimension(100, 100));
         fill.setBackground(Color.WHITE);
         add(fill);
 
-        JPanel fill1 = new JPanel();
+        fill1 = new JPanel();
         fill1.setPreferredSize(new Dimension(100, 100));
         fill1.setBackground(Color.WHITE);
         add(fill1);
 
-        JPanel fill2 = new JPanel();
+        fill2 = new JPanel();
         fill2.setPreferredSize(new Dimension(100, 100));
         fill2.setBackground(Color.WHITE);
         add(fill2);
 
-        JPanel fill3 = new JPanel();
+        fill3 = new JPanel();
         fill3.setPreferredSize(new Dimension(100, 100));
         fill3.setBackground(Color.WHITE);
         add(fill3);
@@ -79,10 +86,20 @@ public class ClosedListPanel extends JPanel {
         add(openDatePanel);
 
         if(isFavorite){
-            favoriteButton.setIcon(starFull);
+            if(starFull != null){
+                favoriteButton.setIcon(new ImageIcon(starFull));
+            }
+            else{
+                logger.error("Can't find favorite button image: " + starFullPath);
+            }
         }
         else{
-            favoriteButton.setIcon(starEmpty);
+            if(starEmpty != null){
+                favoriteButton.setIcon(new ImageIcon(starEmpty));
+            }
+            else{
+                logger.error("Can't find favorite button image: " + starEmptyPath);
+            }
         }
 
         favoriteButton.setBackground(Color.WHITE);
@@ -97,15 +114,25 @@ public class ClosedListPanel extends JPanel {
 
         favoriteButton.addActionListener(e -> {
             if(isFavorite){
-                favoriteButton.setIcon(starEmpty);
+                if(starEmpty != null){
+                    favoriteButton.setIcon(new ImageIcon(starEmpty));
+                }
+                else{
+                    logger.error("Can't find favorite button image: " + starEmptyPath);
+                }
                 isFavorite = false;
                 favoriteResorts.removeFavorite(resort);
-                countryResorts.getPanelClosed(resort.country(), resort.openStatus(), resort).unfavorite();
+                countryResorts.getPanelClosed(resort.country(), resort).unfavorite(starEmpty, starEmptyPath);
             }
             else{
-                favoriteButton.setIcon(starFull);
+                if(starFull != null){
+                    favoriteButton.setIcon(new ImageIcon(starFull));
+                }
+                else{
+                    logger.error("Can't find favorite button image: " + starFullPath);
+                }
                 isFavorite = true;
-                favoriteResorts.addFavorite(resort, new ClosedListPanel(resort));
+                favoriteResorts.addFavoriteClosed(resort, new ClosedListPanel(resort));
             }
         });
 
@@ -113,8 +140,33 @@ public class ClosedListPanel extends JPanel {
         updateTimeLabel.setText(resort.updateTime());
         openDateLabel.setText(resort.openDate());
     }
-    public void unfavorite(){
+    public void unfavorite(java.net.URL starEmpty, String starEmptyPath){
         isFavorite = false;
-        favoriteButton.setIcon(starEmpty);
+        if(starEmpty != null){
+            favoriteButton.setIcon(new ImageIcon(starEmpty));
+        }
+        else{
+            logger.error("Can't find favorite button image: " + starEmptyPath);
+        }
     }
+
+    public void whiteBackground(){
+        changeBackground(white);
+    }
+    public void grayBackground(){
+        changeBackground(gray);
+    }
+
+    private void changeBackground(Color color) {
+        this.setBackground(color);
+        this.namePanel.setBackground(color);
+        this.nameLabel.setBackground(color);
+        this.fill.setBackground(color);
+        this.fill1.setBackground(color);
+        this.fill2.setBackground(color);
+        this.fill3.setBackground(color);
+        this.openDatePanel.setBackground(color);
+        this.favoritePanel.setBackground(color);
+    }
+
 }

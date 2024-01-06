@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import javax.swing.WindowConstants;
 import java.awt.event.WindowEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class MainFrame extends JFrame {
     private JPanel cardPanel;
@@ -17,6 +19,8 @@ public class MainFrame extends JFrame {
     private JPanel fillingPanel;
     private JScrollPane menuScrollPanel;
     private JPanel menuButtonPanel;
+    private JLabel flagIconLabel;
+    private static final Logger logger = LogManager.getLogger(MainFrame.class);
     private final String MENU_PANEL = "MenuPanel";
     private String lastCountryPanel = null;
     private boolean menuIsActive = false;
@@ -30,6 +34,33 @@ public class MainFrame extends JFrame {
         setBackground(Color.WHITE);
         setResizable(false);
         setLocationRelativeTo(null);
+
+        String logoPath = "logoSmall.png";
+        java.net.URL logo = getClass().getResource(logoPath);
+        if(logo != null){
+            logoLabel.setIcon(new ImageIcon(logo));
+        }
+        else{
+            logger.error("Can't find logo: " + logoPath);
+        }
+
+        String favoritePath = "starFull.png";
+        java.net.URL favorite = getClass().getResource(favoritePath);
+        if(favorite != null){
+            favoriteButton.setIcon(new ImageIcon(favorite));
+        }
+        else{
+            logger.error("Can't find favorite button image: " + favoritePath);
+        }
+
+        String menuPath = "menu.png";
+        java.net.URL menu = getClass().getResource(menuPath);
+        if(menu != null){
+            menuButton.setIcon(new ImageIcon(menu));
+        }
+        else{
+            logger.error("Can't find menu button image: " + menuPath);
+        }
 
         favoriteResorts.setFavoriteSavedMap(StorageHandler.loadSetFromFile("data/favorites.json"));
 
@@ -130,6 +161,14 @@ public class MainFrame extends JFrame {
         MenuButton button = new MenuButton(country);
         button.addActionListener(new DisplayResortActionListener(country, cardLayout, cardPanel));
         button.addActionListener(e -> {
+            String iconPath = country.getFlagUrl();
+            java.net.URL icon = getClass().getResource(iconPath);
+            if(icon != null){
+                flagIconLabel.setIcon(new ImageIcon(icon));
+            }
+            else{
+                logger.error("Can't find image: " + iconPath);
+            }
             lastCountryPanel = country.getCountryName();
             menuIsActive = false;
         });

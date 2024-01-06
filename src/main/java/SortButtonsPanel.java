@@ -16,6 +16,7 @@ public class SortButtonsPanel extends JPanel {
     public SortButtonsPanel(Country country, CountryResortsPanel countryPanel){
         setSize(new Dimension(1000, 50));
         setLayout(new GridLayout(1,5));
+        setBackground(Color.WHITE);
 
 
         List<JButton> buttons = List.of(sortByNames, sortBySnowLast, sortByCurrSnow, sortByOpenDist, sortByOpenLifts);
@@ -79,25 +80,38 @@ public class SortButtonsPanel extends JPanel {
 
     private void display(CountryResortsPanel countryPanel, Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap, Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap){
         countryPanel.clearScrollContainer();
-
+        int i = 0;
         countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
-        for(JPanel panel : openMap.get(Resort.OpenStatus.OPEN).values()){
+        for(OpenListPanel panel : openMap.get(Resort.OpenStatus.OPEN).values()){
+            if(i % 2 == 0) panel.whiteBackground();
+            else panel.grayBackground();
             countryPanel.addToScrollContainer(panel);
+            i++;
         }
-
+        i = 0;
         countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
-        for(JPanel panel : openMap.get(Resort.OpenStatus.WEEKEND).values()){
+        for(OpenListPanel panel : openMap.get(Resort.OpenStatus.WEEKEND).values()){
+            if(i % 2 == 0) panel.whiteBackground();
+            else panel.grayBackground();
             countryPanel.addToScrollContainer(panel);
+            i++;
         }
 
+        i = 0;
         countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
-        for(JPanel panel : openMap.get(Resort.OpenStatus.TEMPCLOSED).values()){
+        for(OpenListPanel panel : openMap.get(Resort.OpenStatus.TEMPCLOSED).values()){
+            if(i % 2 == 0) panel.whiteBackground();
+            else panel.grayBackground();
             countryPanel.addToScrollContainer(panel);
+            i++;
         }
-
+        i = 0;
         countryPanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
-        for(JPanel panel : closedMap.get(Resort.OpenStatus.CLOSE).values()){
+        for(ClosedListPanel panel : closedMap.get(Resort.OpenStatus.CLOSE).values()){
+            if(i % 2 == 0) panel.whiteBackground();
+            else panel.grayBackground();
             countryPanel.addToScrollContainer(panel);
+            i++;
         }
 
         countryPanel.setScrollView();

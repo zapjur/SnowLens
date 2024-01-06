@@ -68,8 +68,8 @@ public class CountryResorts {
                 .findFirst()
                 .orElse(null);
     }
-    public ClosedListPanel getPanelClosed(Country country, Resort.OpenStatus status, Resort resort) {
-        return countryMapClosed.get(country).get(status).entrySet().stream()
+    public ClosedListPanel getPanelClosed(Country country,  Resort resort) {
+        return countryMapClosed.get(country).get(Resort.OpenStatus.CLOSE).entrySet().stream()
                 .filter(entry -> entry.getKey().name().equals(resort.name()))
                 .map(Map.Entry::getValue)
                 .findFirst()

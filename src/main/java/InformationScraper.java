@@ -42,27 +42,37 @@ public class InformationScraper {
                 if (!table.select("span.styles_open__3MfH6").isEmpty()) {
                     if (table.select("span.styles_open__3MfH6").text().equals(open)) {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN, url, resort);
-                        if(res != null) return res;
+                        if(res != null){
+                            logger.info("Success scraping favorite resort: " + resort.name());
+                            return res;
+                        }
 
                     } else if (table.select("span.styles_open__3MfH6").text().equals(weekends)) {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND, url, resort);
-                        if(res != null) return res;
+                        if(res != null){
+                            logger.info("Success scraping favorite resort: " + resort.name());
+                            return res;
+                        }
                     }
 
                 } else if (!table.select("span.styles_partial__2pEPh").isEmpty()) {
                     if (table.select("span.styles_partial__2pEPh").text().equals(tempclosed)) {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED, url, resort);
-                        if(res != null) return res;
+                        if(res != null){
+                            logger.info("Success scraping favorite resort: " + resort.name());
+                            return res;
+                        }
                     }
                 } else if (!table.select("span.styles_closed__2QlIG").isEmpty()) {
                     if (table.select("span.styles_closed__2QlIG").text().equals(closed)) {
                         res = scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE, url, resort);
-                        if(res != null) return res;
+                        if(res != null){
+                            logger.info("Success scraping favorite resort: " + resort.name());
+                            return res;
+                        }
                     }
                 }
             }
-
-            logger.info("Success scraping favorite resort: " + resort.name());
 
         } catch (IOException e){
             logger.error("Error while scraping favorite resort: " + resort.name());

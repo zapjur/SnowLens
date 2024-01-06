@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class OpenStatusPanel extends JPanel {
 
+    Font font = new Font("Arial", Font.BOLD, 22);
     public OpenStatusPanel(Resort.OpenStatus status) {
         setSize(new Dimension(1000, 50));
         setPreferredSize(new Dimension(1000, 50));
@@ -13,25 +14,25 @@ public class OpenStatusPanel extends JPanel {
         BorderedLabel blabel;
         switch (status) {
             case OPEN:
-                blabel = new BorderedLabel("Open", Color.WHITE, Color.BLACK, new Font("Arial", Font.BOLD, 22));
+                blabel = new BorderedLabel("Open", Color.WHITE, Color.BLACK, font);
                 add(blabel);
                 setBackground(new Color(101, 183, 65));
                 break;
 
             case CLOSE:
-                blabel = new BorderedLabel("Closed", Color.WHITE, Color.BLACK, new Font("Arial", Font.BOLD, 22));
+                blabel = new BorderedLabel("Closed", Color.WHITE, Color.BLACK, font);
                 add(blabel);
                 setBackground(new Color(199, 0, 57));
                 break;
 
             case WEEKEND:
-                blabel = new BorderedLabel("Weekends Only", Color.WHITE, Color.BLACK, new Font("Arial", Font.BOLD, 22));
+                blabel = new BorderedLabel("Weekends Only", Color.WHITE, Color.BLACK, font);
                 add(blabel);
                 setBackground(new Color(154, 222, 123));
                 break;
 
             case TEMPCLOSED:
-                blabel = new BorderedLabel("Temporarily Closed", Color.WHITE, Color.BLACK, new Font("Arial", Font.BOLD, 22));
+                blabel = new BorderedLabel("Temporarily Closed", Color.WHITE, Color.BLACK, font);
                 add(blabel);
                 setBackground(new Color(255, 181, 52));
                 break;

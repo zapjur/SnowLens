@@ -17,29 +17,45 @@ public class DisplayFavoriteButtonActionListener implements ActionListener {
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.WEEKEND)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.TEMPCLOSED)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.CLOSE)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.CLOSE).values()) {
+            int i = 0;
+            for (ClosedListPanel panel : favoriteResorts.getPanelsClosed().values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
