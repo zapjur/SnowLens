@@ -33,7 +33,7 @@ public class FavoriteResorts {
     }
 
     public void removeFavorite(Resort resort) {
-        favoriteMap.get(resort.openStatus()).remove(resort);
+        favoriteMap.get(resort.openStatus()).entrySet().removeIf(entry -> entry.getKey().name().equals(resort.name()));
         favoriteSavedMap.remove(resort.name());
     }
 

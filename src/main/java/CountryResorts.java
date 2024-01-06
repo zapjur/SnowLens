@@ -62,10 +62,18 @@ public class CountryResorts {
         }
     }
     public OpenListPanel getPanel(Country country, Resort.OpenStatus status, Resort resort) {
-        return countryMap.get(country).get(status).get(resort);
+        return countryMap.get(country).get(status).entrySet().stream()
+                .filter(entry -> entry.getKey().name().equals(resort.name()))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
     public ClosedListPanel getPanelClosed(Country country, Resort.OpenStatus status, Resort resort) {
-        return countryMapClosed.get(country).get(status).get(resort);
+        return countryMapClosed.get(country).get(status).entrySet().stream()
+                .filter(entry -> entry.getKey().name().equals(resort.name()))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 
     public boolean containsResort(Country country, Resort resort) {

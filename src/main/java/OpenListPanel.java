@@ -117,7 +117,6 @@ public class OpenListPanel extends JPanel {
     public void unfavorite(){
         isFavorite = false;
         favoriteButton.setIcon(starEmpty);
-        System.out.println(isFavorite);
     }
 
 }
