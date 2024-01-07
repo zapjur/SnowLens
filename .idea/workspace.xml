@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="wersja działa git">
-      <change afterPath="$PROJECT_DIR$/src/main/java/InternetProblemHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InternetProblemPanel.java" afterDir="false" />
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="dodany internetproblem handler i panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayStartFavoritePanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +121,7 @@
       <workItem from="1704584956724" duration="745000" />
       <workItem from="1704627908277" duration="1570000" />
       <workItem from="1704631230717" duration="627000" />
-      <workItem from="1704643389499" duration="3141000" />
+      <workItem from="1704643389499" duration="11948000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -466,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704556674971</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="dodany internetproblem handler i panel">
+      <option name="closed" value="true" />
+      <created>1704646566446</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1704646566446</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,6 +506,7 @@
     <MESSAGE value="fixed favorite" />
     <MESSAGE value="works :)" />
     <MESSAGE value="wersja działa git" />
-    <option name="LAST_COMMIT_MESSAGE" value="wersja działa git" />
+    <MESSAGE value="dodany internetproblem handler i panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodany internetproblem handler i panel" />
   </component>
 </project>

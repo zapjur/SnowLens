@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.util.concurrent.*;
 
 public class InformationScraper {
     private static final Logger logger = LogManager.getLogger(InformationScraper.class);
@@ -265,6 +266,45 @@ public class InformationScraper {
             parts = openLifts.split(" ");
             openLifts = parts[0];
 
+            if(country == Country.USA || country == Country.CANADA){
+                if(!snowLast24.equals("-") && snowLast24.length() > 1) {
+                    try {
+                        snowLast24 = snowLast24.substring(0, snowLast24.length() - 1);
+                        snowLast24 = String.format("%.0f", Float.parseFloat(snowLast24) * 2.54);
+                        snowLast24 += "cm";
+                    } catch (NumberFormatException ex){
+                        logger.error("Error while converting inches to cm in last snow in resort: " + name);
+                    }
+                }
+
+                if(!currSnow.equals("-")){
+                    currSnow = currSnow.substring(0, currSnow.length()-1);
+                    parts = currSnow.split("-");
+
+                    if(parts.length > 1){
+                        try {
+                            parts[0] = String.format("%.0f", Float.parseFloat(parts[0]) * 2.54);
+                            parts[1] = String.format("%.0f", Float.parseFloat(parts[1]) * 2.54);
+                            currSnow = parts[0] + "-" + parts[1] + "cm";
+                        }
+                        catch (NumberFormatException ex){
+                            logger.error("Error while converting inches to cm in curr snow in resort: " + name);
+                        }
+                    }
+                    else{
+                        try {
+                            currSnow = String.format("%.0f", Float.parseFloat(currSnow) * 2.54);
+                            currSnow += "cm";
+                        }
+                        catch (NumberFormatException ex){
+                            logger.error("Error while converting inches to cm in curr snow in resort: " + name);
+                        }
+                    }
+                }
+
+
+            }
+
             resorts.add(new Resort(name, updateTime, "N/A", snowLast24, currSnow, snowType, openTrailsDist,
                     openTrailsPer, openDist, openLifts, status, country, url, lang, favoriteResorts.containsResort(name, status)));
 
@@ -309,17 +349,7 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/slaskie/warunki-narciarskie"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.POLAND, Dictionary.Language.POLISH);
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.POLAND, Dictionary.Language.POLISH);
     }
 
     public static Map<Resort.OpenStatus, List<Resort>> italyScraping() throws IOException {
@@ -335,17 +365,7 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/veneto/warunki-narciarskie"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.ITALY, Dictionary.Language.POLISH);
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.ITALY, Dictionary.Language.POLISH);
     }
 
     public static Map<Resort.OpenStatus, List<Resort>> austriaScraping() throws IOException {
@@ -359,17 +379,7 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/vorarlberg/warunki-narciarskie"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.AUSTRIA, Dictionary.Language.POLISH);;
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.AUSTRIA, Dictionary.Language.POLISH);
     }
     public static Map<Resort.OpenStatus, List<Resort>> czechScraping() throws IOException {
         List<String> Urls = List.of(
@@ -383,17 +393,7 @@ public class InformationScraper {
                 "https://www.skiinfo.pl/wysoczyzna/warunki-narciarskie"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.CZECH, Dictionary.Language.POLISH);;
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.CZECH, Dictionary.Language.POLISH);
     }
     public static Map<Resort.OpenStatus, List<Resort>> andorraScraping() throws IOException {
         Map<Resort.OpenStatus, List<Resort>> map = infoScraping("https://www.skiinfo.pl/andora/warunki-narciarskie", Country.ANDORRA,Dictionary.Language.POLISH);
@@ -418,17 +418,7 @@ public class InformationScraper {
 
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.FRANCE, Dictionary.Language.ENGLISH);
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.FRANCE, Dictionary.Language.ENGLISH);
     }
     public static Map<Resort.OpenStatus, List<Resort>> finlandScraping() throws IOException {
         Map<Resort.OpenStatus, List<Resort>> map = infoScraping("https://www.skiinfo.pl/finlandia/warunki-narciarskie", Country.FINLAND, Dictionary.Language.POLISH);
@@ -480,17 +470,7 @@ public class InformationScraper {
                 "https://www.onthesnow.co.uk/vosges/skireport"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.SWITZERLAND, Dictionary.Language.ENGLISH);
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.SWITZERLAND, Dictionary.Language.ENGLISH);
     }
     public static Map<Resort.OpenStatus, List<Resort>> usaScraping() throws IOException {
         List<String> Urls = List.of(
@@ -527,20 +507,10 @@ public class InformationScraper {
                 "https://www.onthesnow.com/missouri/skireport",
                 "https://www.onthesnow.com/new-mexico/skireport",
                 "https://www.onthesnow.com/pennsylvania/skireport",
-                "https://www.onthesnow.com/virginia/skireports"
+                "https://www.onthesnow.com/virginia/skireport"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
-
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.USA, Dictionary.Language.ENGLISH);
-
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
-        }
-        return map;
+        return scrapLoop(Urls, Country.USA, Dictionary.Language.ENGLISH);
     }
     public static Map<Resort.OpenStatus, List<Resort>> canadaScraping() throws IOException {
         List<String> Urls = List.of(
@@ -550,26 +520,37 @@ public class InformationScraper {
                 "https://www.onthesnow.com/quebec/skireport"
         );
 
-        Map<Resort.OpenStatus, List<Resort>> map = new HashMap<>();
+        return scrapLoop(Urls, Country.CANADA, Dictionary.Language.ENGLISH);
+    }
 
-        for (String url : Urls) {
-            Map<Resort.OpenStatus, List<Resort>> temp = infoScraping(url, Country.CANADA, Dictionary.Language.ENGLISH);
+    private static Map<Resort.OpenStatus, List<Resort>> scrapLoop(List<String> urls, Country country, Dictionary.Language lang){
+        Map<Resort.OpenStatus, List<Resort>> map = new ConcurrentHashMap<>();
 
-            temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
-                list1.addAll(list2);
-                return list1;
-            }));
+        int threadPoolSize = Math.min(urls.size(), Runtime.getRuntime().availableProcessors() * 2);
+        ExecutorService executor = Executors.newFixedThreadPool(threadPoolSize);
+
+        List<Future<Map<Resort.OpenStatus, List<Resort>>>> futures = new ArrayList<>();
+
+        for (String url : urls) {
+            Callable<Map<Resort.OpenStatus, List<Resort>>> task = () -> infoScraping(url, country, lang);
+            futures.add(executor.submit(task));
         }
+
+        for (Future<Map<Resort.OpenStatus, List<Resort>>> future : futures) {
+            try {
+                Map<Resort.OpenStatus, List<Resort>> temp = future.get();
+                temp.forEach((key, value) -> map.merge(key, value, (list1, list2) -> {
+                    list1.addAll(list2);
+                    return list1;
+                }));
+            } catch (InterruptedException | ExecutionException e) {
+                logger.error("Error while processing thread: " + e);
+            }
+        }
+
+        executor.shutdown();
+
         return map;
     }
 
-    public static void main(String[] args) {
-        try {
-            Map<Resort.OpenStatus, List<Resort>> map = franceScraping();
-            System.out.println(map.toString());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
 }
