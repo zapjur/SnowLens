@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="works :)">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="wersja działa git">
+      <change afterPath="$PROJECT_DIR$/src/main/java/InternetProblemHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/InternetProblemPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/favorites.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/favorites.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CountryResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CountryResorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayStartFavoritePanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SortButtonsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortButtonsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +124,11 @@
       <workItem from="1704222853001" duration="11127000" />
       <workItem from="1704364027862" duration="29460000" />
       <workItem from="1704466118727" duration="32920000" />
-      <workItem from="1704555063348" duration="1590000" />
+      <workItem from="1704555063348" duration="1622000" />
+      <workItem from="1704584956724" duration="745000" />
+      <workItem from="1704627908277" duration="1570000" />
+      <workItem from="1704631230717" duration="627000" />
+      <workItem from="1704643389499" duration="3141000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -461,7 +458,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704499247130</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="wersja działa git">
+      <option name="closed" value="true" />
+      <created>1704556674971</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556674971</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,6 +504,7 @@
     <MESSAGE value="better ui" />
     <MESSAGE value="fixed favorite" />
     <MESSAGE value="works :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="works :)" />
+    <MESSAGE value="wersja działa git" />
+    <option name="LAST_COMMIT_MESSAGE" value="wersja działa git" />
   </component>
 </project>

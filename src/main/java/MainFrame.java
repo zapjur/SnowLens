@@ -26,6 +26,7 @@ public class MainFrame extends JFrame {
     private boolean menuIsActive = false;
     private boolean favoriteIsActive = false;
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
+    private CountryResortsPanel favoritePanel;
 
     public MainFrame() {
         setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -66,39 +67,8 @@ public class MainFrame extends JFrame {
 
         CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
 
-        CountryResortsPanel favoritePanel = new CountryResortsPanel(Country.FAVORITE);
-        favoriteResorts.scrapStartFavorite();
-
-        if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
-            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
-                favoritePanel.addToScrollContainer(panel);
-            }
-        }
-
-        if(favoriteResorts.containsStatus(Resort.OpenStatus.WEEKEND)) {
-            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
-                favoritePanel.addToScrollContainer(panel);
-            }
-        }
-
-        if(favoriteResorts.containsStatus(Resort.OpenStatus.TEMPCLOSED)) {
-            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
-                favoritePanel.addToScrollContainer(panel);
-            }
-        }
-
-        if(favoriteResorts.containsStatus(Resort.OpenStatus.CLOSE)) {
-            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.CLOSE).values()) {
-                favoritePanel.addToScrollContainer(panel);
-            }
-        }
-        favoritePanel.setScrollView();
-        cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
-        cardLayout.show(cardPanel, Country.FAVORITE.getCountryName());
+        favoritePanel = new CountryResortsPanel(Country.FAVORITE);
+        displayStartFavorite(cardLayout);
 
         menuButtonPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -173,6 +143,48 @@ public class MainFrame extends JFrame {
             menuIsActive = false;
         });
         return button;
+    }
+
+    private void displayStartFavorite(CardLayout cardLayout){
+        favoriteResorts.scrapStartFavorite();
+
+        if(!InternetProblemHandler.scrappingStatus()){
+            cardPanel.add(InternetProblemHandler.getInternetProblemPanel(), InternetProblemHandler.getPanelName());
+            cardLayout.show(cardPanel, InternetProblemHandler.getPanelName());
+            InternetProblemHandler.scrappingSuccessful();
+            return;
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.WEEKEND)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.TEMPCLOSED)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+
+        if(favoriteResorts.containsStatus(Resort.OpenStatus.CLOSE)) {
+            favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
+            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.CLOSE).values()) {
+                favoritePanel.addToScrollContainer(panel);
+            }
+        }
+        favoritePanel.setScrollView();
+        cardPanel.add(favoritePanel, Country.FAVORITE.getCountryName());
+        cardLayout.show(cardPanel, Country.FAVORITE.getCountryName());
     }
 
 

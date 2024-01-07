@@ -44,6 +44,7 @@ public class InformationScraper {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.OPEN, url, resort);
                         if(res != null){
                             logger.info("Success scraping favorite resort: " + resort.name());
+                            InternetProblemHandler.scrappingSuccessful();
                             return res;
                         }
 
@@ -51,6 +52,7 @@ public class InformationScraper {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.WEEKEND, url, resort);
                         if(res != null){
                             logger.info("Success scraping favorite resort: " + resort.name());
+                            InternetProblemHandler.scrappingSuccessful();
                             return res;
                         }
                     }
@@ -60,6 +62,7 @@ public class InformationScraper {
                         res = scrapForOpen(table, country, lang, Resort.OpenStatus.TEMPCLOSED, url, resort);
                         if(res != null){
                             logger.info("Success scraping favorite resort: " + resort.name());
+                            InternetProblemHandler.scrappingSuccessful();
                             return res;
                         }
                     }
@@ -68,6 +71,7 @@ public class InformationScraper {
                         res = scrapForClosed(table, country, lang, Resort.OpenStatus.CLOSE, url, resort);
                         if(res != null){
                             logger.info("Success scraping favorite resort: " + resort.name());
+                            InternetProblemHandler.scrappingSuccessful();
                             return res;
                         }
                     }
@@ -76,6 +80,7 @@ public class InformationScraper {
 
         } catch (IOException e){
             logger.error("Error while scraping favorite resort: " + resort.name());
+            InternetProblemHandler.scrappingFailed();
         }
         return null;
     }
@@ -206,9 +211,11 @@ public class InformationScraper {
             }
 
             logger.info("Success scraping " +  count + " resorts from url: " + url);
+            InternetProblemHandler.scrappingSuccessful();
         }
         catch (IOException e){
             logger.error("Error while scraping url: " + url);
+            InternetProblemHandler.scrappingFailed();
         }
 
         return map;

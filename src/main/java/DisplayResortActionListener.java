@@ -24,6 +24,14 @@ public class DisplayResortActionListener implements ActionListener {
                 if (!Country.COUNTRY_RESORTS.containsKey(country)) {
                     Country.COUNTRY_RESORTS.put(country, country.getResortList());
                 }
+                if(!InternetProblemHandler.scrappingStatus()){
+                    cardPanel.add(InternetProblemHandler.getInternetProblemPanel(), InternetProblemHandler.getPanelName());
+                    cardLayout.show(cardPanel, InternetProblemHandler.getPanelName());
+                    Country.addedCards.remove(country);
+                    Country.COUNTRY_RESORTS.remove(country);
+                    InternetProblemHandler.scrappingSuccessful();
+                    return;
+                }
 
                 CountryResortsPanel countryResortsPanel = new CountryResortsPanel(country);
                 countryResortsPanel.addSortButtonsPanel();

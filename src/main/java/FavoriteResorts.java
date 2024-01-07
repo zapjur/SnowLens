@@ -88,6 +88,7 @@ public class FavoriteResorts {
     public void scrapStartFavorite(){
         for(Resort resort : favoriteSavedMap.values()){
             Resort res = InformationScraper.scrapFavoriteResort(resort.url(), resort.country(), resort.lang(), resort);
+            if(res == null) continue;
             if(resort.openStatus() != Resort.OpenStatus.CLOSE) {
                 favoriteMap.get(res.openStatus()).put(res, new OpenListPanel(res));
             }

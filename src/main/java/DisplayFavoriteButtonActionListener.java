@@ -14,6 +14,12 @@ public class DisplayFavoriteButtonActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         favoritePanel.clearScrollContainer();
+        if(!InternetProblemHandler.scrappingStatus()){
+            favoritePanel.addToScrollContainer(InternetProblemHandler.getInternetProblemPanel());
+            favoritePanel.setScrollView();
+            InternetProblemHandler.scrappingSuccessful();
+            return;
+        }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
