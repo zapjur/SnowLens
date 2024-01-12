@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="dodany internetproblem handler i panel">
+    <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="wersja git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InformationScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/favorites.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/favorites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,11 @@
       <workItem from="1704584956724" duration="745000" />
       <workItem from="1704627908277" duration="1570000" />
       <workItem from="1704631230717" duration="627000" />
-      <workItem from="1704643389499" duration="11948000" />
+      <workItem from="1704643389499" duration="13497000" />
+      <workItem from="1704822165714" duration="740000" />
+      <workItem from="1704980955558" duration="272000" />
+      <workItem from="1704981815787" duration="220000" />
+      <workItem from="1704985301838" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -467,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704646566446</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="wersja git">
+      <option name="closed" value="true" />
+      <created>1704660983314</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1704660983314</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +519,7 @@
     <MESSAGE value="works :)" />
     <MESSAGE value="wersja działa git" />
     <MESSAGE value="dodany internetproblem handler i panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodany internetproblem handler i panel" />
+    <MESSAGE value="wersja git" />
+    <option name="LAST_COMMIT_MESSAGE" value="wersja git" />
   </component>
 </project>
