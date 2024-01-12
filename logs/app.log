@@ -1,9 +1,94 @@
-2024-01-11 15:03:39 ERROR InformationScraper:83 - Error while scraping favorite resort: Obereggen - Pampeago - Predazzo
-2024-01-11 15:03:39 ERROR InformationScraper:83 - Error while scraping favorite resort: Kasina Ski
-2024-01-11 15:03:39 ERROR InformationScraper:83 - Error while scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
-2024-01-11 15:03:42 ERROR InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-11 15:03:39 ERROR Scrapper.InformationScraper:83 - Error while scraping favorite resort: Obereggen - Pampeago - Predazzo
+2024-01-11 15:03:39 ERROR Scrapper.InformationScraper:83 - Error while scraping favorite resort: Kasina Ski
+2024-01-11 15:03:39 ERROR Scrapper.InformationScraper:83 - Error while scraping favorite resort: Grapa Ski - Litwinka (Czarna Góra)
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/lodzkie/warunki-narciarskie
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/slaskie/warunki-narciarskie
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/dolnoslaskie/warunki-narciarskie
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/malopolskie/warunki-narciarskie
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/gory-swietokrzyskie/warunki-narciarskie
+2024-01-11 15:03:42 ERROR Scrapper.InformationScraper:218 - Error while scraping url: https://www.skiinfo.pl/podkarpackie/warunki-narciarskie
+2024-01-12 11:51:42 ERROR MainFrame:52 - Can't find logo: logoSmall.png
+2024-01-12 11:51:42 ERROR MainFrame:61 - Can't find favorite button image: starFull.png
+2024-01-12 11:51:42 ERROR MainFrame:70 - Can't find menu button image: menu.png
+2024-01-12 11:51:44 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:51:44 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:52:46 ERROR MainFrame:52 - Can't find logo: src/main/resources/logoSmall.png
+2024-01-12 11:52:46 ERROR MainFrame:61 - Can't find favorite button image: starFull.png
+2024-01-12 11:52:46 ERROR MainFrame:70 - Can't find menu button image: menu.png
+2024-01-12 11:52:48 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:52:48 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:53:11 ERROR MainFrame:52 - Can't find logo: logoSmall.png
+2024-01-12 11:53:11 ERROR MainFrame:61 - Can't find favorite button image: starFull.png
+2024-01-12 11:53:11 ERROR MainFrame:70 - Can't find menu button image: menu.png
+2024-01-12 11:53:12 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:53:12 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:10 ERROR MainFrame:61 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:10 ERROR MainFrame:70 - Can't find menu button image: menu.png
+2024-01-12 11:55:11 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:11 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:29 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:29 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:98 - Can't find favorite button image: starFull.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR OpenListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png
+2024-01-12 11:55:34 ERROR ClosedListPanel:106 - Can't find favorite button image: starEmpty.png

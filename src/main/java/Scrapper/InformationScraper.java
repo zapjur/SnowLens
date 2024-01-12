@@ -1,3 +1,6 @@
+package Scrapper;
+
+import Data.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

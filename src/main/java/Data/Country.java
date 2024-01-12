@@ -1,5 +1,8 @@
+package Data;
+
 import java.io.IOException;
 import java.util.*;
+import Scrapper.InformationScraper;
 
 import static java.util.Map.entry;
 

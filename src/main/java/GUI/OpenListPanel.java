@@ -1,34 +1,45 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import Data.FavoriteResorts;
+import Data.Resort;
+import Data.CountryResorts;
 
-public class ClosedListPanel extends JPanel {
-
-    private JPanel namePanel = new JPanel();
-    private JLabel nameLabel = new JLabel();
-    private JLabel updateTimeLabel = new JLabel();
-    private JPanel openDatePanel = new JPanel();
-    private JLabel openDateLabel = new JLabel();
-    private JPanel favoritePanel = new JPanel();
-    private JPanel fill, fill1, fill2, fill3;
-    private JButton favoriteButton = new JButton();
+public class OpenListPanel extends JPanel {
+    private JPanel namePanel;
+    private JPanel snowLastPanel;
+    private JPanel currSnowPanel;
+    private JPanel trailsPanel;
+    private JPanel liftsPanel;
+    private JPanel favoritePanel;
+    private JButton favoriteButton;
+    private JLabel nameLabel;
+    private JLabel updateTimeLabel;
+    private JLabel snowLastLabel;
+    private JLabel currSnowLabel;
+    private JLabel snowTypeLabel;
+    private JLabel trailsDistLabel;
+    private JLabel trailsPerLabel;
+    private JLabel liftsLabel;
     private boolean isFavorite = false;
-    private static final Logger logger = LogManager.getLogger(ClosedListPanel.class);
+    private static final Logger logger = LogManager.getLogger(OpenListPanel.class);
     private FavoriteResorts favoriteResorts = FavoriteResorts.getInstance();
     private CountryResorts countryResorts = CountryResorts.getInstance();
     private Font font = new Font("Arial", Font.BOLD, 14);
     private Color white = Color.WHITE;
     private Color gray = new Color(233, 236, 239);
 
-    public ClosedListPanel(Resort resort){
+    public OpenListPanel(Resort resort){
         this.isFavorite = true;
         constructObject(resort);
     }
-    public ClosedListPanel(Resort resort, boolean isFavorite){
+    public OpenListPanel(Resort resort, boolean isFavorite){
         this.isFavorite = isFavorite;
-        countryResorts.addResort(resort.country(), resort, this);
         constructObject(resort);
+        countryResorts.addResort(resort.country(), resort, this);
     }
 
     private void constructObject(Resort resort){
@@ -37,53 +48,47 @@ public class ClosedListPanel extends JPanel {
         setBackground(Color.WHITE);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
-        String starEmptyPath = "starEmpty.png";
+        String starEmptyPath = "/starEmpty.png";
         java.net.URL starEmpty = getClass().getResource(starEmptyPath);
 
-        String starFullPath = "starFull.png";
+        String starFullPath = "/starFull.png";
         java.net.URL starFull = getClass().getResource(starFullPath);
 
         nameLabel.setFont(font);
-        nameLabel.setBackground(Color.WHITE);
         updateTimeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
-        updateTimeLabel.setBackground(Color.WHITE);
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         updateTimeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        namePanel.setLayout(new BoxLayout(namePanel, BoxLayout.Y_AXIS));
-        namePanel.setBackground(Color.WHITE);
+        namePanel.setLayout(new BoxLayout(namePanel, BoxLayout.PAGE_AXIS));
         namePanel.setPreferredSize(new Dimension(300, 100));
         namePanel.add(nameLabel);
         namePanel.add(updateTimeLabel);
         add(namePanel);
 
-        fill = new JPanel();
-        fill.setPreferredSize(new Dimension(100, 100));
-        fill.setBackground(Color.WHITE);
-        add(fill);
+        snowLastPanel.setPreferredSize(new Dimension(100, 100));
+        add(snowLastPanel);
 
-        fill1 = new JPanel();
-        fill1.setPreferredSize(new Dimension(100, 100));
-        fill1.setBackground(Color.WHITE);
-        add(fill1);
+        currSnowLabel.setFont(font);
+        snowTypeLabel.setFont(new Font("Arial", Font.PLAIN, 12));
+        currSnowLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        snowTypeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        currSnowPanel.setLayout(new BoxLayout(currSnowPanel, BoxLayout.PAGE_AXIS));
+        currSnowPanel.setPreferredSize(new Dimension(200, 100));
+        currSnowPanel.add(currSnowLabel);
+        currSnowPanel.add(snowTypeLabel);
+        add(currSnowPanel);
 
-        fill2 = new JPanel();
-        fill2.setPreferredSize(new Dimension(100, 100));
-        fill2.setBackground(Color.WHITE);
-        add(fill2);
+        trailsDistLabel.setFont(font);
+        trailsPerLabel.setFont(new Font("Arial", Font.PLAIN, 12));
+        trailsDistLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        trailsPerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        trailsPanel.setLayout(new BoxLayout(trailsPanel, BoxLayout.PAGE_AXIS));
+        trailsPanel.setPreferredSize(new Dimension(200, 100));
+        trailsPanel.add(trailsDistLabel);
+        trailsPanel.add(trailsPerLabel);
+        add(trailsPanel);
 
-        fill3 = new JPanel();
-        fill3.setPreferredSize(new Dimension(100, 100));
-        fill3.setBackground(Color.WHITE);
-        add(fill3);
-
-        openDateLabel.setFont(font);
-        openDateLabel.setBackground(Color.WHITE);
-        openDateLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        openDatePanel.setLayout(new BoxLayout(openDatePanel, BoxLayout.PAGE_AXIS));
-        openDatePanel.setBackground(Color.WHITE);
-        openDatePanel.setPreferredSize(new Dimension(200, 100));
-        openDatePanel.add(openDateLabel);
-        add(openDatePanel);
+        liftsPanel.setPreferredSize(new Dimension(100, 100));
+        add(liftsPanel);
 
         if(isFavorite){
             if(starFull != null){
@@ -102,16 +107,8 @@ public class ClosedListPanel extends JPanel {
             }
         }
 
-        favoriteButton.setBackground(Color.WHITE);
-        favoriteButton.setBorderPainted(false);
-        favoriteButton.setFocusPainted(false);
-        favoriteButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        favoritePanel.setLayout(new BoxLayout(favoritePanel, BoxLayout.PAGE_AXIS));
         favoritePanel.setPreferredSize(new Dimension(100, 100));
-        favoritePanel.setBackground(Color.WHITE);
-        favoritePanel.add(favoriteButton);
         add(favoritePanel);
-
         favoriteButton.addActionListener(e -> {
             if(isFavorite){
                 if(starEmpty != null){
@@ -122,7 +119,7 @@ public class ClosedListPanel extends JPanel {
                 }
                 isFavorite = false;
                 favoriteResorts.removeFavorite(resort);
-                countryResorts.getPanelClosed(resort.country(), resort).unfavorite(starEmpty, starEmptyPath);
+                countryResorts.getPanel(resort.country(), resort.openStatus(), resort).unfavorite(starEmpty, starEmptyPath);
             }
             else{
                 if(starFull != null){
@@ -132,14 +129,22 @@ public class ClosedListPanel extends JPanel {
                     logger.error("Can't find favorite button image: " + starFullPath);
                 }
                 isFavorite = true;
-                favoriteResorts.addFavoriteClosed(resort, new ClosedListPanel(resort));
+                favoriteResorts.addFavorite(resort, new OpenListPanel(resort));
             }
         });
 
         nameLabel.setText(resort.name());
         updateTimeLabel.setText(resort.updateTime());
-        openDateLabel.setText(resort.openDate());
+        snowLastLabel.setText(resort.snowLast24());
+        snowLastLabel.setFont(font);
+        currSnowLabel.setText(resort.currSnow());
+        snowTypeLabel.setText(resort.snowType());
+        trailsDistLabel.setText(resort.openTrailsDist());
+        trailsPerLabel.setText(resort.openTrailsPer());
+        liftsLabel.setText(resort.openLifts());
+        liftsLabel.setFont(font);
     }
+
     public void unfavorite(java.net.URL starEmpty, String starEmptyPath){
         isFavorite = false;
         if(starEmpty != null){
@@ -161,11 +166,16 @@ public class ClosedListPanel extends JPanel {
         this.setBackground(color);
         this.namePanel.setBackground(color);
         this.nameLabel.setBackground(color);
-        this.fill.setBackground(color);
-        this.fill1.setBackground(color);
-        this.fill2.setBackground(color);
-        this.fill3.setBackground(color);
-        this.openDatePanel.setBackground(color);
+        this.snowLastPanel.setBackground(color);
+        this.snowLastLabel.setBackground(color);
+        this.currSnowPanel.setBackground(color);
+        this.currSnowLabel.setBackground(color);
+        this.snowTypeLabel.setBackground(color);
+        this.trailsPanel.setBackground(color);
+        this.trailsDistLabel.setBackground(color);
+        this.trailsPerLabel.setBackground(color);
+        this.liftsPanel.setBackground(color);
+        this.liftsLabel.setBackground(color);
         this.favoritePanel.setBackground(color);
     }
 

@@ -1,11 +1,17 @@
+package Data;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.EnumMap;
 import java.util.concurrent.*;
 import java.util.List;
 import java.util.ArrayList;
+
+import GUI.ClosedListPanel;
+import GUI.OpenListPanel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import Scrapper.InformationScraper;
 
 public class FavoriteResorts {
     private static volatile FavoriteResorts instance;

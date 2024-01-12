@@ -1,3 +1,9 @@
+package GUI;
+import Data.FavoriteResorts;
+import Data.StorageHandler;
+import Data.Country;
+import Data.InternetProblemHandler;
+import Data.Resort;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -36,7 +42,7 @@ public class MainFrame extends JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
 
-        String logoPath = "logoSmall.png";
+        String logoPath = "/logoSmall.png";
         java.net.URL logo = getClass().getResource(logoPath);
         if(logo != null){
             logoLabel.setIcon(new ImageIcon(logo));
@@ -45,7 +51,7 @@ public class MainFrame extends JFrame {
             logger.error("Can't find logo: " + logoPath);
         }
 
-        String favoritePath = "starFull.png";
+        String favoritePath = "/starFull.png";
         java.net.URL favorite = getClass().getResource(favoritePath);
         if(favorite != null){
             favoriteButton.setIcon(new ImageIcon(favorite));
@@ -54,7 +60,7 @@ public class MainFrame extends JFrame {
             logger.error("Can't find favorite button image: " + favoritePath);
         }
 
-        String menuPath = "menu.png";
+        String menuPath = "/menu.png";
         java.net.URL menu = getClass().getResource(menuPath);
         if(menu != null){
             menuButton.setIcon(new ImageIcon(menu));
@@ -157,29 +163,45 @@ public class MainFrame extends JFrame {
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.OPEN)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.OPEN));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.OPEN).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.WEEKEND)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.WEEKEND));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.WEEKEND).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.TEMPCLOSED)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.TEMPCLOSED));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+            int i = 0;
+            for (OpenListPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.TEMPCLOSED).values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
 
         if(favoriteResorts.containsStatus(Resort.OpenStatus.CLOSE)) {
             favoritePanel.addToScrollContainer(new OpenStatusPanel(Resort.OpenStatus.CLOSE));
-            for (JPanel panel : favoriteResorts.getPanels(Resort.OpenStatus.CLOSE).values()) {
+            int i = 0;
+            for (ClosedListPanel panel : favoriteResorts.getPanelsClosed().values()) {
+                if(i % 2 == 0) panel.whiteBackground();
+                else panel.grayBackground();
                 favoritePanel.addToScrollContainer(panel);
+                i++;
             }
         }
         favoritePanel.setScrollView();

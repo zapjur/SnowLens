@@ -1,3 +1,6 @@
+package Data;
+
+import GUI.InternetProblemPanel;
 
 public class InternetProblemHandler {
 

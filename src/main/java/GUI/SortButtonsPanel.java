@@ -1,7 +1,12 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
+import Data.Country;
+import Data.CountryResorts;
+import Data.Resort;
 
 public class SortButtonsPanel extends JPanel {
 
@@ -34,7 +39,7 @@ public class SortButtonsPanel extends JPanel {
         sortByOpenDist.addActionListener(e ->{
 
             Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByOpenDist(country);
-            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getClosedSortedByNames(country);
 
             display(countryPanel, openMap, closedMap);
 
@@ -43,7 +48,7 @@ public class SortButtonsPanel extends JPanel {
         sortByCurrSnow.addActionListener(e ->{
 
             Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByCurrSnow(country);
-            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getClosedSortedByNames(country);
 
             display(countryPanel, openMap, closedMap);
 
@@ -52,7 +57,7 @@ public class SortButtonsPanel extends JPanel {
         sortByOpenLifts.addActionListener(e ->{
 
             Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByOpenLifts(country);
-            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getClosedSortedByNames(country);
 
             display(countryPanel, openMap, closedMap);
 
@@ -70,7 +75,7 @@ public class SortButtonsPanel extends JPanel {
         sortBySnowLast.addActionListener(e -> {
 
             Map<Resort.OpenStatus, Map<Resort, OpenListPanel>> openMap = countryResorts.getOpenSortedByLastSnow(country);
-            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getCountryMapClosed(country);
+            Map<Resort.OpenStatus, Map<Resort, ClosedListPanel>> closedMap = countryResorts.getClosedSortedByNames(country);
 
             display(countryPanel, openMap, closedMap);
 

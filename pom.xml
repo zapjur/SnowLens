@@ -14,6 +14,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -44,7 +48,11 @@
             <artifactId>jgoodies-forms</artifactId>
             <version>1.9.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>2.0</version>
+        </dependency>
 
 
     </dependencies>

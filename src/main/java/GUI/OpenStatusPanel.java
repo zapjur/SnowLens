@@ -1,5 +1,8 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
+import Data.Resort;
 
 public class OpenStatusPanel extends JPanel {
 

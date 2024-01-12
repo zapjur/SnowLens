@@ -6,8 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1a64fc-a330-448b-813f-32b707748614" name="Changes" comment="wersja git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/favorites.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/favorites.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClosedListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ClosedListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CountryResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/CountryResorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CountryResortsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/CountryResortsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayFavoriteButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DisplayFavoriteButtonActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayResortActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DisplayResortActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FavoriteResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/FavoriteResorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InformationScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scrapper/InformationScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InternetProblemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/InternetProblemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InternetProblemPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/InternetProblemPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OpenListPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OpenListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenStatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OpenStatusPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Resort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Resort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortButtonsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SortButtonsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StorageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/StorageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +85,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/GUI" />
       <recent name="$PROJECT_DIR$/src/main/resources/flags" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
@@ -126,6 +147,7 @@
       <workItem from="1704980955558" duration="272000" />
       <workItem from="1704981815787" duration="220000" />
       <workItem from="1704985301838" duration="197000" />
+      <workItem from="1705055100867" duration="7734000" />
     </task>
     <task id="LOCAL-00001" summary="cc">
       <option name="closed" value="true" />
@@ -479,7 +501,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704660983314</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="wersja git">
+      <option name="closed" value="true" />
+      <created>1705055183030</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1705055183031</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

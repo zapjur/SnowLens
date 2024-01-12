@@ -1,6 +1,10 @@
-import javax.swing.*;
+package GUI;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Data.InternetProblemHandler;
+import Data.FavoriteResorts;
+import Data.Resort;
 
 public class DisplayFavoriteButtonActionListener implements ActionListener {
 

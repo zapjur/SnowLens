@@ -1,7 +1,10 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import Data.Country;
 
 public class MenuButton extends JButton {
     private static final Logger logger = LogManager.getLogger(MenuButton.class);

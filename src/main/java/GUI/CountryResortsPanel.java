@@ -1,5 +1,8 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
+import Data.Country;
 
 public class CountryResortsPanel extends JPanel {
 

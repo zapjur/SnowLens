@@ -1,3 +1,8 @@
+package Data;
+
+import GUI.ClosedListPanel;
+import GUI.OpenListPanel;
+
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
@@ -93,7 +98,10 @@ public class CountryResorts {
         if (unsortedMap != null) {
             for (Resort.OpenStatus status : unsortedMap.keySet()) {
                 Map<Resort, OpenListPanel> sorted = unsortedMap.get(status).entrySet().stream()
-                        .sorted(Map.Entry.comparingByKey(comparator))
+                        .sorted(Map.Entry.comparingByKey(
+                                comparator
+                                        .thenComparing(Comparator.comparing((Resort resort) -> resort.name()))
+                        ))
                         .collect(Collectors.toMap(
                                 Map.Entry::getKey,
                                 Map.Entry::getValue,
@@ -163,7 +171,20 @@ public class CountryResorts {
                 }
                 else{
                     if(parts.length == 0) return Integer.MIN_VALUE;
-                    return Integer.parseInt((parts[0]));
+                    return Integer.parseInt((parts[0].replace("cm", "")))*2;
+                }
+            } catch (NumberFormatException ex) {
+                return Integer.MIN_VALUE;
+            }
+        }).thenComparing((Resort resort) -> {
+            try{
+                String[] parts = resort.currSnow().split("-");
+                if(parts.length >= 2) {
+                    return Integer.parseInt(parts[1].replace("cm", ""));
+                }
+                else{
+                    if(parts.length == 0) return Integer.MIN_VALUE;
+                    return Integer.parseInt((parts[0].replace("cm", "")));
                 }
             } catch (NumberFormatException ex) {
                 return Integer.MIN_VALUE;

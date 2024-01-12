@@ -1,3 +1,7 @@
+package Data;
+
+import Data.Country;
+import Data.Dictionary;
 
 public record Resort(
         String name, String updateTime, String openDate, String snowLast24, String currSnow, String snowType,
